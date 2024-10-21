@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+li{
+    list-style: none;
+}
+.cointainer{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+}
+
+/* **********************   LOGIN-PAGE   ************************** */
+
+
+#registration{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#registration .registrationCointainer{
+    height: 550px;
+    width: 400px;
+    margin-top: 90px;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 6px 6px #c1c0c0;
+    background-color: rgb(250, 250, 250);
+
+}
+
+#registration .registrationCointainer .registrationTitle h2{
+    text-align: center;
+    text-shadow: 1px 2px 1px #7d7a7a;
+    padding: 10px;
+}
+
+#registration .registrationCointainer form{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#registration .registrationCointainer form input{
+    width: 100%;
+    padding: 8px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    outline: none;
+    background-color: rgb(250, 250, 250);
+    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);
+    box-shadow: rgba(67, 71, 85, 0.6) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+#registration .registrationCointainer form .registrationButton button{
+    cursor: pointer;
+    padding: 10px 45px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+    margin-top: 25px; 
+    background-color: rgb(60, 170, 210);
+}
+#registration .registrationCointainer form .registrationButton button:hover{
+    box-shadow: 0.8px 0.8px 3px 3px #c1c0c0;
+    font-weight: bold;
+    border: none;
+    transition: 0.8s ease-in;
+    background-color: rgb(250, 250, 250);
+    color: rgb(60, 170, 210);
+}
+
+
+
+/* *******************   RESPONSIVE   ******************** */
+
+
+@media only screen and (max-width:500px){
+    #registration .registrationCointainer{
+        width: 80%;
+    }
+}
