@@ -1,0 +1,391 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+li{
+    list-style: none;
+}
+#dashboardHeader{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(173, 172, 172);
+    
+}
+#dashboardHeader .logoAndBars{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#dashboardHeader .logoAndBars i{
+    display: none;
+    font-size:  25px;
+}
+#dashboardHeader .profile{
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+#dashboardHeader .profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/*--------------
+ Header - End 
+---------------*/
+
+
+
+#dashboardContainer{
+    width: 100%;
+    height: 89%;
+    display: flex;
+}
+/*--------------------------
+ Dashboard left side - start 
+---------------------------*/
+#dashboardContainer .leftSide{
+    width: 18%;
+    min-width: 300px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    background-color: silver;
+    overflow: scroll;
+    scrollbar-width: none;
+    z-index: 6;
+}
+#dashboardContainer .leftSide ul{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    margin-top: 20px;
+}
+#dashboardContainer .leftSide ul li{
+    color: #fff;
+    width: 200px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#dashboardContainer .leftSide ul a{
+    color: #fff;
+    margin: 5px;
+    padding: 7px;
+    width: 80%;
+    border-radius: 9px;
+    flex-direction: row;
+    transition: all 0.2s ease;
+    background-color: rgb(53, 53, 53);
+}
+
+#dashboardContainer .leftSide ul a:hover{
+    background-color: #fff; 
+    color: #000;   
+    li{
+        color: black;
+    }
+}
+#dashboardContainer .leftSide ul a img{
+    height: 2vw;
+    width: 2vw;
+    margin:0 12px;
+}
+
+
+/*--------------------------
+ Dashboard left side - end
+---------------------------*/
+
+/*--------------------------
+ Dashboard Right side - start 
+---------------------------*/
+#dashboardContainer .rightSide{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+#dashboardContainer .rightSide .orderHistorySection{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+    scrollbar-width: none;
+    overflow: scroll;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer{
+    width: 1200px;
+    height: 550px;
+    margin: 30px 0px;
+    border-radius: 10px;
+    background-color: #b9b6b6;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #b8afaf;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .leftDetail{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    line-height: 25px;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .rightDetail{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 25px;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .rightDetail .orderId{
+    display: flex;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .rightDetail .viewOrderDetailsAndInvoice{
+    display: flex;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails{
+    width: 80%;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftHeading{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    margin-top: 20px;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .product{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    text-align: start;
+    margin: 40px 0px 0px 20px;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .product .productImage{
+    width: 150px;
+    height: 120px;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .product .productImage img{
+    width: 100%;
+    height: 100%;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .product .productName{
+    width: 600px;
+    display: flex;
+    padding-top: 10px;
+    line-height: 22px;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftButtons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftButtons button{
+    width: 200px;
+    padding: 15px 25px;
+    font-size: var(--largeFont);
+    font-weight: var(--largeFontWeight);
+    letter-spacing: 1px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftButtons button:hover{
+    background-color: yellow;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftButtons button:nth-child(1){
+    margin-right: 10px;
+}
+
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails{
+    width: 50%;
+    height: 100%; 
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .rightButtons{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .rightButtons button{
+    width: 300px;
+    font-size: var(--largeFont);
+    font-weight: var(--largeFontWeight);
+    border-radius: 30px;
+    padding: 15px 25px;
+    margin-bottom: 10px;
+    outline: none;
+    background-color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .rightButtons button:hover{
+    background-color: yellow;
+}
+
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .threeDot{
+    display: none;
+}
+#dashboardContainer p{
+    margin-left: 20px;
+}
+
+/*--------------------------
+ Dashboard Right side - End 
+---------------------------*/
+
+
+/*----------------------
+   media Query - Start 
+-----------------------*/
+
+/*---------------------
+   orderHistory - start 
+----------------------*/
+@media screen and (max-width: 1520px) {
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer{
+        width: 95%;
+    }
+    
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails{
+        width: 70%;
+    }
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails{
+        width: 30%;
+    }
+    
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .rightButtons button{
+        width: 90%;
+        padding: 11px 20px;
+    }
+}
+
+
+
+@media screen and (max-width: 750px) {
+    
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer{
+        height: 550px;
+    }
+    
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails{
+        width: 100%;
+    }
+    
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .product .productImage{
+        width: 100px;
+        height: 90px;
+    }
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .product .productImage img{
+        width: 100px;
+        height: 90px;
+    }
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails{
+        width: 100%;
+        margin-top: 10px;
+    }
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .rightButtons{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .rightButtons button{
+        width: 300px;
+        height: 70px;
+        font-size: var(--midiumFont);
+        font-weight: var(--midiumFontWeight);
+        border-radius: 5px;
+        padding: 8px 10px;
+        margin: 5px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+   
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails{
+        display: flex;
+        flex-direction: row;
+        overflow-x: hidden;
+    } 
+    
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .rightButtons{
+        display: none;
+    }
+    #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .threeDot{
+        display: block;
+        position: absolute;
+        right: 30px;
+        font-size: 20px;
+    }
+}
+
+/*----------------------
+   media Query - end 
+-----------------------*/
+
+/*---------------------
+   orderHistory - end 
+----------------------*/
+

@@ -1,0 +1,404 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+li{
+    list-style: none;
+}
+#dashboardHeader{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(173, 172, 172);
+    
+}
+#dashboardHeader .logoAndBars{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#dashboardHeader .logoAndBars i{
+    display: none;
+    font-size:  25px;
+}
+#dashboardHeader .profile{
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+#dashboardHeader .profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/*--------------
+ Header - End 
+---------------*/
+
+
+
+#dashboardContainer{
+    width: 100%;
+    height: 89%;
+    display: flex;
+}
+/*--------------------------
+ Dashboard left side - start 
+---------------------------*/
+#dashboardContainer .leftSide{
+    width: 18%;
+    min-width: 300px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    background-color: silver;
+    overflow: scroll;
+    scrollbar-width: none;
+    z-index: 6;
+}
+#dashboardContainer .leftSide ul{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    margin-top: 20px;
+}
+
+#dashboardContainer .leftSide ul a{
+ background-color: rgb(53, 53, 53);
+ margin: 5px;
+ padding: 7px;
+ width: 80%;
+ border-radius: 9px;
+ flex-direction: row;
+ transition: all 0.2s ease;
+}
+
+#dashboardContainer .leftSide ul a:hover{
+    background-color: #fff;    
+    li{
+        color: black;
+    }
+}
+#dashboardContainer .leftSide ul a img{
+    height: 2vw;
+    width: 2vw;
+    margin:0 12px;
+}
+#dashboardContainer .leftSide ul li{
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+/*--------------------------
+ Dashboard left side - end
+---------------------------*/
+
+
+/*--------------------------
+ Dashboard Right side - start 
+---------------------------*/
+#dashboardContainer .rightSide{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    overflow: scroll;
+    /* scrollbar-width: none; */
+}
+/* user Information */
+#dashboardContainer .rightSide .userContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+#dashboardContainer .rightSide .title{
+    width: 90%;
+    margin: 50px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#dashboardContainer .rightSide .title select{
+    width: 150px;
+    padding: 6px;
+    outline: none;
+    border: 1px solid rgb(221, 215, 215);
+}
+
+.addUserbtn {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.addUserbtn button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addUserbtn button:hover {
+    background-color: #0056b3;
+}
+
+#dashboardContainer .rightSide .usersTable{
+    width: 90%;
+    height: 500px;
+    overflow-x: auto;
+    overflow-y: auto;
+    scrollbar-width: none;
+    margin-bottom: 40px;
+}
+#dashboardContainer .rightSide .usersTable table{
+    width: 100%;
+    min-width: 1200px;
+}
+#dashboardContainer .rightSide .usersTable table td, th{
+    padding: 10px;
+    height: 40px;
+}
+#dashboardContainer .rightSide .usersTable table td{
+    height: 70px;
+}
+
+#dashboardContainer .rightSide .usersTable table th{
+    background-color: yellow;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+}
+#dashboardContainer .rightSide .usersTable table tr{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#dashboardContainer .rightSide .usersTable table{
+    border-spacing: 0; 
+    border-collapse: collapse;
+}
+#dashboardContainer .rightSide .usersTable td .userProfile{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+
+#dashboardContainer .rightSide .usersTable td .userImage{
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+}
+#dashboardContainer .rightSide .usersTable .userImage i{
+       
+        border-radius: 50%;
+}
+#dashboardContainer .rightSide .usersTable table tr td i{
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#dashboardContainer .rightSide .usersTable table tr td .editUserBtn:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: rotate(25deg);
+}
+
+
+
+/*--------------------------
+ Dashboard Right side - End 
+---------------------------*/
+
+
+
+/*----------------------
+    Edit form - start
+------------------------*/
+.addUser {
+    height: 100vh;
+    width: 100%;
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.editUser {
+    height: 100vh;
+    width: 100%;
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+#registerSectionAdd,
+#registerSectionEdit {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#registerSectionAdd .container,
+#registerSectionEdit .container {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    border-radius: 10px;
+}
+
+#registerSectionAdd .container .formBox h3,
+#registerSectionEdit .container .formBox h3 {
+    margin: 20px 0px 40px 0px;
+    font-size: 24px;
+}
+
+#registerSectionAdd .container form .formBox,
+#registerSectionEdit .container form .formBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#registerSectionAdd .container form .formBox:nth-child(1),
+#registerSectionEdit .container form .formBox:nth-child(1) {
+    display: flex; /* Show the first box initially */
+    background-color: white;
+    z-index: 3;
+}
+
+#registerSectionAdd .container form .formBox:nth-child(2),
+#registerSectionEdit .container form .formBox:nth-child(2) {
+    display: none; /* Hidden by default */
+    background-color: white;
+    z-index: 2;
+}
+
+#registerSectionAdd .container form .formBox:nth-child(3),
+#registerSectionEdit .container form .formBox:nth-child(3) {
+    display: none; /* Hidden by default */
+    background-color: white;
+    z-index: 1;
+}
+
+#registerSectionAdd .container form .formBox input,
+#registerSectionEdit .container form .formBox input {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 14px;
+    font-weight: var(--midiumFontWeight);
+    outline: none;
+    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+#registerSectionAdd .container form .formBox .button,
+#registerSectionEdit .container form .formBox .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#registerSectionAdd .container form .formBox .button button:nth-child(1),
+#registerSectionEdit .container form .formBox .button button:nth-child(1) {
+    margin-right: 10px;
+}
+
+#registerSectionAdd .container form .formBox .button button,
+#registerSectionEdit .container form .formBox .button button {
+    margin: 20px 0px;
+    width: 40%;
+    padding: 5px 0px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: rgb(105, 105, 231);
+    font-weight: var(--largeFontWeight);
+    font-size: var(--midiumFont);
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+#registerSectionAdd .container form .formBox .button button:hover,
+#registerSectionEdit .container form .formBox .button button:hover {
+    background-color: rgb(85, 85, 191); /* Change color on hover */
+}
+
+
+.closeAddUser{
+    position: absolute;
+    top:2%;
+    right: 2%;
+    z-index: 9;
+    cursor: pointer;
+}
+
+.closeEditUser{
+    position: absolute;
+    top:2%;
+    right: 2%;
+    z-index: 9;
+    cursor: pointer;
+}
+
+
+  /*----------------------
+      Edit form - start
+  ------------------------*/

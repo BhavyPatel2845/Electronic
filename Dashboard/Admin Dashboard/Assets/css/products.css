@@ -1,0 +1,510 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+a{
+  text-decoration: none;
+  text-transform: capitalize;
+}
+li{
+  list-style: none;
+}
+#dashboardHeader{
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(173, 172, 172);
+  
+}
+#dashboardHeader .logoAndBars{
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+#dashboardHeader .logoAndBars i{
+  display: none;
+  font-size:  25px;
+}
+#dashboardHeader .profile{
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+#dashboardHeader .profile img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+/*--------------
+Header - End 
+---------------*/
+
+
+
+#dashboardContainer{
+  width: 100%;
+  height: 89%;
+  display: flex;
+}
+/*--------------------------
+Dashboard left side - start 
+---------------------------*/
+#dashboardContainer .leftSide{
+  width: 18%;
+  min-width: 300px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  background-color: silver;
+  overflow: scroll;
+  scrollbar-width: none;
+  z-index: 6;
+}
+#dashboardContainer .leftSide ul{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  margin-top: 20px;
+}
+
+#dashboardContainer .leftSide ul a{
+background-color: rgb(53, 53, 53);
+margin: 5px;
+padding: 7px;
+width: 80%;
+border-radius: 9px;
+flex-direction: row;
+transition: all 0.2s ease;
+}
+
+#dashboardContainer .leftSide ul a:hover{
+  background-color: #fff;    
+  li{
+      color: black;
+  }
+}
+#dashboardContainer .leftSide ul a img{
+  height: 2vw;
+  width: 2vw;
+  margin:0 12px;
+}
+#dashboardContainer .leftSide ul li{
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+/*--------------------------
+Dashboard left side - end
+---------------------------*/
+
+/*----------------------
+    Edit form - start
+------------------------*/
+#editFormContainer {
+  height: 100vh;
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+#editFormContainer .formContainer {
+  width: 600px;
+  /* height: 600px; */
+  padding: 20px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.formContainer form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 14px;
+}
+
+form div {
+  width: 90%;
+  margin-bottom: 12px;
+}
+
+form label{
+  
+  font-size: 15px;
+}
+
+form input[name="productId"] {
+  opacity: 0;
+  position: absolute;
+  top: -20%;
+}
+
+form div input,
+form div textarea,
+form div select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+form div input:focus,
+form div textarea:focus,
+form div select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+.btns{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btns button {
+  padding: 12px 15px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 47%;
+  text-align: center;
+}
+
+.btns .submit{
+  background-color: #1dc544;
+}
+.btns .submit:hover {
+  background-color: #218838;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.btns .submit:active {
+  background-color: #1dc544;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+
+.btns .submit:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(40, 167, 69, 0.5);
+}
+
+.btns .close{
+  background-color: #ff4d4d;
+}
+.btns .close:hover {
+  background-color: #d43f3f;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.btns .close:active {
+  background-color: #ff4d4d;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+
+.btns .close:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(40, 167, 69, 0.5);
+}
+
+/*----------------------
+    Edit form - start
+------------------------*/
+
+/*--------------------------
+ Dashboard Right side - start 
+---------------------------*/
+#dashboardContainer .rightSide {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgb(201, 188, 188); */
+}
+
+.rightSide .productsContainer {
+  height: 100%;
+  width: 93%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  /* background-color: rgb(88, 65, 65); */
+}
+
+.productsContainer .productsBox {
+  height: 550px;
+  width: 350px;
+  grid-gap: 1vw;
+  margin: 1vw;
+  background-color: #fcfbfb;
+  border-radius: 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.productsBox .imageBox {
+  height: 45%;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid silver;
+  /* background-color: red; */
+}
+.productsBox .imageBox img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.productsBox .productDetailBox {
+  height: 55%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: red; */
+}
+.productDetailBox .productNameCatagory {
+  margin: 0 1vw;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #333;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+.productDetailBox span {
+  font-weight: normal;
+  color: #555;
+  font-size: 1.2rem;
+  letter-spacing: 0.3px;
+}
+.productDetailBox .productDescription {
+  margin: 0 1vw;
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+.productDetailBox .productPriceDiscount {
+  /* width: 75%; */
+  /* background-colo  r: yellow; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0 1vw;
+}
+.productPriceDiscount div {
+  height: 40px;
+  width: 38%; 
+  border-radius: 6px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600; 
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  color: #333; 
+  padding: 0 10px;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.productPriceDiscount div:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+}
+
+.productDetailBox .productEditDelete {
+  margin: 0 1vw;
+  /* background-color: red; */
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.productEditDelete button,
+.productEditDelete a {
+  width: 45%;
+  font-size: 1.2vw;
+  font-weight: 600;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  text-decoration: none; 
+  color: inherit; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.productEditDelete button:hover,
+.productEditDelete a:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.productEditDelete .productEdit img,
+.productEditDelete .productDelete img {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 0.7vw;
+  padding: 3px;
+  transition: transform 0.3s ease;
+}
+
+.productEditDelete .productDelete img {
+  padding: 0px;
+  
+}
+
+.productEditDelete button:hover img,
+.productEditDelete a:hover img {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.productEditDelete .productEdit {
+  background-color: #f9aa33;
+  color: white;
+  border: 2px solid #f9aa33;
+}
+
+.productEditDelete .productEdit:hover {
+  background-color: #e08b0f;
+  border-color: #e08b0f;
+}
+
+.productEditDelete .productDelete {
+  background-color: #ff4d4d;
+  color: white;
+  border: 2px solid #ff4d4d;
+}
+
+.productEditDelete .productDelete:hover {
+  background-color: #d43f3f;
+  border-color: #d43f3f;
+}
+
+/*--------------------------
+ Dashboard Right side - End 
+---------------------------*/
+
+/*--------------------------------------
+ Dashboard Right side responsive - start 
+---------------------------------------*/
+
+@media screen and (max-width: 1246px) {
+  .rightSide .productsContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1091px) {
+  .rightSide .productsContainer .productsBox {
+    height: 500px;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .rightSide .productsContainer .productsBox {
+    height: 550px;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 787px) {
+  .rightSide .productsContainer .productsBox {
+    height: 500px;
+    width: 300px;
+  }
+}
+@media (max-width: 768px) {
+  #editFormContainer .formContainer {
+    width: 90%;
+    padding: 15px;
+  }
+
+  form div {
+    width: 100%;
+  }
+
+  form div input,
+  form div textarea,
+  form div select {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 672px) {
+  .rightSide .productsContainer {
+    width: 320px;
+    grid-template-columns: 1fr;
+  }
+}
+/*--------------------------------------
+ Dashboard Right side responsive - End 
+---------------------------------------*/

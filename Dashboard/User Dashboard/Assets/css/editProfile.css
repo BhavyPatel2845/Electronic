@@ -1,0 +1,444 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+li{
+    list-style: none;
+}
+#dashboardHeader{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(173, 172, 172);
+    
+}
+#dashboardHeader .logoAndBars{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#dashboardHeader .logoAndBars i{
+    display: none;
+    font-size:  25px;
+}
+#dashboardHeader .profile{
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+#dashboardHeader .profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/*--------------
+ Header - End 
+---------------*/
+
+
+
+#dashboardContainer{
+    width: 100%;
+    height: 89%;
+    display: flex;
+}
+/*--------------------------
+ Dashboard left side - start 
+---------------------------*/
+#dashboardContainer .leftSide{
+    width: 18%;
+    min-width: 300px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    background-color: silver;
+    overflow: scroll;
+    scrollbar-width: none;
+    z-index: 6;
+}
+#dashboardContainer .leftSide ul{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    margin-top: 20px;
+}
+#dashboardContainer .leftSide ul li{
+    color: #fff;
+    width: 200px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#dashboardContainer .leftSide ul a{
+    color: #fff;
+    margin: 5px;
+    padding: 7px;
+    width: 80%;
+    border-radius: 9px;
+    flex-direction: row;
+    transition: all 0.2s ease;
+    background-color: rgb(53, 53, 53);
+}
+
+#dashboardContainer .leftSide ul a:hover{
+    background-color: #fff; 
+    color: #000;   
+    li{
+        color: black;
+    }
+}
+#dashboardContainer .leftSide ul a img{
+    height: 2vw;
+    width: 2vw;
+    margin:0 12px;
+}
+
+
+/*--------------------------
+ Dashboard left side - end
+---------------------------*/
+
+/*--------------------------
+ Dashboard Right side - start 
+---------------------------*/
+#dashboardContainer .rightSide{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+/* Edit Profile Section */
+#dashboardContainer .rightSide .editProfile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#dashboardContainer .rightSide .editProfile form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+#dashboardContainer .rightSide .editProfile form h2{
+    width: 90%;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    margin: 50px 0px;
+    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);
+}
+#dashboardContainer .rightSide .editProfile .profileImage{
+    width: 70px;
+    height: 70px;
+}
+#dashboardContainer .rightSide .editProfile .profileImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#dashboardContainer .rightSide .editProfile form .profileImage{
+    margin-top: 40px;
+}
+#dashboardContainer .rightSide .editProfile form .editImage{
+    border: 1px solid black;
+    padding: 6px 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;    
+    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);  
+    border: none;
+}
+#dashboardContainer .rightSide .editProfile form .names{
+    width: 570px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#dashboardContainer .rightSide .editProfile form .names input{
+    width: 28%;
+}
+#dashboardContainer .rightSide .editProfile form .emailContact{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#dashboardContainer .rightSide .editProfile form .emailContact input{
+    width: 90%;
+}
+#dashboardContainer .rightSide .editProfile form .birthAgeAndGender{
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#dashboardContainer .rightSide .editProfile form .birthAgeAndGender input{
+    width: 40%;
+}
+#dashboardContainer .rightSide .editProfile form .zipAndCity{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#dashboardContainer .rightSide .editProfile form .zipAndCity input{
+    width: 90%;
+}
+#dashboardContainer .rightSide .editProfile form .stateAndCountry{
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#dashboardContainer .rightSide .editProfile form .stateAndCountry input{
+    width: 40%;
+}
+
+#dashboardContainer .rightSide .editProfile form input{
+       padding: 10px;
+       font-size: var(--largeFont);
+       font-weight: var(--midiumFontWeight);
+       margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);    
+       outline: none;
+       border: none;
+}
+#dashboardContainer .rightSide .editProfile  form button{
+        padding: 10px 20px;
+        font-size: var(--midiumsmFont);
+        font-weight: var(--largeFontWeight);
+        background-color: yellow;
+        color: #000;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin-top: 40px;
+        transition: .3s ease-in-out;
+}
+
+#dashboardContainer .rightSide .editProfile form button:hover{
+        transform: scale(1.1);
+}   
+
+/* Address Details page */
+.addressButton{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.addressButton button{
+    padding: 10px 20px;
+    font-size: var(--midiumsmFont);
+    font-weight: var(--largeFontWeight);
+    background-color: yellow;
+    color: #000;
+    margin-left: 100px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.addressButton button:hover{
+    transform: scale(1.1);
+}
+#addressContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#addressContainer #addressDetails{
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin-bottom: 50px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    line-height: 40px;
+} 
+#addressContainer #addressDetails .infoRow{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(201, 195, 195);
+}
+#addressContainer #addressDetails .infoRow div{
+    width: 25%;
+}
+
+/*--------------------------
+ Dashboard Right side - End 
+---------------------------*/
+
+
+
+/*---------------------
+ Media Query - start 
+----------------------*/
+
+/*---------------------
+ Address Popup - start 
+----------------------*/
+@media screen and (max-width: 450px) {
+    #addressPopup .container{
+        width: 100vw;
+        height: 100vh;
+        box-shadow: none;
+    }
+    #addressPopup .container .formBox{
+        width: 100%;
+        height: 100%;
+    }
+    #addressPopup .container form .formBox input{
+      width: 80%;       
+    }
+}
+/*---------------------
+ Address Popup - End 
+----------------------*/
+
+/*---------------------------
+ Edit Profile page - start
+----------------------------*/
+@media screen and (max-width: 625px) {
+    #dashboardContainer .rightSide .editProfile form .names{
+        width: 100%;
+        flex-direction: column;
+    }
+    #dashboardContainer .rightSide .editProfile form .birthAgeAndGender{
+        width: 100%;
+        flex-direction: column;
+    }
+    #dashboardContainer .rightSide .editProfile form .stateAndCountry{
+        width: 100%;
+        flex-direction: column;
+    }
+    #dashboardContainer .rightSide .editProfile form .names input{
+        width: 90%;
+    }
+    #dashboardContainer .rightSide .editProfile form .birthAgeAndGender input{
+        width: 90%;
+    }
+    #dashboardContainer .rightSide .editProfile form .stateAndCountry input{
+        width: 90%;
+    }
+    #dashboardContainer .rightSide .editProfile form input{
+        width: 90%;
+    }
+    #dashboardContainer .rightSide .editProfile form .emailContact{
+        width: 100%;
+    }
+    #dashboardContainer .rightSide .editProfile form .zipAndCity{
+        width: 100%;
+    }
+}
+
+/*---------------------------
+ Edit Profile page - End
+----------------------------*/
+/*---------------------------
+ Address Details page -start
+----------------------------*/
+@media screen and (max-width: 1450px) {
+    #addressContainer #addressDetails{
+        max-width: 900px;
+    }
+}
+@media screen and (max-width: 1335px) {
+    #addressContainer #addressDetails{
+        max-width: 700px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    #addressContainer #addressDetails{
+        max-width: 600px;
+    }
+}
+@media screen and (max-width: 990px) {
+    #addressContainer #addressDetails{
+        max-width: 800px;
+    }
+}
+@media screen and (max-width: 845px) {
+    #addressContainer #addressDetails{
+        max-width: 600px;
+    }
+}
+@media screen and (max-width: 635px) {
+    #addressContainer #addressDetails{
+        max-width: 500px;
+    }
+    #addressContainer #addressDetails .infoRow{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 635px) {
+    #addressContainer #addressDetails{
+        max-width: 300px;
+    }
+}
+/*---------------------------
+ Address Details page -start
+----------------------------*/
+
+/*---------------------
+ Media Query - End 
+----------------------*/
+

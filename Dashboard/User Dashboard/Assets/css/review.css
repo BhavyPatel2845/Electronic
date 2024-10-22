@@ -1,0 +1,310 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+li{
+    list-style: none;
+}
+#dashboardHeader{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(173, 172, 172);
+    
+}
+#dashboardHeader .logoAndBars{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#dashboardHeader .logoAndBars i{
+    display: none;
+    font-size:  25px;
+}
+#dashboardHeader .profile{
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+#dashboardHeader .profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/*--------------
+ Header - End 
+---------------*/
+
+
+
+#dashboardContainer{
+    width: 100%;
+    height: 89%;
+    display: flex;
+}
+/*--------------------------
+ Dashboard left side - start 
+---------------------------*/
+#dashboardContainer .leftSide{
+    width: 18%;
+    min-width: 300px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    background-color: silver;
+    overflow: scroll;
+    scrollbar-width: none;
+    z-index: 6;
+}
+#dashboardContainer .leftSide ul{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    margin-top: 20px;
+}
+#dashboardContainer .leftSide ul li{
+    color: #fff;
+    width: 200px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#dashboardContainer .leftSide ul a{
+    color: #fff;
+    margin: 5px;
+    padding: 7px;
+    width: 80%;
+    border-radius: 9px;
+    flex-direction: row;
+    transition: all 0.2s ease;
+    background-color: rgb(53, 53, 53);
+}
+
+#dashboardContainer .leftSide ul a:hover{
+    background-color: #fff; 
+    color: #000;   
+    li{
+        color: black;
+    }
+}
+#dashboardContainer .leftSide ul a img{
+    height: 2vw;
+    width: 2vw;
+    margin:0 12px;
+}
+
+
+/*--------------------------
+ Dashboard left side - end
+---------------------------*/
+
+/*--------------------------
+ Dashboard Right side - start 
+---------------------------*/
+#dashboardContainer .rightSide{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+/*-------------------
+Support Form - Start
+--------------------*/
+
+#dashboardContainer .rightSide .reviewForm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#dashboardContainer .rightSide .reviewForm .container{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    border-radius: 10px;
+    
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+#dashboardContainer .rightSide .reviewForm .container h3{
+    width: 100%;
+}
+#dashboardContainer .rightSide .reviewForm .container form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#dashboardContainer .rightSide .reviewForm .container h3{
+    margin: 20px 0px 40px 0px;
+    font-size: 24px;
+}
+#dashboardContainer .rightSide .reviewForm .container input{
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 14px;
+    font-weight: var(--midiumFontWeight);
+    outline: none;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;    
+    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25); 
+}
+#dashboardContainer .rightSide .reviewForm .container select{
+    width: 420px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 14px;
+    font-weight: var(--midiumFontWeight);
+    outline: none;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;    
+    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);    
+}
+#dashboardContainer .rightSide .reviewForm .container p{
+    width: 400px;
+    text-align: start;
+    font-size: 14px;
+    padding: 10px;
+    /* background-color: rebeccapurple; */
+    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);    
+    /* background-color: red; */
+}
+#dashboardContainer .rightSide .reviewForm .container textarea{
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 14px;
+    font-weight: var(--midiumFontWeight);
+    outline: none;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;    
+    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);    
+}
+#dashboardContainer .rightSide .reviewForm .container .ratingStar{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+
+#dashboardContainer .rightSide .reviewForm .container .ratingStar .stars{
+    margin: 0px 10px 10px;
+}
+#dashboardContainer .rightSide .reviewForm .container .ratingStar .stars span{
+    
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+#dashboardContainer .rightSide .reviewForm .container .ratingStar .stars span.active{
+    color: rgb(255, 136, 0);
+    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);    
+
+}
+#dashboardContainer .rightSide .reviewForm .container button{
+    margin: 50px 0px 30px 0px;
+    width: 40%;
+    padding: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: rgb(105, 105, 231);
+    font-weight: var(--largeFontWeight);
+    font-size: var(--midiumFont);
+    cursor: pointer;  
+}
+/*-------------------
+ Support Form - End
+--------------------*/
+
+/*--------------------------
+ Dashboard Right side - End 
+---------------------------*/
+
+
+
+/*---------------------
+ Media Query - start 
+----------------------*/
+
+/*-------------------
+Support Form - Start
+--------------------*/
+@media screen and (max-width: 615px) {
+    #dashboardContainer .rightSide .supportForm{
+        width: 100%;
+        height: 100%;
+    }
+    #dashboardContainer .rightSide .supportForm .container{
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    
+    #dashboardContainer .rightSide .supportForm .container select{
+      width: 320px;
+    }
+    #dashboardContainer .rightSide .supportForm .container textarea{
+        width: 300px;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    
+    #dashboardContainer .rightSide .supportForm .container select{
+      width: 270px;
+    }
+    #dashboardContainer .rightSide .supportForm .container textarea{
+        width: 250px;
+    }
+  }
+/*-------------------
+Support Form - End
+--------------------*/
+
+/*---------------------
+ Media Query - End 
+----------------------*/
+

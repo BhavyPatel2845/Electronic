@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+li{
+    list-style: none;
+}
+#dashboardHeader{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(173, 172, 172);
+    
+}
+#dashboardHeader .logoAndBars{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#dashboardHeader .logoAndBars i{
+    display: none;
+    font-size:  25px;
+}
+#dashboardHeader .profile{
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+#dashboardHeader .profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/*--------------
+ Header - End 
+---------------*/
+
+
+
+#dashboardContainer{
+    width: 100%;
+    height: 89%;
+    display: flex;
+}
+/*--------------------------
+ Dashboard left side - start 
+---------------------------*/
+#dashboardContainer .leftSide{
+    width: 18%;
+    min-width: 300px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    background-color: silver;
+    overflow: scroll;
+    scrollbar-width: none;
+    z-index: 6;
+}
+#dashboardContainer .leftSide ul{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    margin-top: 20px;
+}
+
+#dashboardContainer .leftSide ul a{
+ background-color: rgb(53, 53, 53);
+ margin: 5px;
+ padding: 7px;
+ width: 80%;
+ border-radius: 9px;
+ flex-direction: row;
+ transition: all 0.2s ease;
+}
+
+#dashboardContainer .leftSide ul a:hover{
+    background-color: #fff;    
+    li{
+        color: black;
+    }
+}
+#dashboardContainer .leftSide ul a img{
+    height: 2vw;
+    width: 2vw;
+    margin:0 12px;
+}
+#dashboardContainer .leftSide ul li{
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+/*--------------------------
+ Dashboard left side - end
+---------------------------*/
+
+/*--------------------------
+ Dashboard Right side - start 
+---------------------------*/
+#dashboardContainer .rightSide{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    /* overflow: scroll; */
+    /* scrollbar-width: none; */
+}
+/* Admin home page */
+#dashboardContainer .rightSide .detailSection{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+#dashboardContainer .rightSide .detailSection .heading{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0px;
+}
+#dashboardContainer .rightSide .detailSection .heading select{
+    font-size: var(--midiumFont);
+    font-weight: var(--midiumFontWeight);
+    border: 1px solid rgb(150, 145, 145);
+    background-color: #fff;
+    color: #000;
+    width: 180px;
+    cursor: pointer;
+    outline: none;
+}
+#dashboardContainer .rightSide .detailSection .detailSectionContainer{
+    width: 90%;
+     display: flex;
+     justify-content: center;
+    grid-gap: 10px;
+    flex-wrap: wrap;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+#dashboardContainer .rightSide .detailContainer{
+    width: 300px;
+    height: 150px;
+    position: relative;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-top: 60px;
+}
+#dashboardContainer .rightSide .detailContainer .imageContainer{
+    width: 80px;
+    height: 70px;
+    top: -30px;
+    left: 30px;
+    position: absolute;
+    background-color: red;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+#dashboardContainer .rightSide .detailContainer .imageContainer .image{
+    width: 75px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#dashboardContainer .rightSide .detailContainer .imageContainer .image i{
+    font-size: 40px;
+}
+#dashboardContainer .rightSide .detailContainer .detail{
+    width: 80%;
+    position: absolute;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    line-height: 25px; 
+}
+#dashboardContainer .rightSide .detailContainer .detail h6, .detail p{
+    font-size: var(--extraLargeFont);
+    font-weight: var(--midiumFontWeight);
+}
+#dashboardContainer .rightSide .detailSection .detailSectionContainer .moreInfo {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgb(204, 197, 197);
+    padding: 5px 0px;
+} 
+
+
+
+/*--------------------------
+ Dashboard Right side - End 
+---------------------------*/
+
