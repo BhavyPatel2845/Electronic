@@ -28,9 +28,9 @@
         <div class="home">
             <div class="slide active">
                 <div class="slide-content">
-                    <h2>your one-stop electronics market</h2>
-                    <p>Welcome to the SmartTech store, a place where you can buy everything about electronics,sale every day!</p>
-                    <button>Learn More</button>
+                    <h2>Mobiles</h2>
+                    <p>Welcome to the SmartTech store, a place where you can buy everything about mobiles,sale every day!</p>
+                    <button>Buy Now</button>
                 </div>
                 <div class="slide-image">
                     <img src="IMAGES/home-image.png" alt="Slide 1 Image">
@@ -39,9 +39,9 @@
             
             <div class="slide">
                 <div class="slide-content">
-                    <h2>Slide 2 Title</h2>
-                    <p>Slide 2 description goes here.</p>
-                    <button>Learn More</button>
+                    <h2>Smart Watches</h2>
+                    <p>Welcome to the SmartTech store, a place where you can buy everything about smart watches,sale every day!</p>
+                    <button>Buy Now</button>
                 </div>
                 <div class="slide-image">
                     <img src="IMAGES/product2.png" alt="Slide 2 Image">
@@ -50,9 +50,20 @@
     
             <div class="slide">
                 <div class="slide-content">
-                    <h2>Slide 3 Title</h2>
-                    <p>Slide 3 description goes here.</p>
-                    <button>Learn More</button>
+                    <h2>Air Burds</h2>
+                    <p>Welcome to the SmartTech store, a place where you can buy everything about air burds,sale every day!</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="slide-image">
+                    <img src="IMAGES/product3.png" alt="Slide 3 Image">
+                </div>
+            </div>
+            
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Laptops</h2>
+                    <p>Welcome to the SmartTech store, a place where you can buy everything about laptops,sale every day!</p>
+                    <button>Buy Now</button>
                 </div>
                 <div class="slide-image">
                     <img src="IMAGES/product3.png" alt="Slide 3 Image">
@@ -109,7 +120,7 @@
 
 
         
-        <!----------------------  MOBILE-SLIDER -------------------------->
+        <!----------------------  PRODUCT-SLIDER -------------------------->
       
 
         <div class="productSlider" id="productSlider">
@@ -118,20 +129,163 @@
                     <div class="heading">
                         <h2>Mobile Products</h2>
                     </div>
-                    <div class="buttons">
-                        <div class="productSwiperButtonPrev" onclick="previousButton('manual')">&#10094;</div>
-                        <div class="productSwiperButtonNext" id="nextSliderButton" onclick="nextButtonClick('manual')">&#10095;</div>
-                    </div>
                 </div>
                 <div class="productsContainer">
                     <div class="swiperContainer">
                         <div class="swiperWrapper">
+                        <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/home-image.png" alt="">
+                                </div>
+                                <p class="productName">Sumsang S23 Ultra</p>
+                                <p class="productPrice">&#8377; 96,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/home-image.png" alt="">
+                                </div>
+                                <p class="productName">Sumsang S23 Ultra</p>
+                                <p class="productPrice">&#8377; 96,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/home-image.png" alt="">
+                                </div>
+                                <p class="productName">Sumsang S23 Ultra</p>
+                                <p class="productPrice">&#8377; 96,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/home-image.png" alt="">
+                                </div>
+                                <p class="productName">Sumsang S23 Ultra</p>
+                                <p class="productPrice">&#8377; 96,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/home-image.png" alt="">
+                                </div>
+                                <p class="productName">Sumsang S23 Ultra</p>
+                                <p class="productPrice">&#8377; 96,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>\
+                            <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/home-image.png" alt="">
+                                </div>
+                                <p class="productName">Sumsang S23 Ultra</p>
+                                <p class="productPrice">&#8377; 96,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/home-image.png" alt="">
+                                </div>
+                                <p class="productName">Product Name</p>
+                                <p class="productPrice">&#8377; 350.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/home-image.png" alt="">
+                                </div>
+                                <p class="productName">Product Name</p>
+                                <p class="productPrice">&#8377; 350.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/home-image.png" alt="">
+                                </div>
+                                <p class="productName">Product Name</p>
+                                <p class="productPrice">&#8377; 350.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/home-image.png" alt="">
+                                </div>
+                                <p class="productName">Product Name</p>
+                                <p class="productPrice">&#8377; 350.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
                                     <img src="./IMAGES/product1.png" alt="">
                                 </div>
                                 <p class="productName">Product Name</p>
                                 <p class="productPrice">&#8377; 350.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
@@ -139,92 +293,19 @@
                                 </div>
                                 <p class="productName">Product Name</p>
                                 <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product3.png" alt="">
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product4.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product5.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product1.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product2.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product3.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product4.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product5.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product1.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product2.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product3.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product4.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
                             </div>
                         </div>
+                </div>
+                    <div class="buttons">
+                        <div class="productSwiperButtonPrev" onclick="previousButton('manual')">&#10094;</div>
+                        <div class="productSwiperButtonNext" id="nextSliderButton" onclick="nextButtonClick('manual')">&#10095;</div>
                     </div>
                 </div>
             </div> 
@@ -233,85 +314,127 @@
                     <div class="heading">
                         <h2>Smart Watch Products</h2>
                     </div>
-                    <div class="buttons">
-                        <div class="productSwiperButtonPrev" onclick="smartWatchPreviousButton('manual')">&#10094;</div>
-                        <div class="productSwiperButtonNext" id="nextSliderButton" onclick="smartWatchNextButtonClick('manual')">&#10095;</div>
-                    </div>
                 </div>
                 <div class="productsContainer">
                     <div class="swiperContainer">
                         <div class="swiperWrapper">
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product1.png" alt="">
+                                    <img src="./IMAGES/product2.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Realme Pro2</p>
+                                <p class="productPrice">&#8377; 4000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
                                     <img src="./IMAGES/product2.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product3.png" alt="">
+                                <p class="productName">Realme Pro2</p>
+                                <p class="productPrice">&#8377; 4000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product4.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product5.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product1.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
                                     <img src="./IMAGES/product2.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Realme Pro2</p>
+                                <p class="productPrice">&#8377; 4000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product3.png" alt="">
+                                    <img src="./IMAGES/product2.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Realme Pro2</p>
+                                <p class="productPrice">&#8377; 4000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product4.png" alt="">
+                                    <img src="./IMAGES/product2.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Realme Pro2</p>
+                                <p class="productPrice">&#8377; 4000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product5.png" alt="">
+                                    <img src="./IMAGES/product2.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Realme Pro2</p>
+                                <p class="productPrice">&#8377; 4000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/product2.png" alt="">
+                                </div>
+                                <p class="productName">Realme Pro2</p>
+                                <p class="productPrice">&#8377; 4000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/product2.png" alt="">
+                                </div>
+                                <p class="productName">Realme Pro2</p>
+                                <p class="productPrice">&#8377; 4000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="productSwiperButtonPrev" onclick="smartWatchPreviousButton('manual')">&#10094;</div>
+                        <div class="productSwiperButtonNext" id="nextSliderButton" onclick="smartWatchNextButtonClick('manual')">&#10095;</div>
                     </div>
                 </div>
             </div> 
@@ -320,10 +443,6 @@
                     <div class="heading">
                         <h2>Air Burds Products</h2>
                     </div>
-                    <div class="buttons">
-                        <div class="productSwiperButtonPrev" onclick="airburdPreviousButton('manual')">&#10094;</div>
-                        <div class="productSwiperButtonNext" id="nextSliderButton" onclick="airburdNextButtonClick('manual')">&#10095;</div>
-                    </div>
                 </div>
                 <div class="productsContainer">
                     <div class="swiperContainer">
@@ -332,101 +451,119 @@
                                 <div class="individualProductImageContainer">
                                     <img src="./IMAGES/product1.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product2.png" alt="">
+                                <p class="productName">Boat 172</p>
+                                <p class="productPrice">&#8377; 2000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product3.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product4.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product5.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
                                     <img src="./IMAGES/product1.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product2.png" alt="">
+                                <p class="productName">Boat 172</p>
+                                <p class="productPrice">&#8377; 2000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product3.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product4.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product5.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
                                     <img src="./IMAGES/product1.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Boat 172</p>
+                                <p class="productPrice">&#8377; 2000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product2.png" alt="">
+                                    <img src="./IMAGES/product1.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Boat 172</p>
+                                <p class="productPrice">&#8377; 2000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product3.png" alt="">
+                                    <img src="./IMAGES/product1.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Boat 172</p>
+                                <p class="productPrice">&#8377; 2000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product4.png" alt="">
+                                    <img src="./IMAGES/product1.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Boat 172</p>
+                                <p class="productPrice">&#8377; 2000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/product1.png" alt="">
+                                </div>
+                                <p class="productName">Boat 172</p>
+                                <p class="productPrice">&#8377; 2000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="individualProductBox productSwiperSlide">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/product1.png" alt="">
+                                </div>
+                                <p class="productName">Boat 172</p>
+                                <p class="productPrice">&#8377; 2000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="productSwiperButtonPrev" onclick="airburdPreviousButton('manual')">&#10094;</div>
+                        <div class="productSwiperButtonNext" id="nextSliderButton" onclick="airburdNextButtonClick('manual')">&#10095;</div>
                     </div>
                 </div>
             </div> 
@@ -435,113 +572,113 @@
                     <div class="heading">
                         <h2>Laptop Products</h2>
                     </div>
-                    <div class="buttons">
-                        <div class="productSwiperButtonPrev" onclick="laptopPreviousButton('manual')">&#10094;</div>
-                        <div class="productSwiperButtonNext" id="nextSliderButton" onclick="laptopNextButtonClick('manual')">&#10095;</div>
-                    </div>
                 </div>
                 <div class="productsContainer">
                     <div class="swiperContainer">
                         <div class="swiperWrapper">
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product1.png" alt="">
+                                    <img src="./IMAGES/laptop1.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Lenovo IdesPad Slim 3</p>
+                                <p class="productPrice">&#8377; 60,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product2.png" alt="">
+                                    <img src="./IMAGES/laptop1.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Lenovo IdesPad Slim 3</p>
+                                <p class="productPrice">&#8377; 60,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product3.png" alt="">
+                                    <img src="./IMAGES/laptop1.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Lenovo IdesPad Slim 3</p>
+                                <p class="productPrice">&#8377; 60,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product4.png" alt="">
+                                    <img src="./IMAGES/laptop1.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Lenovo IdesPad Slim 3</p>
+                                <p class="productPrice">&#8377; 60,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product5.png" alt="">
+                                    <img src="./IMAGES/laptop1.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Lenovo IdesPad Slim 3</p>
+                                <p class="productPrice">&#8377; 60,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product1.png" alt="">
+                                    <img src="./IMAGES/laptop1.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
+                                <p class="productName">Lenovo IdesPad Slim 3</p>
+                                <p class="productPrice">&#8377; 60,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                             </div>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product2.png" alt="">
+                                    <img src="./IMAGES/laptop1.png" alt="">
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product3.png" alt="">
+                                <p class="productName">Lenovo IdesPad Slim 3</p>
+                                <p class="productPrice">&#8377; 60,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
                                 </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product4.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product5.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product1.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product2.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product3.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
-                            </div>
-                            <div class="individualProductBox productSwiperSlide">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product4.png" alt="">
-                                </div>
-                                <p class="productName">Product Name</p>
-                                <p class="productPrice">&#8377; 350.00</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="productSwiperButtonPrev" onclick="laptopPreviousButton('manual')">&#10094;</div>
+                        <div class="productSwiperButtonNext" id="nextSliderButton" onclick="laptopNextButtonClick('manual')">&#10095;</div>
                     </div>
                 </div>
             </div> 
@@ -552,167 +689,173 @@
         <!-----------------------------     REVIEWS    ------------------------------>
 
         <div class="customerReviewSlider" id="customerReviewSlider">
-            <h4>Customer <span>Review</span></h4>
+            <h2>Customer Reviews</h2>
             <div class="customerReviewContainer">
             <div class="swiperContainer">
 
                 <div class="swiperWrapper">
                     <div class="individualProductBox reviewSwiperSlide">
-                        <div class="customerPhoto">
+                        <div class="customerPhotoAndName">
                             <img src="./IMAGES/profile.jpg" alt="">
+                            <h5>Ram Nadoda</h5>
                         </div>
                         <div class="customerReview">
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
                                 expedita accusamus minima sint vitae illo voluptatibus culpa officia 
                                 tempore id. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="ratingStar">
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
+                        <div class="reviewStar">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                    </div>
+                    </div> 
                     <div class="individualProductBox reviewSwiperSlide">
-                        <div class="customerPhoto">
+                        <div class="customerPhotoAndName">
                             <img src="./IMAGES/profile.jpg" alt="">
+                            <h5>Ram Nadoda</h5>
                         </div>
                         <div class="customerReview">
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
                                 expedita accusamus minima sint vitae illo voluptatibus culpa officia 
                                 tempore id. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="ratingStar">
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
+                        <div class="reviewStar">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                    </div>
+                    </div> 
                     <div class="individualProductBox reviewSwiperSlide">
-                        <div class="customerPhoto">
+                        <div class="customerPhotoAndName">
                             <img src="./IMAGES/profile.jpg" alt="">
+                            <h5>Ram Nadoda</h5>
                         </div>
                         <div class="customerReview">
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
                                 expedita accusamus minima sint vitae illo voluptatibus culpa officia 
                                 tempore id. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="ratingStar">
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
+                        <div class="reviewStar">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                    </div>
+                    </div> 
                     <div class="individualProductBox reviewSwiperSlide">
-                        <div class="customerPhoto">
+                        <div class="customerPhotoAndName">
                             <img src="./IMAGES/profile.jpg" alt="">
+                            <h5>Ram Nadoda</h5>
                         </div>
                         <div class="customerReview">
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
                                 expedita accusamus minima sint vitae illo voluptatibus culpa officia 
                                 tempore id. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="ratingStar">
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
+                        <div class="reviewStar">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                    </div>
+                    </div> 
                     <div class="individualProductBox reviewSwiperSlide">
-                        <div class="customerPhoto">
+                        <div class="customerPhotoAndName">
                             <img src="./IMAGES/profile.jpg" alt="">
+                            <h5>Ram Nadoda</h5>
                         </div>
                         <div class="customerReview">
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
                                 expedita accusamus minima sint vitae illo voluptatibus culpa officia 
                                 tempore id. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="ratingStar">
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
+                        <div class="reviewStar">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                    </div>
+                    </div> 
                     <div class="individualProductBox reviewSwiperSlide">
-                        <div class="customerPhoto">
+                        <div class="customerPhotoAndName">
                             <img src="./IMAGES/profile.jpg" alt="">
+                            <h5>Ram Nadoda</h5>
                         </div>
                         <div class="customerReview">
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
                                 expedita accusamus minima sint vitae illo voluptatibus culpa officia 
                                 tempore id. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="ratingStar">
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
+                        <div class="reviewStar">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                    </div>
+                    </div> 
                     <div class="individualProductBox reviewSwiperSlide">
-                        <div class="customerPhoto">
+                        <div class="customerPhotoAndName">
                             <img src="./IMAGES/profile.jpg" alt="">
+                            <h5>Ram Nadoda</h5>
                         </div>
                         <div class="customerReview">
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
                                 expedita accusamus minima sint vitae illo voluptatibus culpa officia 
                                 tempore id. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="ratingStar">
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
+                        <div class="reviewStar">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                    </div>
+                    </div> 
                     <div class="individualProductBox reviewSwiperSlide">
-                        <div class="customerPhoto">
+                        <div class="customerPhotoAndName">
                             <img src="./IMAGES/profile.jpg" alt="">
+                            <h5>Ram Nadoda</h5>
                         </div>
                         <div class="customerReview">
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
                                 expedita accusamus minima sint vitae illo voluptatibus culpa officia 
                                 tempore id. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="ratingStar">
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
+                        <div class="reviewStar">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                    </div>
+                    </div> 
                     <div class="individualProductBox reviewSwiperSlide">
-                        <div class="customerPhoto">
+                        <div class="customerPhotoAndName">
                             <img src="./IMAGES/profile.jpg" alt="">
+                            <h5>Ram Nadoda</h5>
                         </div>
                         <div class="customerReview">
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, 
                                 expedita accusamus minima sint vitae illo voluptatibus culpa officia 
                                 tempore id. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="ratingStar">
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
-                            <i>@</i>
+                        <div class="reviewStar">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                    </div>
-
-                    
-
+                    </div>                   
                 </div>
                 <div class="swipperButton">
                     <div class="productSwiperButtonPrev">&#10094;</div>

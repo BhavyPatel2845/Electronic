@@ -16,22 +16,25 @@ li{
 }
 #dashboardHeader{
     width: 100%;
-    height: 65px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-color: #fff;
-    border-bottom: 1px solid rgb(173, 172, 172);
+    background-color: #cadcfc;
+    border-bottom: 1px solid #5086e4;
     
 }
 #dashboardHeader .logoAndBars{
-    width: 200px;
+    width: 400px;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
+}
+#dashboardHeader .logoAndBars img{
+    height: 200px;
 }
 #dashboardHeader .logoAndBars i{
     display: none;
@@ -40,17 +43,21 @@ li{
 #dashboardHeader .profile{
     width: 40px;
     height: 40px;
-    margin-right: 12px;
-}
-#dashboardHeader .profile img{
-    width: 100%;
-    height: 100%;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00246b;
     border-radius: 50%;
+}
+#dashboardHeader .profile i{
+    width: 100%;
+    height: auto;
+    color: #00246b;
 }
 /*--------------
  Header - End 
 ---------------*/
-
 
 
 #dashboardContainer{
@@ -74,6 +81,7 @@ li{
     overflow: scroll;
     scrollbar-width: none;
     z-index: 6;
+    background-color: #cadcfc;
 }
 #dashboardContainer .leftSide ul{
     width: 90%;
@@ -88,20 +96,17 @@ li{
 }
 
 #dashboardContainer .leftSide ul a{
- background-color: rgb(53, 53, 53);
  margin: 5px;
  padding: 7px;
  width: 80%;
  border-radius: 9px;
  flex-direction: row;
  transition: all 0.2s ease;
+ background-color: #00246b;
 }
 
 #dashboardContainer .leftSide ul a:hover{
-    background-color: #fff;    
-    li{
-        color: black;
-    }
+    background-color: #5086e4;    
 }
 #dashboardContainer .leftSide ul a img{
     height: 2vw;
@@ -132,8 +137,8 @@ li{
     justify-content: start;
     align-items: center;
     text-align: center;
-    /* overflow: scroll; */
-    /* scrollbar-width: none; */
+    background-color: #00246b;
+    color: #cadcfc;
 }
 /* Admin home page */
 #dashboardContainer .rightSide .detailSection{
@@ -151,14 +156,13 @@ li{
     margin: 50px 0px;
 }
 #dashboardContainer .rightSide .detailSection .heading select{
-    font-size: var(--midiumFont);
-    font-weight: var(--midiumFontWeight);
-    border: 1px solid rgb(150, 145, 145);
-    background-color: #fff;
-    color: #000;
     width: 180px;
     cursor: pointer;
     outline: none;
+    padding: 5px 10px;
+    border: 1px solid #cadcfc;
+    color: #cadcfc;
+    background-color: transparent;
 }
 #dashboardContainer .rightSide .detailSection .detailSectionContainer{
     width: 90%;
@@ -173,8 +177,9 @@ li{
     width: 300px;
     height: 150px;
     position: relative;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     margin-top: 60px;
+    background-color: #cadcfc;
+    color: #00246b;
 }
 #dashboardContainer .rightSide .detailContainer .imageContainer{
     width: 80px;
@@ -182,7 +187,7 @@ li{
     top: -30px;
     left: 30px;
     position: absolute;
-    background-color: red;
+    background-color: #5086e4;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 #dashboardContainer .rightSide .detailContainer .imageContainer .image{
@@ -205,17 +210,17 @@ li{
     align-items: end;
     line-height: 25px; 
 }
-#dashboardContainer .rightSide .detailContainer .detail h6, .detail p{
-    font-size: var(--extraLargeFont);
-    font-weight: var(--midiumFontWeight);
+#dashboardContainer .rightSide .detailContainer .detail h6{
+    font-size: 20px;
 }
+
 #dashboardContainer .rightSide .detailSection .detailSectionContainer .moreInfo {
     position: absolute;
     bottom: 0px;
     width: 100%;
     display: flex;
     justify-content: center;
-    border-top: 1px solid rgb(204, 197, 197);
+    border-top: 1px solid #00246b;
     padding: 5px 0px;
 } 
 

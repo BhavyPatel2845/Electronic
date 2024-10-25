@@ -29,10 +29,10 @@
     <div class="dashboardHeader" id="dashboardHeader">
         <div class="logoAndBars">
             <i id="bars" class="fa-solid fa-bars"></i>
-            <img class="companyLogo" src="../Assets/images/logo.png" alt="">
+            <img class="companyLogo" src="../../IMAGES/logo.png" alt="">
         </div>
         <div class="profile">
-            <img src="../Assets/images/profile.jpg" alt="">
+            <i class="fa-solid fa-user"></i>
         </div>
     </div>
     <!---------------------
@@ -86,8 +86,68 @@
                             </div>
                         </div>
                         <div class="detail">
-                            <h6>Users</h6>
-                            <p>124</p>
+                            <h6>Total Sale</h6>
+                            <p>&#8377;50,00,000.00</p>
+                        </div>
+                        <div class="moreInfo">
+                            <p>More Info</p>
+                        </div>
+                    </div>
+
+                    <div class="detailContainer">
+                        <div class="imageContainer">
+                            <div class="image">
+                                <i class="fa-solid fa-recycle"></i>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <h6>Total Profit</h6>
+                            <p>&#8377;12,00,000.00</p>
+                        </div>
+                        <div class="moreInfo">
+                            <p>More Info</p>
+                        </div>
+                    </div>
+
+                    <div class="detailContainer">
+                        <div class="imageContainer">
+                            <div class="image">
+                                <i class="fa-solid fa-recycle"></i>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <h6>Refund</h6>
+                            <p>&#8377;70,000.00</p>
+                        </div>
+                        <div class="moreInfo">
+                            <p>More Info</p>
+                        </div>
+                    </div>
+
+                    <div class="detailContainer">
+                        <div class="imageContainer">
+                            <div class="image">
+                                <i class="fa-solid fa-recycle"></i>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <h6>Customer</h6>
+                            <p> 540</p>
+                        </div>
+                        <div class="moreInfo">
+                            <p>More Info</p>
+                        </div>
+                    </div>
+
+                    <div class="detailContainer">
+                        <div class="imageContainer">
+                            <div class="image">
+                                <i class="fa-solid fa-recycle"></i>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <h6>Products</h6>
+                            <p>320</p>
                         </div>
                         <div class="moreInfo">
                             <p>More Info</p>
@@ -102,67 +162,7 @@
                         </div>
                         <div class="detail">
                             <h6>Users</h6>
-                            <p>124</p>
-                        </div>
-                        <div class="moreInfo">
-                            <p>More Info</p>
-                        </div>
-                    </div>
-
-                    <div class="detailContainer">
-                        <div class="imageContainer">
-                            <div class="image">
-                                <i class="fa-solid fa-recycle"></i>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h6>Users</h6>
-                            <p>124</p>
-                        </div>
-                        <div class="moreInfo">
-                            <p>More Info</p>
-                        </div>
-                    </div>
-
-                    <div class="detailContainer">
-                        <div class="imageContainer">
-                            <div class="image">
-                                <i class="fa-solid fa-recycle"></i>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h6>Users</h6>
-                            <p>124</p>
-                        </div>
-                        <div class="moreInfo">
-                            <p>More Info</p>
-                        </div>
-                    </div>
-
-                    <div class="detailContainer">
-                        <div class="imageContainer">
-                            <div class="image">
-                                <i class="fa-solid fa-recycle"></i>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h6>Users</h6>
-                            <p>124</p>
-                        </div>
-                        <div class="moreInfo">
-                            <p>More Info</p>
-                        </div>
-                    </div>
-
-                    <div class="detailContainer">
-                        <div class="imageContainer">
-                            <div class="image">
-                                <i class="fa-solid fa-recycle"></i>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h6>Users</h6>
-                            <p>124</p>
+                            <p>1024</p>
                         </div>
                         <div class="moreInfo">
                             <p>More Info</p>

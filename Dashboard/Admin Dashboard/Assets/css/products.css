@@ -16,22 +16,25 @@ li{
 }
 #dashboardHeader{
   width: 100%;
-  height: 65px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  background-color: #fff;
-  border-bottom: 1px solid rgb(173, 172, 172);
+  background-color: #cadcfc;
+  border-bottom: 1px solid #5086e4;
   
 }
 #dashboardHeader .logoAndBars{
-  width: 200px;
+  width: 400px;
   height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   text-align: center;
+}
+#dashboardHeader .logoAndBars img{
+  height: 200px;
 }
 #dashboardHeader .logoAndBars i{
   display: none;
@@ -40,17 +43,21 @@ li{
 #dashboardHeader .profile{
   width: 40px;
   height: 40px;
-  margin-right: 12px;
-}
-#dashboardHeader .profile img{
-  width: 100%;
-  height: 100%;
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00246b;
   border-radius: 50%;
+}
+#dashboardHeader .profile i{
+  width: 100%;
+  height: auto;
+  color: #00246b;
 }
 /*--------------
 Header - End 
 ---------------*/
-
 
 
 #dashboardContainer{
@@ -74,6 +81,7 @@ Dashboard left side - start
   overflow: scroll;
   scrollbar-width: none;
   z-index: 6;
+  background-color: #cadcfc;
 }
 #dashboardContainer .leftSide ul{
   width: 90%;
@@ -88,20 +96,17 @@ Dashboard left side - start
 }
 
 #dashboardContainer .leftSide ul a{
-background-color: rgb(53, 53, 53);
 margin: 5px;
 padding: 7px;
 width: 80%;
 border-radius: 9px;
 flex-direction: row;
 transition: all 0.2s ease;
+background-color: #00246b;
 }
 
 #dashboardContainer .leftSide ul a:hover{
-  background-color: #fff;    
-  li{
-      color: black;
-  }
+  background-color: #5086e4;    
 }
 #dashboardContainer .leftSide ul a img{
   height: 2vw;
@@ -132,7 +137,6 @@ Dashboard left side - end
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
 }
 
@@ -152,6 +156,8 @@ Dashboard left side - end
   justify-content: center;
   align-items: center;
   position: relative;
+  background-color: #cadcfc;
+  color: #00246b;
 }
 
 .formContainer form {
@@ -185,11 +191,28 @@ form div select {
   width: 100%;
   padding: 12px;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #00246b;
   border-radius: 6px;
   outline: none;
   box-sizing: border-box;
   transition: all 0.3s ease;
+  background-color: transparent;
+
+}
+
+form div input[type=file]::file-selector-button{
+  background-color: transparent;
+  border: none;
+  color: #00246b;
+  margin-right: 20px; 
+  cursor: pointer;
+}
+form div input::placeholder,
+form div textarea::placeholder{
+  color: #00246b;
+}
+form input[type=file]::file-selector-button:hover{
+  color: #5086e4;
 }
 
 form div input:focus,
@@ -273,7 +296,7 @@ form div select:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: rgb(201, 188, 188); */
+  background-color: #00246b;
 }
 
 .rightSide .productsContainer {
@@ -285,7 +308,6 @@ form div select:focus {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  /* background-color: rgb(88, 65, 65); */
 }
 
 .productsContainer .productsBox {
@@ -298,13 +320,15 @@ form div select:focus {
   overflow-y: scroll;
   scrollbar-width: none;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #cadcfc;
+  color: #00246b;
 }
 
 .productsBox .imageBox {
   height: 45%;
   width: 100%;
   position: relative;
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid #007bff;
   /* background-color: red; */
 }
 .productsBox .imageBox img {
@@ -319,32 +343,27 @@ form div select:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* background-color: red; */
 }
 .productDetailBox .productNameCatagory {
   margin: 0 1vw;
   font-weight: 600;
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 1.3rem;
   letter-spacing: 0.5px;
   text-transform: capitalize;
 }
 .productDetailBox span {
   font-weight: normal;
-  color: #555;
   font-size: 1.2rem;
   letter-spacing: 0.3px;
+  color: #007bff;
 }
 .productDetailBox .productDescription {
   margin: 0 1vw;
   font-size: 1.1rem;
-  color: #666;
   font-weight: 400;
   letter-spacing: 0.4px;
 }
 .productDetailBox .productPriceDiscount {
-  /* width: 75%; */
-  /* background-colo  r: yellow; */
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -352,28 +371,19 @@ form div select:focus {
 }
 .productPriceDiscount div {
   height: 40px;
-  width: 38%; 
+  width: 45%; 
   border-radius: 6px; 
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600; 
-  background-color: #f5f5f5;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 1.1rem;
-  color: #333; 
   padding: 0 10px;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.productPriceDiscount div:hover {
-  background-color: #e0e0e0;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
-}
-
 .productDetailBox .productEditDelete {
   margin: 0 1vw;
-  /* background-color: red; */
   height: 15%;
   display: flex;
   flex-direction: row;

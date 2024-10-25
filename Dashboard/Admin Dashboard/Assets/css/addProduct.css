@@ -16,22 +16,25 @@ li{
 }
 #dashboardHeader{
     width: 100%;
-    height: 65px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-color: #fff;
-    border-bottom: 1px solid rgb(173, 172, 172);
+    background-color: #cadcfc;
+    border-bottom: 1px solid #5086e4;
     
 }
 #dashboardHeader .logoAndBars{
-    width: 200px;
+    width: 400px;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
+}
+#dashboardHeader .logoAndBars img{
+    height: 200px;
 }
 #dashboardHeader .logoAndBars i{
     display: none;
@@ -40,17 +43,21 @@ li{
 #dashboardHeader .profile{
     width: 40px;
     height: 40px;
-    margin-right: 12px;
-}
-#dashboardHeader .profile img{
-    width: 100%;
-    height: 100%;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00246b;
     border-radius: 50%;
+}
+#dashboardHeader .profile i{
+    width: 100%;
+    height: auto;
+    color: #00246b;
 }
 /*--------------
  Header - End 
 ---------------*/
-
 
 
 #dashboardContainer{
@@ -74,6 +81,7 @@ li{
     overflow: scroll;
     scrollbar-width: none;
     z-index: 6;
+    background-color: #cadcfc;
 }
 #dashboardContainer .leftSide ul{
     width: 90%;
@@ -88,20 +96,17 @@ li{
 }
 
 #dashboardContainer .leftSide ul a{
- background-color: rgb(53, 53, 53);
  margin: 5px;
  padding: 7px;
  width: 80%;
  border-radius: 9px;
  flex-direction: row;
  transition: all 0.2s ease;
+ background-color: #00246b;
 }
 
 #dashboardContainer .leftSide ul a:hover{
-    background-color: #fff;    
-    li{
-        color: black;
-    }
+    background-color: #5086e4;    
 }
 #dashboardContainer .leftSide ul a img{
     height: 2vw;
@@ -132,9 +137,9 @@ li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* text-align: center; */
     overflow: scroll;
     scrollbar-width: none;
+    background-color: #00246b;
 }
 
 /* Add Product Section */
@@ -148,6 +153,7 @@ li{
     text-align: center;
     /* overflow-y: scroll; */
     border-radius: 10px;
+    color: #cadcfc;
 }
 
 #dashboardContainer .rightSide .addProdct form{
@@ -219,29 +225,52 @@ li{
 }
 #dashboardContainer .rightSide .addProdct form .productInfo button{
     cursor: pointer;
+    width: 200px;
     padding: 10px 20px;
     border: none;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
      margin-top: 30px;
     border-radius: 5px;
-    
-    font-size: var(--midiumsmFont);
-    font-weight: var(--largeFontWeight);
-    transition: .3s ease-in;
-    background-color: green;
+    transition: 0.3s ease-in;
+    background-color: #cadcfc;
+    color: #00246b;
 }
 #dashboardContainer .rightSide .addProdct form .productInfo button:hover{
-    background-color: red;
+    background-color: #5086e4;
 }
 
 #dashboardContainer .rightSide .addProdct form .productInfo input,
 #dashboardContainer .rightSide .addProdct form .productInfo textarea,
 #dashboardContainer .rightSide .addProdct form .productInfo select{
-    /* width: 100%; */
     outline: none;
     padding: 10px;
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border: 1px solid #cadcfc;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 10px;
+}
+#dashboardContainer .rightSide .addProdct form .productInfo select option{
+    color: #cadcfc;
+    background-color: #00246b;
+}
+#dashboardContainer .rightSide .addProdct form .productInfo input::placeholder,
+#dashboardContainer .rightSide .addProdct form .productInfo textarea::placeholder{
+    color: #cadcfc;
+}
+#dashboardContainer .rightSide .addProdct form .productInfo input[type=file]::file-selector-button{
+    background-color: transparent;
     border: none;
+    color: #cadcfc;
+    margin-right: 20px; 
+    cursor: pointer;
+}
+
+#dashboardContainer .rightSide .addProdct form .productInfo input[type=file]::file-selector-button:hover{
+    color: #5086e4;
 }
 
 

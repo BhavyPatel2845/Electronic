@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,10 +79,10 @@
     <div class="dashboardHeader" id="dashboardHeader">
         <div class="logoAndBars">
             <i id="bars" class="fa-solid fa-bars"></i>
-            <img class="companyLogo" src="../../Assets/images/logo.png" alt="">
+            <img class="companyLogo" src="../../IMAGES/logo.png" alt="">
         </div>
         <div class="profile">
-            <img src="../../Assets/images/profile.jpg" alt="">
+        <i class="fa-solid fa-user"></i>
         </div>
     </div>
     <!----------------------------
@@ -132,33 +130,35 @@
                 ?>
                         <div class="productsBox">
                     <div class="imageBox">
-                        <img src="../../backend/productImageUpload/" " alt="">
+                        <img src="../../IMAGES/product1.png" alt="">
                     </div>
                     <div class="productDetailBox">
                         <div class="productNameCatagory">
-                            <div class="productName">Name: <span>Product Name</span></div>
-                            <div class="productCatagory">Category: <span>Product Category</span></div>
+                            <div class="productName">Name: <span>Boat 172</span></div>
+                            <div class="productCatagory">Category: <span>Air Burds</span></div>
                         </div>
                         <div class="productDescription">
-                            <p>hello how are you</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, assumenda!
+                                 Quas nulla perferendis exercitationem at.</p>
                         </div>
                         <div class="productPriceDiscount">
-                            <div class="productPrice">Price: <span>&#8377 700</span></div>
+                            <div class="productPrice">Price: <span>&#8377 1500</span></div>
                             <div class="productDiscount">Discount: <span>10%</span></div>
                         </div>
-                        <!-- <div class="productEditDelete">
-                            <button class="productEdit" 
-                                    data-id="' . $row['id'] . '" 
+                        <div class="productEditDelete">
+                            <button class="productEdit">
+                                <!-- aa buutton ni andar no code che -->
+                                    <!-- data-id="' . $row['id'] . '" 
                                     data-name="' . $row['productName'] . '" 
                                     data-category="' . $row['productCatagory'] . '" 
                                     data-description="' . $row['productDescription'] . '" 
                                     data-price="' . $row['productPrice'] . '" 
                                     data-discount="' . $row['productDiscount'] . '" 
-                                    data-image="' . $row['productImage'] . '">
+                                    data-image="' . $row['productImage'] . '"-->
                                 <img src="./Assets/images/edit.png" alt="Edit"> Edit
                             </button>
-                            <a class="productDelete" href="../../backend/adminProductDelete.php?id= ' . $row['id'] . '"><img src="./Assets/images/delete.png" alt="Edit">delete</a>
-                        </div> -->
+                            <a class="productDelete"><img src="./Assets/images/delete.png" alt="Edit">delete</a>
+                        </div>
                     </div>
                 </div>
                 <?php
@@ -190,7 +190,7 @@
 </body>
 
 </html>
-
+<!-- 
 <?php
 $con->close();
-?>
+?> -->

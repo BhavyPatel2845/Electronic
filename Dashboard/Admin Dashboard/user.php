@@ -34,10 +34,10 @@
     <div class="dashboardHeader" id="dashboardHeader">
         <div class="logoAndBars">
             <i id="bars" class="fa-solid fa-bars"></i>
-            <img class="companyLogo" src="../Assets/images/logo.png" alt="">
+            <img class="companyLogo" src="../../IMAGES/logo.png" alt="">
         </div>
         <div class="profile">
-            <img src="../Assets/images/profile.jpg" alt="">
+            <i class="fa-solid fa-user"></i>
         </div>
     </div>
     <!---------------------

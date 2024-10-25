@@ -34,14 +34,17 @@ li{
     justify-content: space-around;
    
     padding: 2vw 0;
+    
+    color: #cadcfc;
+    background-color: #00246b;
 }
 
 #cartSection .cartProductBox{
     min-height: 70vh;
     width: 70%;
-    background-color: rgb(243, 243, 243);
     border-radius: 12px;
     overflow: hidden;
+    background-color: #cadcfc;
 }
 
 .cartProductBox .header{
@@ -57,10 +60,12 @@ li{
 
 .cartProductBox .header h1{
     font-weight: 400;
+    color: #00246b;
 }
 
 .cartProductBox .header h4{
-    margin-left: 70.5%;   
+    margin-left: 70.5%;  
+    color: #00246b; 
 }
 
 .cartProductBox .cartBoxes{
@@ -80,7 +85,6 @@ li{
     border-radius: 12px;
     overflow: hidden;
     position: relative;
-    background-color: rgba(185, 190, 200, 0.16);
     box-shadow: inset 0 .0625rem .0625rem rgba(255, 255, 255, .2), inset 0 .375rem .75rem rgba(255, 255, 255, .12), 0 .25rem .25rem rgba(0, 0, 0, .2), 0 .0625rem .125rem rgba(8, 8, 8, .2);
 }
 
@@ -99,12 +103,12 @@ li{
     width: 70%;
     height: 100%;
     border-radius: 12px;
-    background-color: rgba(185, 190, 200, 0.16);
     box-shadow: inset 0 .0625rem .0625rem rgba(255, 255, 255, .2), inset 0 .375rem .75rem rgba(255, 255, 255, .12), 0 .25rem .25rem rgba(0, 0, 0, .2), 0 .0625rem .125rem rgba(8, 8, 8, .2);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 0 1vw;
+    color: #00246b;
 }
 
 .productCartDetails .colProductDetails{
@@ -123,7 +127,6 @@ li{
 
 .colProductDetails .Shipping{
     color: #0f1111;
-    font-size: var(--smallFont);
 }
 
 .productCartDetails .rowProductDetails{
@@ -132,24 +135,26 @@ li{
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* background-color: red; */
     justify-content: space-around;
 }
 
 .rowProductDetails select{
     height: 100%;
-    border-color: #d5d9d9;
+    /* border: 1px solid #87cefa; */
+    border: 1px solid #00246b;
     border-radius: 8px;
-    color: #0f1111;
-    background: #f0f2f2;
+    outline: none;
+    background-color: transparent;
 }
 
 .rowProductDetails a{
     font-size: 15px;
     color: #007185;
+    transition: 0.5s ease;
 }
 .rowProductDetails a:hover{
     border-bottom:1px solid #007185;
+    transform: translateY(-10%);
 }
 
 #cartSection .cartTotalPriceBox{
@@ -158,10 +163,12 @@ li{
     top: 2%;
     /* bottom: 0; */
     position: sticky;
-    background-color: rgb(243, 243, 243);
     border-radius: 12px;
     z-index: 1;
     /* position: relative; */
+    
+    background-color: #cadcfc;
+    color: #00246b;
 }
 
 .cartTotalPriceBox .subtotalCarts{
@@ -183,14 +190,14 @@ li{
     text-align: center;
     text-decoration: none !important;
     vertical-align: middle;
-    background: #ffd814;
-    border-color: #ffd814;
+    border: none;
     margin: 0vw 1vw;
     margin-bottom: 2vw;
     /* position: absolute;
     top: 70%;
     left: 50%; */
     /* transform: translate(-50%, -50%); */
+    background-color: #ef860e;
     height: 6vh;
     width: 90%;
     border-radius: 15px;
@@ -205,8 +212,7 @@ li{
   color:#0f1111;
 }
 .cartTotalPriceBox button:hover{
-  background-color: #debc14;
-  color: white !important;
+  background-color: #ef590e;
 }
 
 .cartTotalPriceBox a{
@@ -216,6 +222,23 @@ li{
 }
 
 
+/************************* Footer ***********************/
+#footer{
+  background-color: #cadcfc;
+  color: #00246b;
+}
+
+#footer .footerLinks a{
+  color: #00246b;
+}
+
+#footer .socialMediaLinksContainer {
+  border-bottom: 1px solid #00246b;
+}
+
+#footer .copyRightContainer {
+  text-align: center;color: #00246b;
+}
  /*-- ---------------------
   Cart Section - End 
 -------------------------*/

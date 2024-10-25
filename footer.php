@@ -2,7 +2,7 @@
         <div class="footerContainer">
             <div class="companyDetails">
                 <div class="nameAndLogo">
-                    <img src="IMAGES/logo.jpg">
+                    <img src="./IMAGES/logo.png">
                     <div class="companyName">
                         <h4>SmartTech</h4>
                         <p>Electronics Store</p>

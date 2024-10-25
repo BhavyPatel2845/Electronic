@@ -38,11 +38,15 @@ li{
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  margin: 50px 0px;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 50px 0px;
+  color: #cadcfc;
+  background-color: #00246b;
+  /* background-color: #87cefa; */
 }
 #product .left{
-    width: 45%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,11 +56,14 @@ li{
 }
 #product .left .productImage{
      width: 100%;
-     height: auto;
+     height: 500px;
 }
 #product .left .productImage img{
-  width: 90%;
-  height: 100%;
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  
+  filter: drop-shadow(1px 1px 4px #cadcfc);
 }
 #product .left .smallProductImage{
     width: 90%;
@@ -74,21 +81,25 @@ li{
 
 #product .right{
   width: 55%;
-  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   text-align: start;
   margin-left: 20px;
+  margin-top: 50px;
 }
-#product .right .productName h4{
-  margin-bottom: 40px;  
-  font-size: var(--extraLargeFontH4);
-  font-weight: var(--largeFontWeight);
+#product .right .productName h3{
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  font-size: 22px;  
 }
 #product .right .rating{
   margin-bottom: 40px;
+  display: flex;
+  font-size: 20px;
+  grid-gap: 10px;
+
 }
 #product .right .rating span{
   color: yellow;
@@ -104,6 +115,7 @@ li{
 #product .right .productDescription{
   width: 70%;
   margin-bottom: 40px;
+  line-height: 25px;
 }
 #product .right .quantity{
   width: 220px;
@@ -112,6 +124,7 @@ li{
   align-items: center;
   text-align: center;
   margin-bottom: 40px;
+  font-size: 16px;
 }
 #product .right .quantity input{
   width: 100px;
@@ -120,20 +133,26 @@ li{
   justify-content: center;
   align-items: center;
   text-align: center;
+  border: 1px solid #cadcfc;
+  font-size: 16px;
+  color: #cadcfc;
+  background-color: transparent;
 }
 #product .right .addToCart button{
-  width: 300px;
-  border-radius: 10px;
-  padding: 20px;
-  font-size: var(--largeFont);
-  font-weight: var(--largeFontWeight);
+  /* border-radius: 10px; */
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
   text-transform: uppercase;
-  color: #fff;
-  background-color: black;
   letter-spacing: 1px;
   cursor: pointer;
+  background-color: #cadcfc;
+  color: #00246b;
 }
-
+#product .right .addToCart button:hover{
+  background-color: #87cefa;
+}
 
 /*----------------------------
  individual product - start
@@ -149,7 +168,10 @@ li{
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 50px;
+  padding: 20px 0px 50px;
+  padding: 50px;
+  background-color: #00246b;
+  color: #cadcfc;
 }
 #product .productTableInfo table{
   width: 1000px;
@@ -157,9 +179,7 @@ li{
   border-collapse: collapse;
 }
 #product .productTableInfo table th{
-  font-size: var(--extralargeFont);
-  font-weight: var(--largeFontWeight);
-  color: #000;
+  color: #87cefa;
   letter-spacing: 1px;
 }
 #product .productTableInfo table td{
@@ -168,7 +188,7 @@ li{
 
 table,td,tr{
   padding: 20px;
-  border: 1px solid rgb(207, 204, 204);
+  border: 1px solid #cadcfc;
 }
 
 /*----------------------------
@@ -185,8 +205,9 @@ table,td,tr{
   justify-content: center;
   text-align: start;
   align-items: center;
-  margin: 80px 0px 80px 0px;
+  padding: 80px 0px 80px 0px;
   position: relative;
+  background-color: #00246b;
 }
 
 .productSlider .headingAndButton {
@@ -204,6 +225,10 @@ table,td,tr{
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #cadcfc;
+  font-size: 25px;
+  grid-gap: 10px;
+  margin-right: 40px;
 }
 
 .productSlider .buttons .productSwiperButtonNext,
@@ -220,30 +245,27 @@ table,td,tr{
   width: 100%;
   letter-spacing: 1.5px;
   margin-left: 42px;
-  
+  color: #cadcfc;
+  font-size: 20px;
 }
 
-.productSlider .headingAndButton .heading h5 span {
-  color: brown;
-}
 
 .productSlider .productsContainer {
-  width: 100%;
+  width: 92%;
   display: flex;
   grid-gap: 30px;
   margin-top: 50px;
+  padding: 0px 10px;
   margin: 0;
   padding-top: 40px;
   overflow: hidden;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-top: 1px solid rgb(218, 213, 213);
-  border-bottom: 1px solid rgb(218, 213, 213);
 }
 
 .productSlider .productsContainer .individualProductBox {
-  width: 16.5%;
+  width: 19.5%;
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -252,6 +274,7 @@ table,td,tr{
   padding: 20px;
   letter-spacing: 1px;
   border-right: 1px solid rgb(218, 213, 213);
+  background-color: #87cefa;
 }
 
 .productSlider .productsContainer .individualProductBox .individualProductImageContainer {
@@ -265,13 +288,29 @@ table,td,tr{
   height: 100%;
 }
 
+.productSlider .productsContainer .individualProductBox p{
+  width: 100%;
+  font-size: 18px;
+  margin-top: 8px;
+  text-align: start;
+}
+
+.productSlider .productsContainer .individualProductBox .productRating{
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  grid-gap: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #f16108;
+}
 /* --------------
 swipper - start 
 ---------------- */
 
 .productSlider .productsContainer .swiperContainer {
   width: 100%;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -281,13 +320,27 @@ swipper - start
 }
 
 .productSlider .productsContainer .swiperWrapper .productSwiperSlide {
-  height: 300px;
+  height: 450px;
   flex: 1 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
   margin: 5px;
+}
+.productSlider .productsContainer .swiperWrapper .productSwiperSlide .cartButton{
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin-top: 30px;
+}
+.productSlider .productsContainer .swiperWrapper .productSwiperSlide .cartButton button{
+  cursor: pointer;
+  padding: 10px 30px;
+  border: none;
+  background-color: #00246b;
+  color: #cadcfc;
 }
 
 /* --------------
@@ -302,6 +355,25 @@ swipper - End
 -------------------*/
 
 
+
+/************************* Footer ***********************/
+#footer{
+  background-color: #cadcfc;
+  color: #00246b;
+}
+
+#footer .footerLinks a{
+  color: #00246b;
+}
+
+#footer .socialMediaLinksContainer {
+  border-bottom: 1px solid #00246b;
+}
+
+#footer .copyRightContainer {
+  text-align: center;
+  color: #00246b;
+}
 
 
 /*----------------------

@@ -37,18 +37,18 @@
         <div class="productContainer">
             <div class="left">
                 <div class="productImage">
-                    <img src="./Assets/images/productImages/categories1.jpg" alt="">
+                    <img src="./IMAGES/home-image.png" alt="">
                 </div>
                 <div class="smallProductImage">
-                    <img src="./Assets/images/productImages/categories1.jpg" alt="categories1">
-                    <img src="./Assets/images/productImages/categories2.jpg" alt="categories2">
-                    <img src="./Assets/images/productImages/categories3.jpg" alt="categories3">
-                    <img src="./Assets/images/productImages/categories4.jpg" alt="categories4">
+                    <img src="./IMAGES/home-image.png" alt="categories1">
+                    <img src="./IMAGES/home-image.png" alt="categories2">
+                    <img src="./IMAGES/home-image.png" alt="categories3">
+                    <img src="./IMAGES/home-image.png" alt="categories4">
                 </div>
             </div>
             <div class="right productDetail">
                 <div class="productName">
-                    <h4>Product Name</h4>
+                    <h3>Samsung S23 Ultra </h3>
                 </div>
                 <div class="rating">
                     <span class="rate">&#9733;</span>
@@ -58,8 +58,8 @@
                     <span class="rate">&#9733;</span>
                 </div>
                 <div class="price">
-                    <h4>price:</h4>
-                    <p>$123.45</p>
+                    <h4>price  :</h4>
+                    <p>&#8377;97,000.00</p>
                 </div>
                 <div class="productDescription">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at incidunt,
@@ -68,7 +68,7 @@
                     </p>
                 </div>
                 <div class="quantity">
-                    <h4>Quantity:</h4>
+                    <h4>Quantity  :</h4>
                     <input type="number" value="1">
                 </div>
                 <div class="addToCart">
@@ -80,24 +80,32 @@
         <div class="productTableInfo">
             <table>
                 <tr>
-                    <th>Fragrance Composition</th>
-                    <td>Rich Sandalwood & Tropical Flowers</td>
+                    <th>Processor</th>
+                    <td>Snapdragon 8 Gen 2</td>
                 </tr>
                 <tr>
-                    <th>Burning Time</th>
-                    <td>Approximately 60min</td>
+                    <th>Memory Storage</th>
+                    <td>256 GB</td>
                 </tr>
                 <tr>
-                    <th>Length</th>
-                    <td>9in</td>
+                    <th>RAM</th>
+                    <td>12 GB</td>
                 </tr>
                 <tr>
-                    <th>Weight</th>
-                    <td>150g</td>
+                    <th>Front-Camera</th>
+                    <td>12 MP</td>
                 </tr>
                 <tr>
-                    <th>Approx Count of Items</th>
-                    <td>75</td>
+                    <th>Rear-Camera</th>
+                    <td>200 MP</td>
+                </tr>
+                <tr>
+                    <th>Battery</th>
+                    <td>4855mAh </td>
+                </tr>
+                <tr>
+                    <th>Warranty</th>
+                    <td>1 Year</td>
                 </tr>
             </table>
         </div>
@@ -117,104 +125,29 @@
         <div class="productsContainer">
             <div class="swiperContainer">
                 <div class="swiperWrapper">
+                    <?php
+                    for ($i=0; $i <20 ; $i++) { 
+                    ?>
                     <div class="individualProductBox productSwiperSlide">
                         <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
+                            <img src="./IMAGES/product1.png" alt="">
                         </div>
-                        <p class="productName">1</p>
-                        <p class="productPrice">&#8377; 350.00</p>
+                        <p class="productName">Boat 172</p>
+                        <p class="productPrice">&#8377; 1500.00</p>
+                        <div class="productRating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                         </div>
+                         <div class="cartButton">
+                            <button>Add To Cart</button>
+                         </div>
                     </div>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                        </div>
-                        <p class="productName">2</p>
-                        <p class="productPrice">&#8377; 350.00</p>
-                    </div>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                        </div>
-                        <p class="productName">3</p>
-                        <p class="productPrice">&#8377; 350.00</p>
-                    </div>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                        </div>
-                        <p class="productName">4</p>
-                        <p class="productPrice">&#8377; 350.00</p>
-                    </div>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                        </div>
-                        <p class="productName">5</p>
-                        <p class="productPrice">&#8377; 350.00</p>
-                    </div>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                        </div>
-                        <p class="productName">6</p>
-                        <p class="productPrice">&#8377; 350.00</p>
-                    </div>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                        </div>
-                        <p class="productName">7</p>
-                        <p class="productPrice">&#8377; 350.00</p>
-                    </div>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                        </div>
-                        <p class="productName">1</p>
-                        <p class="productPrice">&#8377; 350.00</p>
-                    </div>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                        </div>
-                        <p class="productName">2</p>
-                        <p class="productPrice">&#8377; 350.00</p>
-                    </div>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                        </div>
-                        <p class="productName">3</p>
-                        <p class="productPrice">&#8377; 350.00</p>
-                    </div>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                        </div>
-                        <p class="productName">4</p>
-                        <p class="productPrice">&#8377; 350.00</p>
-                    </div>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                        </div>
-                        <p class="productName">5</p>
-                        <p class="productPrice">&#8377; 350.00</p>
-                    </div>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                        </div>
-                        <p class="productName">6</p>
-                        <p class="productPrice">&#8377; 350.00</p>
-                    </div>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                        </div>
-                        <p class="productName">7</p>
-                        <p class="productPrice">&#8377; 350.00</p>
-                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>

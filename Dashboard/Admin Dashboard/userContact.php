@@ -1,10 +1,4 @@
-<?php
 
-    require "../../backend/connection.php";
-    $query = "SELECT * FROM `contact`";
-    $select = mysqli_query($con, $query);
-
-?>
 
 
 <!DOCTYPE html>
@@ -40,10 +34,11 @@
     <div class="dashboardHeader" id="dashboardHeader">
         <div class="logoAndBars">
             <i id="bars" class="fa-solid fa-bars"></i>
-            <img class="companyLogo" src="../../Assets/images/logo.png" alt="">
+            <img class="companyLogo" src="../../IMAGES/logo.png" alt="">
         </div>
         <div class="profile">
-            <img src="../../Assets/images/profile.jpg" alt="">
+            
+        <i class="fa-solid fa-user"></i>
         </div>
     </div>
     <!---------------------
@@ -89,17 +84,17 @@
                     </li>
 
                     <?php
-                 while($row = mysqli_fetch_array($select)){
+                        for ($i=0; $i < 20; $i++){
                     ?>
 
                     <li class="userMessage">
-                        <div class="name"><?php echo $row['fullName'] ?></div>
+                        <div class="name">Ram Nadoda</div>
                         <div class="emailAndHover">
-                            <div class="hoverEmail"><?php echo $row['email'] ?></div>
-                            <div class="email"><?php echo $row['email'] ?></div>
+                            <div class="hoverEmail">ram@gmail.com</div>
+                            <div class="email">ram@gmail.com</div>
                         </div>
-                        <div class="number"><?php echo $row['phone'] ?></div>
-                        <div class="message"><?php echo $row['message'] ?></div>
+                        <div class="number">9876543210</div>
+                        <div class="message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi</div>
                     </li> 
                     
                     <?php } ?>

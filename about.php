@@ -45,7 +45,7 @@
         <div class="aboutFirstPart">
             <div class="aboutImage">
                 <div class="image">
-                    <img src="./Assets/images/productImages/categories2.jpg" alt="">
+                    <img src="./IMAGES/product1.png" alt="">
                 </div>
                 <div class="imageInfo">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -102,7 +102,7 @@
 
         </div>
 
-        <div class="aboutThirdPart">
+        <!-- <div class="aboutThirdPart">
             <div class="left">
                 <h2>Process</h2>
                 <p>Lorem ipsum dolor si. Eos cupiditate eveniet, inventore quaerat Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos cupiditate eveniet, inventore quaerat Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos cupiditate eveniet, inventore quaerat Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos cupiditate eveniet, inventore quaerat</p>
@@ -198,7 +198,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
 
     </div>
     <!----------------

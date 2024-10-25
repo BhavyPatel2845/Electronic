@@ -31,10 +31,10 @@
     <div class="dashboardHeader" id="dashboardHeader">
         <div class="logoAndBars">
             <i id="bars" class="fa-solid fa-bars"></i>
-            <img class="companyLogo" src="../../Assets/images/logo.png" alt="">
+            <img class="companyLogo" src="../../IMAGES/logo.png" alt="">
         </div>
         <div class="profile">
-            <img src="../../Assets/images/profile.jpg" alt="">
+            <i class="fa-solid fa-user"></i>
         </div>
     </div>
     <!---------------------
@@ -53,7 +53,7 @@
         --------------------------->
         <div class="leftSide">
             <ul>
-            <a href="dashboard.php"><li><img src="Assets/images/sidebarImg/dashboard.png" alt="">Dashboard</li></a>
+                <a href="dashboard.php"><li><img src="Assets/images/sidebarImg/dashboard.png" alt="">Dashboard</li></a>
                 <a href="products.php"><li><img src="Assets/images/sidebarImg/products.png" alt="">Products</li></a>
                 <a href="addProduct.php"><li><img src="Assets/images/sidebarImg/addproducts.png" alt="">Add Products</li></a>
                 <a href="user.php"><li><img src="Assets/images/sidebarImg/users.png" alt="">Users</li></a>
@@ -81,10 +81,10 @@
                         </div>
                         <div class="selectCatagory">
                             <select name="productCatagory" id="">
-                                <option value="insencesWDGADG">insencesWDGADG</option>
-                                <option value="insences2">insences2</option>
-                                <option value="insences3">insences3</option>
-                                <option value="insences4">insences4</option>
+                                <option value="insencesWDGADG">Mobile</option>
+                                <option value="insences2">Smart Watch</option>
+                                <option value="insences3">Air Burd</option>
+                                <option value="insences4">Laptop</option>
                             </select>
                         </div>
                         <div class="priceAndDiscount">

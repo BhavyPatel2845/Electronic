@@ -45,89 +45,41 @@
                 <option value=""> Short By Price : Low To High</option>
             </select>
         </div>
-        <div class="productContainer" id="productContainer">
-            <div class="productSlider">
-                <div class="productBox">
-                    <div class="productImage">
-                        <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
+        <div class="laptopProduct">
+                <div class="productsContainer">
+                    <?php
+                    for ($i=0; $i < 20 ; $i++) { 
+                    ?>
+                    <div class="individualProductBox">
+                                <div class="individualProductImageContainer">
+                                    <img src="./IMAGES/laptop1.png" alt="">
+                                </div>
+                                <p class="productName">Lenovo IdesPad Slim 3</p>
+                                <p class="productPrice">&#8377; 60,000.00</p>
+                                <div class="productRating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
                     </div>
-                    <div class="productDetail">
-                        <div class="productRating">
-                            <span class="rate">&#9733;</span>
-                            <span class="rate">&#9733;</span>
-                            <span class="rate">&#9733;</span>
-                            <span class="rate">&#9733;</span>
-                            <span class="">&#9733;</span>
-                        </div>
-                        <div class="productName">
-                            <p>Product Name</p>
-                        </div>
-                        <div class="productPrice">
-                            <p>Price: 120&#8377;</p>
-                        </div>
-                        <div class="addToCart">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <p>Add to Cart</p>
-                        </div>
-                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
-
-                <div class="productBox">
-                    <div class="productImage">
-                        <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                    </div>
-                    <div class="productDetail">
-                        <div class="productRating">
-                            <span class="rate">&#9733;</span>
-                            <span class="rate">&#9733;</span>
-                            <span class="rate">&#9733;</span>
-                            <span class="rate">&#9733;</span>
-                            <span class="">&#9733;</span>
-                        </div>
-                        <div class="productName">
-                            <p>Product Name</p>
-                        </div>
-                        <div class="productPrice">
-                            <p>Price: 120&#8377;</p>
-                        </div>
-                        <div class="addToCart">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <p>Add to Cart</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="productBox">
-                    <div class="productImage">
-                        <img src="./Assets/images/productImages/gulabDhoop.png" alt="">
-                    </div>
-                    <div class="productDetail">
-                        <div class="productRating">
-                            <span class="rate">&#9733;</span>
-                            <span class="rate">&#9733;</span>
-                            <span class="rate">&#9733;</span>
-                            <span class="rate">&#9733;</span>
-                            <span class="">&#9733;</span>
-                        </div>
-                        <div class="productName">
-                            <p>Product Name</p>
-                        </div>
-                        <div class="productPrice">
-                            <p>Price: 120&#8377;</p>
-                        </div>
-                        <div class="addToCart">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <p>Add to Cart</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="productSliderButton">  </div>
-        </div>
+            </div> 
     </div>
     <!------------------
      Product - End 
     ------------------->
+
+    
+<!----------------------------    HEADER     --------------------------------->
+        
+        <?php 
+            include 'footer.php';
+        ?>
 
    
     <!---------

@@ -23,10 +23,10 @@ let tr =  document.querySelectorAll(".usersTable table tr")
 
 tr.forEach(function(val, index){
     if(index % 2 === 0) {
-    val.style.backgroundColor = "#b9b4b4"
+    val.style.backgroundColor = "#cadcfc"
   }
   else{
-    val.style.backgroundColor = "#ebe2e2"
+    val.style.backgroundColor = "#81a5e3"
   }
 })
 

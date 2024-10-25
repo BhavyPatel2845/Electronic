@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="CSS/registration.css">
-    <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/footer.css">
 </head>
 <body>
     <?php 
@@ -18,10 +16,11 @@
                 <h2>Registration</h2>
             </div>
             <form action="">
-                <input type="email" placeholder="Email..." required>
-                <input type="password" placeholder="password..." required> 
-                <input type="email" placeholder="Email..." required>
-                <input type="password" placeholder="password..." required> 
+                <input type="email" placeholder="Full Name" required>
+                <input type="email" placeholder="Date Of Birth..." required>
+                <input type="password" placeholder="City..." required> 
+                <input type="password" placeholder="Pincode..." required>
+                <input type="password" placeholder="Phone Number..." required> 
                 <input type="email" placeholder="Email..." required>
                 <input type="password" placeholder="password..." required> 
                 <div class="registrationButton">

@@ -1,3 +1,10 @@
+/* IMPORT header CSS */
+@import url("header.css");
+
+/* IMPORT FOOTER CSS */
+@import url("footer.css");
+
+
 *{
     padding: 0;
     margin: 0;
@@ -14,27 +21,23 @@ a{
 li{
     list-style: none;
 }
-.cointainer{
-    height: 100%;
-    width: 100%;
-    background-color: rgb(240, 240, 240);
-}
+
 
 /* **********************   LOGIN-PAGE   ************************** */
 
 
 #login{
-    height: 100vh;
+    height: 88vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #00246b;
 }
 
 #login .loginCointainer{
     height: 450px;
     width: 400px;
-    margin-top: 90px;
     padding: 25px;
     border-radius: 10px;
     display: flex;
@@ -42,15 +45,18 @@ li{
     justify-content: center;
     align-items: center;
     grid-gap: 20px;
-    box-shadow: 1px 1px 6px 6px #c1c0c0;
-    background-color: rgb(250, 250, 250);
+    /* box-shadow: 1px 1px 6px 6px #f1710982; */
+    background-color: #cadcfc;
+    color: #00246b;
 
 }
 
 #login .loginCointainer .loginTitle h2{
     text-align: center;
-    text-shadow: 1px 2px 1px #7d7a7a;
     padding: 10px;
+    color: #00246b;
+    font-size: 28px;
+    letter-spacing: 1.5px;
 }
 
 #login .loginCointainer form{
@@ -64,15 +70,19 @@ li{
 
 #login .loginCointainer form input{
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 30px;
     border: none;
     border-radius: 4px;
     font-size: 15px;
     outline: none;
-    background-color: rgb(250, 250, 250);
+    background-color: transparent;
     text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);
-    box-shadow: rgba(67, 71, 85, 0.6) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    box-shadow: #00246b 1px 1px 4px;
+}
+
+#login .loginCointainer form input:first-child{
+    margin-top: 10px;
 }
 
 #login .loginCointainer form .forgetPassword{
@@ -81,7 +91,7 @@ li{
     padding: 15px 10px;
 }
 #login .loginCointainer form a{
-    color:  rgb(60, 170, 210);
+    color:  #00246b;
     font-weight: 600;  
 }
 
@@ -97,38 +107,55 @@ li{
     font-size: 18px;
     letter-spacing: 2px;
     font-weight: 500;
-    color: #fff;
     text-transform: capitalize;
     margin-top: 20px; 
-    background-color: rgb(60, 170, 210);
+    background-color:  #00246b;
+    color:  #cadcfc;
 }
 #login .loginCointainer form .loginButton button:hover  {
-    box-shadow: 0.8px 0.8px 3px 3px #c1c0c0;
     font-weight: bold;
-    border: none;
-    transition: 0.8s ease-in;
-    background-color: rgb(250, 250, 250);
-    color: rgb(60, 170, 210);
+    border: 1px solid;
+    transition: 0.4s ease-in; 
+    color:  #00246b;
+    background-color:  #cadcfc;
+    
 }
 
 #login .loginCointainer form .createAccount{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 25px 0px 15px;
 }
 
 #login .loginCointainer form .createAccount a{
-    color:  rgb(60, 170, 210);
+    color:  #00246b;
     font-weight: 600;   
 }
 
+/************************* Footer ***********************/
+#footer{
+    background-color: #cadcfc;
+    color: #00246b;
+}
+
+#footer .footerLinks a{
+    color: #00246b;
+}
+
+#footer .socialMediaLinksContainer {
+    border-bottom: 1px solid #00246b;
+  }
+
+  #footer .copyRightContainer {
+    text-align: center;color: #00246b;
+  }
 
 /* *******************   RESPONSIVE   ******************** */
 
 
 @media only screen and (max-width:500px){
     #login .loginCointainer{
-        width: 80%;
+        width: 100%;
     }
 }

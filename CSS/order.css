@@ -1,0 +1,173 @@
+/* IMPORT header CSS */
+@import url("header.css");
+
+/* IMPORT FOOTER CSS */
+@import url("footer.css");
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+li{
+    list-style: none;
+}
+
+
+/* ********************* order Page  ************/
+
+.checkOut{
+    width: 100%;
+    padding: 50px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #00246b; */
+    background-color: #00246b;
+}
+.checkOut .checkOutContainer{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    grid-gap: 40px;
+}
+
+.checkOut .checkOutContainer .billingDetail{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #cadcfc;
+}
+.checkOut .checkOutContainer .billingDetail .billingDetailHeader{
+    width: 90%;
+    margin: 20px 20px 50px;
+}
+.checkOut .checkOutContainer .billingDetail form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkOut .checkOutContainer .billingDetail .row{
+    width: 90%;
+    padding: 20px;
+}
+.checkOut .checkOutContainer .billingDetail .row .name{
+    width: 100%;
+    display: flex;
+    grid-gap: 25px;
+}
+.checkOut .checkOutContainer .billingDetail .row input,
+.checkOut .checkOutContainer .billingDetail .row textarea
+{
+    width: 100%;
+    background-color: transparent;
+    color: #00246b;
+    border: 1px solid #00246b;
+    padding: 8px 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.checkOut .checkOutContainer .cartTotalAndPayment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+.checkOut .checkOutContainer .cartTotalAndPayment .row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 40px;
+} 
+.checkOut .checkOutContainer .cartTotalAndPayment .row .cartTotal{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    border-radius: 20px;
+    background-color: #cadcfc;
+}
+
+.checkOut .checkOutContainer .cartTotalAndPayment .row .cartTotal .cartDetail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    grid-gap: 10px;
+}
+
+.checkOut .checkOutContainer .cartTotalAndPayment .row .payment{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    border-radius: 20px;
+    background-color: #cadcfc;
+}
+.checkOut .checkOutContainer .cartTotalAndPayment .row .payment .paymentDetail{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    grid-gap: 10px;
+}
+
+.checkOut .checkOutContainer .cartTotalAndPayment .paymentButton{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.checkOut .checkOutContainer .cartTotalAndPayment .paymentButton button{
+    cursor: pointer;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 20px;
+    font-size: 17px;
+    color: #00246b;
+    background-color: #cadcfc;
+}
+/************************* Footer ***********************/
+#footer{
+    background-color: #cadcfc;
+    color: #00246b;
+}
+
+#footer .footerLinks a{
+    color: #00246b;
+}
+
+#footer .socialMediaLinksContainer {
+    border-bottom: 1px solid #00246b;
+  }
+
+  #footer .copyRightContainer {
+    text-align: center;color: #00246b;
+  }

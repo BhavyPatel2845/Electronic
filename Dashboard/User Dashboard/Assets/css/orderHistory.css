@@ -16,22 +16,25 @@ li{
 }
 #dashboardHeader{
     width: 100%;
-    height: 65px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-color: #fff;
-    border-bottom: 1px solid rgb(173, 172, 172);
+    background-color: #cadcfc;
+    border-bottom: 1px solid #5086e4;
     
 }
 #dashboardHeader .logoAndBars{
-    width: 200px;
+    width: 400px;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
+}
+#dashboardHeader .logoAndBars img{
+    height: 200px;
 }
 #dashboardHeader .logoAndBars i{
     display: none;
@@ -40,12 +43,17 @@ li{
 #dashboardHeader .profile{
     width: 40px;
     height: 40px;
-    margin-right: 12px;
-}
-#dashboardHeader .profile img{
-    width: 100%;
-    height: 100%;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00246b;
     border-radius: 50%;
+}
+#dashboardHeader .profile i{
+    width: 100%;
+    height: auto;
+    color: #00246b;
 }
 /*--------------
  Header - End 
@@ -70,10 +78,10 @@ li{
     justify-content: start;
     align-items: center;
     text-align: center;
-    background-color: silver;
     overflow: scroll;
     scrollbar-width: none;
     z-index: 6;
+    background-color: #cadcfc;
 }
 #dashboardContainer .leftSide ul{
     width: 90%;
@@ -87,7 +95,6 @@ li{
     margin-top: 20px;
 }
 #dashboardContainer .leftSide ul li{
-    color: #fff;
     width: 200px;
     font-weight: 500;
     display: flex;
@@ -95,28 +102,24 @@ li{
     align-items: center;
 }
 
-#dashboardContainer .leftSide ul a{
-    color: #fff;
+#dashboardContainer .leftSide ul li{
     margin: 5px;
     padding: 7px;
     width: 80%;
     border-radius: 9px;
     flex-direction: row;
     transition: all 0.2s ease;
-    background-color: rgb(53, 53, 53);
+    grid-gap: 15px;
+    background-color: #00246b;
+    color: #cadcfc;
 }
 
-#dashboardContainer .leftSide ul a:hover{
-    background-color: #fff; 
-    color: #000;   
-    li{
-        color: black;
-    }
+#dashboardContainer .leftSide ul li a{
+    color: #cadcfc;
 }
-#dashboardContainer .leftSide ul a img{
-    height: 2vw;
-    width: 2vw;
-    margin:0 12px;
+
+#dashboardContainer .leftSide ul li:hover{
+   background-color: #5086e4;
 }
 
 
@@ -135,23 +138,26 @@ li{
     justify-content: start;
     align-items: center;
     text-align: center;
+    background-color: #00246b;
 }
 #dashboardContainer .rightSide .orderHistorySection{
     width: 100%;
-    height: 100%;
+    height: 90vh;
     display: flex;
-    justify-content: center;
-    align-items: start;
+    justify-content: start;
+    align-items: center;
     text-align: start;
+    flex-direction: column;
     scrollbar-width: none;
     overflow: scroll;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer{
     width: 1200px;
-    height: 550px;
+    height: 500px;
     margin: 30px 0px;
     border-radius: 10px;
-    background-color: #b9b6b6;
+    padding: 20px;
+    background-color: #cadcfc;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails{
     width: 100%;
@@ -160,7 +166,8 @@ li{
     justify-content: space-between;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: #b8afaf;
+    background-color: #cadcfc;
+    border-bottom: 1px solid #00246b;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .leftDetail{
     width: 50%;
@@ -170,6 +177,10 @@ li{
     align-items: center;
     text-align: center;
     line-height: 25px;
+}
+
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .leftDetail h6{
+    font-size: 15px;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .rightDetail{
     width: 40%;
@@ -185,6 +196,7 @@ li{
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .rightDetail .viewOrderDetailsAndInvoice{
     display: flex;
+    font-size: 15px;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails{
     width: 100%;
@@ -222,9 +234,15 @@ li{
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .product .productName{
     width: 600px;
-    display: flex;
     padding-top: 10px;
-    line-height: 22px;
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .product .productName h4{
+    margin: 8px 15px;
+    font-size: 18px;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftButtons{
     width: 100%;
@@ -237,14 +255,15 @@ li{
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftButtons button{
     width: 200px;
     padding: 15px 25px;
-    font-size: var(--largeFont);
-    font-weight: var(--largeFontWeight);
     letter-spacing: 1px;
     border-radius: 30px;
     cursor: pointer;
+    border: none;
+    background-color: #00246b;
+    color: #cadcfc;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftButtons button:hover{
-    background-color: yellow;
+    background-color: #5086e4;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftButtons button:nth-child(1){
     margin-right: 10px;
@@ -256,27 +275,28 @@ li{
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .rightButtons{
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .rightButtons button{
     width: 300px;
-    font-size: var(--largeFont);
-    font-weight: var(--largeFontWeight);
     border-radius: 30px;
     padding: 15px 25px;
     margin-bottom: 10px;
     outline: none;
     background-color: #fff;
     letter-spacing: 1px;
+    border: none;
     cursor: pointer;
+    background-color: #00246b;
+    color: #cadcfc;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .rightButtons button:hover{
-    background-color: yellow;
+    background-color: #5086e4;
 }
 
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .threeDot{

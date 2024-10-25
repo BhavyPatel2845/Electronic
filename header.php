@@ -7,7 +7,7 @@
 
         <div class="loginAndRegister">
             <a href="login.php">Login</a> |
-            <a href="register.php">Register</a> |
+            <a href="registration.php">Register</a> |
         </div>
 
     </div>

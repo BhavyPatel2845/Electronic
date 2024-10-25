@@ -29,10 +29,10 @@
     <div class="dashboardHeader" id="dashboardHeader">
         <div class="logoAndBars">
             <i id="bars" class="fa-solid fa-bars"></i>
-            <img class="companyLogo" src="../Assets/images/logo.png" alt="">
+            <img class="companyLogo" src="../../IMAGES/logo.png" alt="">
         </div>
         <div class="profile">
-            <img src="../Assets/images/profile.jpg" alt="">
+            <i class="fa-solid fa-user"></i>
         </div>
     </div>
     <!---------------------
@@ -52,8 +52,7 @@
         <div class="leftSide">
             <ul>
                 <li><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-user"></i><a href="editProfile.php">Edit Profile</a></li>
-                <li><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-user"></i><a href="orderHistory.php">Order History</a></li>
-                <li><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-user"></i><a href="ticketSupportForm.php">Support</a></li>
+                <li><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-user"></i><a href="orderHistory.php">Order History</a></li>    
                 <li><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-user"></i><a href="review.php">Review</a></li>
             </ul>
         </div>
@@ -75,23 +74,21 @@
                         <input type="text" placeholder="Product Name">
                         <p>Product Category</p>
                         <select>
-                            <option value="">Product</option>
-                            <option value="">Incense</option>
-                            <option value="">Doop</option>
-                            <option value="">Cup</option>
+                            <option value="">Mobile</option>
+                            <option value="">Smart Watch</option>
+                            <option value="">Air Burds</option>
+                            <option value="">Laptop</option>
                         </select>
                         <p>Feedback</p>
                         <textarea rows="10" cols="47" placeholder="Message"></textarea>
-                        <!-- <p>Rating</p> -->
                         <div class="ratingStar">
                             <p>What's Your Experience ? </p>
-                            <div class="stars">
-                                                 
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
+                            <div class="stars">  
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
                             </div>
                         </div>
                         <button type="submit"> submit </button>

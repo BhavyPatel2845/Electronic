@@ -28,7 +28,8 @@ li{
 #about{
     width: 100%;
     height: 100%;
-    margin: 50px 0px;
+    color: #cadcfc;
+    background-color: #00246b;
 }
 /* About First Part */
 #about .aboutFirstPart{
@@ -79,6 +80,7 @@ li{
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    filter: drop-shadow(1px 1px 5px #cadcfc);
 }
 #about .aboutFirstPart .aboutImage .imageInfo{
     width: 50%;
@@ -99,16 +101,15 @@ li{
 }
 #about .aboutFirstPart .aboutImage .imageInfo button{
     padding: 20px 40px;
-    font-size: var(--midiumFont);
-    font-weight: var(--midiumFontWeight);
     border-radius: 3px;
-    background-color: #fff;
     cursor: pointer;
     margin-left: 50px;
+    font-size: 18px;
+    background-color: #cadcfc;
+    color: #00246b;
 }
 #about .aboutFirstPart .aboutImage .imageInfo button:hover{
-     color: #fff;
-     background-color: brown;
+     background-color: #87cefa;
      transition: .3s ease-in-out;
 }
 
@@ -116,7 +117,7 @@ li{
 #about .aboutSecondPart{
     width: 100%;
     width: 100%;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
 }
 #about .aboutSecondPart .aboutSecondPartHeading{
     width: 100%;
@@ -140,7 +141,8 @@ li{
     justify-content: space-around;
     align-items: center;
     text-align: start;
-    margin: 50px 0px;
+    margin: 50px 0px 0px;
+    padding-bottom: 50px;
 }
 #about .aboutSecondPart .aboutSecondPartContainer .infoIcon{
     margin-top: -50px;
@@ -149,10 +151,10 @@ li{
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
-    background-color: #cac0c0;
+    background-color: #87cefa;
 }
 #about .aboutSecondPart .aboutSecondPartContainer .firstContainer #firstInfo{
-             margin-bottom: 40px;         
+    margin-bottom: 40px;         
 }
 #about .aboutSecondPart .aboutSecondPartContainer .secondContainer #thirdInfo{
     margin-bottom: 40px;
@@ -160,17 +162,17 @@ li{
 #about .aboutSecondPart .aboutSecondPartContainer .infoContainer{
     width: 100%;
     height: 100%;
-    border: 1px solid #000;
     padding: 30px;
-    background-color: #f5f5f5;
     border-radius: 6px;
+    background-color: #cadcfc;
+    color: #00246b;
 }
 #about .aboutSecondPart .aboutSecondPartContainer .infoContainer h3{
     margin: 10px 0px;
 }
 
 /* About Third Part */
-#about .aboutThirdPart{
+/* #about .aboutThirdPart{
     width: 100%;
     height: 100%;
     display: flex;
@@ -248,7 +250,27 @@ color: #fff;
 }
 #about .aboutThirdPart .right .innerProcessContainer .information p{
        width: 80%;
+} */
+
+
+/************************* Footer ***********************/
+#footer{
+    background-color: #cadcfc;
+    color: #00246b;
 }
+
+#footer .footerLinks a{
+    color: #00246b;
+}
+
+#footer .socialMediaLinksContainer {
+    border-bottom: 1px solid #00246b;
+  }
+
+  #footer .copyRightContainer {
+    text-align: center;color: #00246b;
+  }
+
 /*------------------
   About - End 
 -------------------*/

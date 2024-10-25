@@ -30,10 +30,10 @@
     <div class="dashboardHeader" id="dashboardHeader">
         <div class="logoAndBars">
             <i id="bars" class="fa-solid fa-bars"></i>
-            <img class="companyLogo" src="../Assets/images/logo.png" alt="">
+            <img class="companyLogo" src="../../IMAGES/logo.png" alt="">
         </div>
         <div class="profile">
-            <img src="../../Assets/images/profile.jpg" alt="">
+            <i class="fa-solid fa-user"></i>
         </div>
     </div>
     <!---------------------
@@ -54,7 +54,6 @@
          <ul>
                 <li><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-user"></i><a href="editProfile.php">Edit Profile</a></li>
                 <li><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-user"></i><a href="orderHistory.php">Order History</a></li>
-                <li><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-user"></i><a href="ticketSupportForm.php">Support</a></li>
                 <li><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-user"></i><a href="review.php">Review</a></li>
             </ul>
         </div>
@@ -80,7 +79,7 @@
                             </div>
                             <div>
                                 <p>SHIP TO</p>
-                                <H6>kaushik patel</H6>
+                                <H6>Bhavy patel</H6>
                             </div>
                         </div>
                         <div class="rightDetail">
@@ -109,6 +108,214 @@
                                     <img src="../../IMAGES/product1.png" alt="">
                                 </div>
                                 <div class="productName">
+                                    <h4>Boat 172</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aut!
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aut!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="leftButtons">
+                                <button type="button">Buy it again</button>
+                                <button type="button">View your item</button>
+                            </div>
+
+                        </div>
+                        <div class="orderRightDetails">
+                            <div class="rightButtons">
+                                <button type="button">Get Product Support</button>
+                                <button type="button">Track Package</button>
+                                <button type="button">Leave seller feedback</button>
+                                <button type="button">Leave delivery feedback</button>
+                                <button type="button">Write a Product review</button>
+                            </div>
+                            <div class="threeDot">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Archive Order</p>
+                </div>
+                <div class="orderContainer">
+                    <div class="orderTopDetails">
+                        <div class="leftDetail">
+                            <div>
+                                <P>ORDER PLACED</P>
+                                <h6>9 August 2024</h6>
+                            </div>
+                            <div>
+                                <p>TOTAL</p>
+                                <h6>$4545</h6>
+                            </div>
+                            <div>
+                                <p>SHIP TO</p>
+                                <H6>Bhavy patel</H6>
+                            </div>
+                        </div>
+                        <div class="rightDetail">
+                            <div class="orderId">
+                                <p>ORDER</p>
+                                <p>3434-343434-3434</p>
+                            </div>
+                            <div class="viewOrderDetailsAndInvoice">
+                                <div class="viewOrderDetails">
+                                    <pre>View Order Details |</pre>
+                                </div>
+                                <div class="invoice">
+                                    <pre>  Invoice <i class="fa-solid fa-angle-down"></i></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="orderBottomDetails">
+                        <div class="orderLeftDetails">
+                            <div class="leftHeading">
+                                <h2>Delivered 15 August</h2>
+                                <p>package was handed to resident</p>
+                            </div>
+                            <div class="product">
+                                <div class="productImage">
+                                    <img src="../../IMAGES/product1.png" alt="">
+                                </div>
+                                <div class="productName">
+                                    <h4>Boat 172</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aut!
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aut!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="leftButtons">
+                                <button type="button">Buy it again</button>
+                                <button type="button">View your item</button>
+                            </div>
+
+                        </div>
+                        <div class="orderRightDetails">
+                            <div class="rightButtons">
+                                <button type="button">Get Product Support</button>
+                                <button type="button">Track Package</button>
+                                <button type="button">Leave seller feedback</button>
+                                <button type="button">Leave delivery feedback</button>
+                                <button type="button">Write a Product review</button>
+                            </div>
+                            <div class="threeDot">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Archive Order</p>
+                </div>
+                <div class="orderContainer">
+                    <div class="orderTopDetails">
+                        <div class="leftDetail">
+                            <div>
+                                <P>ORDER PLACED</P>
+                                <h6>9 August 2024</h6>
+                            </div>
+                            <div>
+                                <p>TOTAL</p>
+                                <h6>$4545</h6>
+                            </div>
+                            <div>
+                                <p>SHIP TO</p>
+                                <H6>Bhavy patel</H6>
+                            </div>
+                        </div>
+                        <div class="rightDetail">
+                            <div class="orderId">
+                                <p>ORDER</p>
+                                <p>3434-343434-3434</p>
+                            </div>
+                            <div class="viewOrderDetailsAndInvoice">
+                                <div class="viewOrderDetails">
+                                    <pre>View Order Details |</pre>
+                                </div>
+                                <div class="invoice">
+                                    <pre>  Invoice <i class="fa-solid fa-angle-down"></i></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="orderBottomDetails">
+                        <div class="orderLeftDetails">
+                            <div class="leftHeading">
+                                <h2>Delivered 15 August</h2>
+                                <p>package was handed to resident</p>
+                            </div>
+                            <div class="product">
+                                <div class="productImage">
+                                    <img src="../../IMAGES/product1.png" alt="">
+                                </div>
+                                <div class="productName">
+                                    <h4>Boat 172</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aut!
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aut!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="leftButtons">
+                                <button type="button">Buy it again</button>
+                                <button type="button">View your item</button>
+                            </div>
+
+                        </div>
+                        <div class="orderRightDetails">
+                            <div class="rightButtons">
+                                <button type="button">Get Product Support</button>
+                                <button type="button">Track Package</button>
+                                <button type="button">Leave seller feedback</button>
+                                <button type="button">Leave delivery feedback</button>
+                                <button type="button">Write a Product review</button>
+                            </div>
+                            <div class="threeDot">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Archive Order</p>
+                </div>
+                <div class="orderContainer">
+                    <div class="orderTopDetails">
+                        <div class="leftDetail">
+                            <div>
+                                <P>ORDER PLACED</P>
+                                <h6>9 August 2024</h6>
+                            </div>
+                            <div>
+                                <p>TOTAL</p>
+                                <h6>$4545</h6>
+                            </div>
+                            <div>
+                                <p>SHIP TO</p>
+                                <H6>Bhavy patel</H6>
+                            </div>
+                        </div>
+                        <div class="rightDetail">
+                            <div class="orderId">
+                                <p>ORDER</p>
+                                <p>3434-343434-3434</p>
+                            </div>
+                            <div class="viewOrderDetailsAndInvoice">
+                                <div class="viewOrderDetails">
+                                    <pre>View Order Details |</pre>
+                                </div>
+                                <div class="invoice">
+                                    <pre>  Invoice <i class="fa-solid fa-angle-down"></i></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="orderBottomDetails">
+                        <div class="orderLeftDetails">
+                            <div class="leftHeading">
+                                <h2>Delivered 15 August</h2>
+                                <p>package was handed to resident</p>
+                            </div>
+                            <div class="product">
+                                <div class="productImage">
+                                    <img src="../../IMAGES/product1.png" alt="">
+                                </div>
+                                <div class="productName">
+                                    <h4>Boat 172</h4>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aut!
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aut!
                                     </p>
