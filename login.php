@@ -20,14 +20,14 @@
             <div class="loginTitle">
                 <h2>Login</h2>
             </div>
-            <form action="">
-                <input type="email" placeholder="Email...">
-                <input type="password" placeholder="password..."> 
+            <form action="./backend/login.php" method="post">
+                <input type="email" placeholder="Email..." name="email" >
+                <input type="password" placeholder="password..." name="password" required> 
                 <div class="forgetPassword">
                     <a href="forgetPassword.php">Forget Password</a>
                 </div>
                 <div class="loginButton">
-                    <button type="submit">Sign In</button>
+                    <button type="submit" name="submit">Sign In</button>
                 </div>
                 <div class="createAccount">
                     <p>Dont't Have An Account ?</p>

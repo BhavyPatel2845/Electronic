@@ -15,16 +15,16 @@
             <div class="registrationTitle">
                 <h2>Registration</h2>
             </div>
-            <form action="">
-                <input type="email" placeholder="Full Name" required>
-                <input type="email" placeholder="Date Of Birth..." required>
-                <input type="password" placeholder="City..." required> 
-                <input type="password" placeholder="Pincode..." required>
-                <input type="password" placeholder="Phone Number..." required> 
-                <input type="email" placeholder="Email..." required>
-                <input type="password" placeholder="password..." required> 
+            <form action="./backend/registration.php" method="post">
+                <input type="text" placeholder="User Name" name="userName">
+                <input type="date" placeholder="Date Of Birth..." name="dob">
+                <input type="text" placeholder="City..." name="city" required> 
+                <input type="number" placeholder="Pincode..." name="pincode" required>
+                <input type="number" placeholder="Phone Number..." name="phoneNumber" required> 
+                <input type="email" placeholder="Email..." name="email" required>
+                <input type="password" placeholder="password..." name="password"> 
                 <div class="registrationButton">
-                    <button type="submit">Sign In</button>
+                    <button type="submit" name="submit">Sign In</button>
                 </div>
             </form>
         </div>
