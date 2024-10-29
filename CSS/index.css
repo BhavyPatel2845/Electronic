@@ -95,9 +95,9 @@ li{
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 16px;
-    color: #00246b;
-    background-color: #cadcfc;
+    font-size: 25px;
+    color: #cadcfc;
+    background-color: transparent;
 }
 
 
@@ -194,7 +194,7 @@ li{
     grid-gap: 20px;
     margin-top: 50px;
     margin: 0;
-    padding: 30px 80px;
+    padding: 30px 0px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -254,7 +254,23 @@ li{
   .productSlider .productsContainer .individualProductBox .productRating i{
     color: rgb(255, 132, 0);
   }
-
+  .productsContainer .individualProductBox .addToCart{
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 0px;
+  }
+  .productsContainer .individualProductBox .addToCart button{
+    cursor: pointer;
+    border: none;
+    background-color: #00246b;
+    color: #cadcfc;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    padding: 8px 25px;
+  }
+  
   
   .productSlider .buttons .productSwiperButtonNext,
   .buttons .productSwiperButtonPrev {
@@ -287,7 +303,7 @@ li{
   }
   
   .productSlider .productsContainer .swiperWrapper .productSwiperSlide {
-    height: 370px;
+    height: 390px;
     flex: 1 0 auto;
     display: flex;
     justify-content: center;
@@ -321,7 +337,7 @@ li{
   #customerReviewSlider .customerReviewContainer {
     width: 100%;
     display: flex;
-    grid-gap: 100px;
+    grid-gap: 20px;
     margin-top: 50px;
     margin: 0;
     padding-top: 40px;
@@ -445,3 +461,145 @@ li{
     margin: 5px;
   }
  
+
+
+  /* *******************  Responsive ********************** */
+
+
+  /* ******* Product-Slider ****** */
+
+  @media (min-width: 1200px) {
+    .productSlider .productsContainer .swiperContainer .swiperWrapper .productSwiperSlide {
+      width: calc(28.6% - 50px);
+    }
+  
+    .productSlider .productsContainer .swiperContainer {
+      width: 1100px;
+    }
+  }
+  @media (max-width: 1200px) {
+    .productSlider .productsContainer .swiperContainer .swiperWrapper .productSwiperSlide {
+      width: calc(35.8% - 34px);
+    }
+  
+    .productSlider .productsContainer .swiperContainer {
+      width: 930px;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .productSlider .productsContainer .swiperContainer .swiperWrapper .productSwiperSlide {
+      width: calc(40% - 60px);
+    }
+  
+    .productSlider .productsContainer .swiperContainer {
+      width: 750px;
+    }
+  }
+  @media (max-width: 850px) {
+    .productSlider .productsContainer .swiperContainer .swiperWrapper .productSwiperSlide {
+      width: calc(60% - 70px);
+    }
+  
+    .productSlider .productsContainer .swiperContainer {
+      width: 600px;
+    }
+  }
+  @media (max-width: 680px) {
+    .productSlider .productsContainer .swiperContainer .swiperWrapper .productSwiperSlide {
+      width: calc(60% - 60px);
+    }
+  
+    .productSlider .productsContainer .swiperContainer {
+      width: 520px;
+    }
+  }
+  
+  @media (max-width: 580px) {
+    .productSlider .productsContainer .swiperContainer .swiperWrapper .productSwiperSlide {
+      width: calc(100% - 10px);
+    }
+  
+    .productSlider .productsContainer .swiperContainer {
+      width: 300px;
+    }
+  }
+  
+
+  /* ******* Customer-Reviews ****** */
+
+  @media (min-width: 1500px) {
+    #customerReviewSlider .customerReviewContainer .swiperContainer .swiperWrapper .reviewSwiperSlide {
+      width: calc(31.9% - 100px);
+    }
+  
+    #customerReviewSlider .customerReviewContainer .swiperContainer {
+      width: 1300px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    #customerReviewSlider .customerReviewContainer .swiperContainer .swiperWrapper .reviewSwiperSlide {
+      width: calc(33.2% - 100px);
+    }
+  
+    #customerReviewSlider .customerReviewContainer .swiperContainer {
+      width: 1100px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    #customerReviewSlider .customerReviewContainer .swiperContainer .swiperWrapper .reviewSwiperSlide {
+      width: calc(43.3% - 100px);
+    }
+  
+    #customerReviewSlider .customerReviewContainer .swiperContainer {
+      width: 900px;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    #customerReviewSlider .customerReviewContainer .swiperContainer .swiperWrapper .reviewSwiperSlide {
+      min-width: calc(63.8% - 100px);
+    }
+  
+    #customerReviewSlider .customerReviewContainer .swiperContainer {
+      max-width: 650px;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    #customerReviewSlider .customerReviewContainer .swiperContainer .swiperWrapper .reviewSwiperSlide {
+      min-width: calc(50% - 10px);
+    }
+  
+    #customerReviewSlider .customerReviewContainer .swiperContainer {
+      max-width: 540px;
+    }
+  }@media (max-width: 550px) {
+    #customerReviewSlider .customerReviewContainer .swiperContainer .swiperWrapper .reviewSwiperSlide {
+      min-width: calc(100% - 10px);
+      height: 360px;
+    }
+  
+    #customerReviewSlider .customerReviewContainer .swiperContainer {
+      max-width: 300px;
+    }
+  
+    #customerReviewSlider .customerReviewContainer .swiperContainer .swiperWrapper {
+      display: flex;
+      justify-content: start;
+    }
+  }
+
+  @media (max-width: 350px) {
+    #customerReviewSlider .customerReviewContainer .swiperContainer .swiperWrapper .reviewSwiperSlide {
+      min-width: calc(100% - 10px);
+      height: 360px;
+    }
+  
+    #customerReviewSlider .customerReviewContainer .swiperContainer {
+      max-width: 300px;
+    }
+  }
+  

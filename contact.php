@@ -26,12 +26,12 @@
                 <div class="contactTitle">
                     <h2>Contact Us</h2>
                 </div>
-                <form action="">
-                    <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Email">
-                    <input type="text" placeholder="Phone Number">
-                    <textarea name="message" id="" rows="4" cols="30" placeholder="Message"></textarea>
-                    <button>submit</button>
+                <form action="./backend/contact.php" method="post">
+                    <input type="text" placeholder="Your Name" name="userName">
+                    <input type="number" placeholder="Phone Number" name="phoneNumber">
+                    <input type="email" placeholder="Email" name="email">
+                    <textarea rows="4" cols="30" placeholder="Message" name="message"></textarea>
+                    <button type="submit" name="submit">submit</button>
                 </form>
             </div>
         </div>

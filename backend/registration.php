@@ -40,8 +40,8 @@
     }
     
     $passwordLength = strlen((string)$password);
-    if($passwordLength < 6){
-        $errors[] = "Password minimum 6 character required";
+    if($passwordLength < 6 && $passwordLength > 10){
+        $errors[] = "Password must be 6 to 10 character required";
     }
     // Display errors 
     if (!empty($errors)) {
@@ -59,12 +59,12 @@
         $email = mysqli_real_escape_string($conn, $email);
         $password = mysqli_real_escape_string($conn, $password);
 
-    $insertQuery = "insert into users(name,dob,city,pincode,phoneNumber,email,password) values ('$userName','$dob', '$city', $pincode, $phoneNumber, '$email' ,'$password')";
+    $insertQuery = "insert into users(name,dob,city,pincode,phoneNumber)
+     values ('$userName','$dob', '$city', $pincode, $phoneNumber)";
 
     $loginTableQuery = "insert into login(email,password) values('$email','$password')";
 
     if (mysqli_query($conn,$insertQuery) === TRUE && mysqli_query($conn,$loginTableQuery) === TRUE) {
-        echo "<script>alert('register successfully')</script>";
         header("location: ../login.php");
     }
     else{
@@ -72,4 +72,5 @@
     }
 }
     
+$conn->close();
 ?>

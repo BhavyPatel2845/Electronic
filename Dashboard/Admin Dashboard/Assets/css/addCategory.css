@@ -137,21 +137,24 @@ li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* text-align: center; */
     overflow: scroll;
     scrollbar-width: none;
     background-color: #00246b;
 }
 
-/* Add Product Section */
+/*----------------------
+add Category Form - Start
+------------------------*/
 
-#dashboardContainer .rightSide .addProductForm{
+#dashboardContainer .rightSide .addCategoryForm{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-#dashboardContainer .rightSide .addProductForm .container{
+#dashboardContainer .rightSide .addCategoryForm .container{
     position: relative;
     width: 600px;
     height: 600px;
@@ -168,10 +171,10 @@ li{
     background-color: #cadcfc;
 }
 
-#dashboardContainer .rightSide .addProductForm .container h3{
+#dashboardContainer .rightSide .addCategoryForm .container h3{
     width: 100%;
 }
-#dashboardContainer .rightSide .addProductForm .container form{
+#dashboardContainer .rightSide .addCategoryForm .container form{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -179,56 +182,42 @@ li{
     align-items: center;
     text-align: center;
 }
-#dashboardContainer .rightSide .addProductForm .container h3{
+#dashboardContainer .rightSide .addCategoryForm .container h3{
     margin: 20px 0px 40px 0px;
     font-size: 24px;
 }
-#dashboardContainer .rightSide .addProductForm .container input{
+#dashboardContainer .rightSide .addCategoryForm .container input{
     width: 400px;
     padding: 10px;
-    margin-bottom: 30px;
-    border: none;
-    font-size: 14px;
-    outline: none;
-    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;    
-    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25); 
-    background-color: transparent;
-}
-#dashboardContainer .rightSide .addProductForm .container p{
-    width: 400px;
-    text-align: start;
-    font-size: 14px;
-    padding: 10px;
-    /* background-color: rebeccapurple; */
-    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);    
-    /* background-color: red; */
-}
-#dashboardContainer .rightSide .addProductForm .container textarea{
-    width: 400px;
-    padding: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     border: none;
     font-size: 14px;
     font-weight: var(--midiumFontWeight);
     outline: none;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;    
-    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);    
+    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25); 
     background-color: transparent;
 }
-
-#dashboardContainer .rightSide .addProductForm .container select{
+#dashboardContainer .rightSide .addCategoryForm .container p{
+    width: 400px;
+    text-align: start;
+    font-size: 14px;
+    padding: 10px;
+    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);    
+}
+#dashboardContainer .rightSide .addCategoryForm .container textarea{
     width: 400px;
     padding: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     border: none;
     font-size: 14px;
     font-weight: var(--midiumFontWeight);
     outline: none;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;    
     text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);
-    background-color: transparent;
+    background-color: transparent;    
 }
-#dashboardContainer .rightSide .addProductForm .container button{
+#dashboardContainer .rightSide .addCategoryForm .container button{
     margin: 25px 0px;
     width: 40%;
     padding: 10px 0px;
@@ -239,17 +228,22 @@ li{
     background-color: #00246b;  
 }
 
-#dashboardContainer .rightSide .addProductForm form input[type=file]::file-selector-button{
+#dashboardContainer .rightSide .addCategoryForm form input[type=file]::file-selector-button{
     background-color: transparent;
     border: none;
     color: #00246b;
+    text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);
     margin-right: 20px; 
     cursor: pointer;
 }
 
-#dashboardContainer .rightSide .addProductForm form input[type=file]::file-selector-button:hover{
+#dashboardContainer .rightSide .addCategoryForm form input[type=file]::file-selector-button:hover{
     color: #5086e4;
 }
+
+/*---------------------
+ add category Form - End
+----------------------*/
 
 
 /*--------------------------
@@ -261,66 +255,28 @@ li{
 /*---------------------
  Media Query - start 
 ----------------------*/
-@media screen and (max-width: 990px) {
-    #dashboardContainer .leftSide{
-     width: 100%;
-     display: flex;
-     justify-content: start;
-     text-align: end;
-     align-items: end;
-     height: 0px;
-     transition: .5s ease-in-out;
-     background-color: #fff;
-     position: absolute;
-     box-shadow: 0 30px 30px -10px rgb(0 0 0 / 0.25);
-}
-#dashboardContainer .leftSide ul{
+
+@media screen and (max-width: 615px) {
+    #dashboardContainer .rightSide .addCategoryForm{
         width: 100%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        line-height: 50px;
-        opacity: 0;
-        transition: .1s ease-in-out;
-}   
-  #dashboardHeader .logoAndBars i{
-    display: block;
-}
-
-#dashboardContainer .leftSide.active{
-      height: 100vh;
-}
-#dashboardContainer .leftSide ul.visible{
-    opacity: 1;
-    transition: 2s ease-in-out;
-}
-
-}
-
-
-/*-----------------------
- Add Product Form - start 
-------------------------*/
-
-@media screen and (max-width: 700px){
-    #dashboardContainer .rightSide{
-        height: 92vh;
+        height: 100%;
     }
-    #dashboardContainer .rightSide .addProductForm .container{
-        width: 88%;
+    #dashboardContainer .rightSide .addCategoryForm .container{
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
     }
+  }
+  @media screen and (max-width: 450px) {
     
-    #dashboardContainer .rightSide .addProductForm .container form input,
-    #dashboardContainer .rightSide .addProductForm .container form textarea,
-    #dashboardContainer .rightSide .addProductForm .container form select{
-        width: 90%;
+    #dashboardContainer .rightSide .addCategoryForm .container input,
+    #dashboardContainer .rightSide .addCategoryForm .container textarea,
+    #dashboardContainer .rightSide .addCategoryForm .container p
+    {
+        width: 80%;
     }
-}
+  }
 
-
-/*-----------------------
- Add Product Form - end 
-------------------------*/
 
 /*---------------------
  Media Query - End 

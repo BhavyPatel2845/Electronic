@@ -57,12 +57,12 @@
         --------------------------->
         <div class="leftSide">
             <ul>
-            <a href="dashboard.php"><li><img src="Assets/images/sidebarImg/dashboard.png" alt="">Dashboard</li></a>
+                <a href="dashboard.php"><li><img src="Assets/images/sidebarImg/dashboard.png" alt="">Dashboard</li></a>
                 <a href="products.php"><li><img src="Assets/images/sidebarImg/products.png" alt="">Products</li></a>
+                <a href="addCategory.php"><li><img src="Assets/images/sidebarImg/addproducts.png" alt="">Add Category</li></a>
                 <a href="addProduct.php"><li><img src="Assets/images/sidebarImg/addproducts.png" alt="">Add Products</li></a>
                 <a href="user.php"><li><img src="Assets/images/sidebarImg/users.png" alt="">Users</li></a>
                 <a href="orderHistory.php"><li><img src="Assets/images/sidebarImg/orderhistory.png" alt="">Order History</li></a>
-                <a href="userContact.php"><li><img src="Assets/images/sidebarImg/orderhistory.png" alt="">User Contact</li></a>
             </ul>
         </div>
         <!-------------------------- 
@@ -78,26 +78,38 @@
                     <li id="headerOflist">
                 
                         <div class="name">Name</div>
-                        <div>Email</div>
                         <div class="number">Phone Number</div>
+                        <div>Email</div>
                         <div class="message">Message</div>
                     </li>
 
                     <?php
-                        for ($i=0; $i < 20; $i++){
+                        include "../../backend/database_connection.php";
+                        
+                        $selectQuery = "select userName,phoneNumber,email,message from contact";
+                        $result = $conn->query($selectQuery);
+
+                        if(!empty($result)){
+                            while ($row = $result->fetch_assoc()) {
                     ?>
 
                     <li class="userMessage">
-                        <div class="name">Ram Nadoda</div>
+                        <div class="name"><?php echo $row['userName'] ?></div>
+                        <div class="number"><?php echo $row['phoneNumber'] ?></div>
                         <div class="emailAndHover">
-                            <div class="hoverEmail">ram@gmail.com</div>
-                            <div class="email">ram@gmail.com</div>
+                            <div class="hoverEmail"><?php echo $row['email'] ?></div>
+                            <div class="email"><?php echo $row['email'] ?></div>
                         </div>
-                        <div class="number">9876543210</div>
-                        <div class="message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi</div>
+                        <div class="message"><?php echo $row['message'] ?></div>
                     </li> 
                     
-                    <?php } ?>
+                    <?php 
+                            } 
+                        }
+                        else {
+                            echo "<script> alert('do not contact any user')</script>";
+                        }
+                    ?>
                 </ul>
             </div>
         </div>

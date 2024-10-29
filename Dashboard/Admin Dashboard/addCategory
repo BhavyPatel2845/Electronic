@@ -19,7 +19,7 @@
     <!-----------
      Custom CSS 
      ----------->
-    <link rel="stylesheet" href="./Assets/css/addProduct.css">
+    <link rel="stylesheet" href="./Assets/css/addCategory.css">
 
 </head>
 
@@ -69,26 +69,15 @@
         dashboard Right side - start
         --------------------------->
         <div class="rightSide">
-        <div class="addProductForm">
+        <div class="addCategoryForm">
                 <div class="container">
-                    <h3>Add Product</h3>
+                    <h3>Category Form</h3>
                     <form action="">
-                        <input type="text" placeholder="Product Name">
-                        <textarea rows="10" cols="47" placeholder="Product detail"></textarea>
-                        <select name="" id="">
-                            <option value="">Mobile</option>
-                            <option value="">Smart Watch</option>
-                            <option value="">Air Burds</option>
-                            <option value="">Laptop</option>
-                        </select>
-                        
-                        <input type="text" placeholder="Product Price">
-                        <input type="text" placeholder="Processor">
-                        <input type="text" placeholder="Memory Storage">
-                        <input type="text" placeholder="RAM">
-                        <input type="text" placeholder="Front Camera">
-                        <input type="text" placeholder="Rear Camera">
-                        <input type="text" placeholder="Bettary">
+                        <p>Category Name</p>
+                        <input type="text" placeholder="category Name">
+                        <p>Category Details</p>
+                        <textarea rows="10" cols="47" placeholder="category detail"></textarea>
+                        <p>Category Image</p>
                         <input type="file">
                         <button type="submit"> submit </button>
                     </form>

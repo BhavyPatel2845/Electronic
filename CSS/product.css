@@ -33,17 +33,29 @@ Product - start
   position: relative;
   background-color: #00246b;
 }
-#productSection .productSort{
+#productSection .productCategoryAndSort{
   display: flex;
   justify-content: end;
   align-items: end;
-  grid-gap: 20px;
+  grid-gap: 40px;
   padding: 20px 40px 40px;
   text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);
   color: #cadcfc;
-
 }
-#productSection .productSort select{
+
+#productSection .productCategory{
+  display: flex;
+  grid-gap: 20px;
+  text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);
+  color: #cadcfc;
+}
+#productSection .productSort{
+  display: flex;
+  grid-gap: 20px;
+  text-shadow: 3px 3px 2px rgba(36, 79, 248, 0.25);
+  color: #cadcfc;
+}
+#productSection .productCategoryAndSort select{
   border: none;
   padding: 5px 10px;
   outline: none;
@@ -54,7 +66,7 @@ Product - start
   color: #cadcfc;
 }
 
- .laptopProduct
+ .product
 {
   width: 100%;
   display: flex;
@@ -143,7 +155,7 @@ transform: translateY(-5px);
 
 .productsContainer .individualProductBox .productRating{
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   grid-gap: 10px;
   margin-top: 10px;
@@ -152,47 +164,23 @@ transform: translateY(-5px);
   color: rgb(255, 132, 0);
 }
 
-
-.buttons .productSwiperButtonNext,
-.buttons .productSwiperButtonPrev {
-  font-size: 30px;
+.productsContainer .individualProductBox .addToCart{
+  width: 80%;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
   align-items: center;
+  padding: 10px 0px;
+}
+.productsContainer .individualProductBox .addToCart button{
   cursor: pointer;
-  user-select: none;
-}
-.buttons {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-}
-/* 
-.productsContainer .swiperContainer {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: yellow;
-  flex-direction: column;
+  border: none;
+  background-color: #00246b;
+  color: #cadcfc;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  padding: 8px 25px;
 }
 
-.productsContainer .swiperContainer .swiperWrapper {
-  display: flex;
-  flex-basis: 200;
-  transition: transform 0.5s ease;
-}
-
- .productsContainer .swiperWrapper .productSwiperSlide {
-  height: 370px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  margin: 5px;
-} */
 
 /************************* Footer ***********************/
 #footer{

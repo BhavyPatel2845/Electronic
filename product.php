@@ -35,34 +35,49 @@
      Product - start 
     ------------------->
     <div class="productSection" id="productSection">
-        <div class="productSort">
-            <label for=""> Short By </label>
-            <select name="" id="">
-                <option value=""> Short By Latest</option>
-                <option value=""> Short By Rating : High To Low</option>
-                <option value=""> Short By Rating : Low To High</option>
-                <option value=""> Short By Price : High To Low</option>
-                <option value=""> Short By Price : Low To High</option>
-            </select>
+        <div class="productCategoryAndSort">
+            <div class="productCategory">
+                <label for=""> Category </label>
+                <select name="" id="">
+                    <option value=""> All Products </option>
+                    <option value=""> Mobiles </option>
+                    <option value=""> Smart Watches </option>
+                    <option value=""> Air Burds </option>
+                    <option value=""> Laptops </option>
+                </select>
+            </div>
+            <div class="productSort">
+                <label for=""> Short By </label>
+                <select name="" id="">
+                    <option value=""> Short By Latest</option>
+                    <option value=""> Short By Rating : High To Low</option>
+                    <option value=""> Short By Rating : Low To High</option>
+                    <option value=""> Short By Price : High To Low</option>
+                    <option value=""> Short By Price : Low To High</option>
+                </select>
+            </div>
         </div>
-        <div class="laptopProduct">
+        <div class="product">
                 <div class="productsContainer">
                     <?php
                     for ($i=0; $i < 20 ; $i++) { 
                     ?>
                     <div class="individualProductBox">
-                                <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/laptop1.png" alt="">
-                                </div>
-                                <p class="productName">Lenovo IdesPad Slim 3</p>
-                                <p class="productPrice">&#8377; 60,000.00</p>
-                                <div class="productRating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
+                        <div class="individualProductImageContainer">
+                            <img src="./IMAGES/laptop1.png" alt="">
+                        </div>
+                        <p class="productName">Lenovo IdesPad Slim 3</p>
+                        <p class="productPrice">&#8377; 60,000.00</p>
+                        <div class="productRating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="addToCart">
+                            <button>Add To Cart</button>
+                        </div>
                     </div>
                     <?php
                     }
@@ -75,7 +90,7 @@
     ------------------->
 
     
-<!----------------------------    HEADER     --------------------------------->
+<!----------------------------    FOOTER     --------------------------------->
         
         <?php 
             include 'footer.php';
