@@ -34,28 +34,55 @@
                     <input type="text" name="productName" placeholder="Product Name">
                 </div>
                 <div class="productDetail">
-                    <label for="productDescription">Description</label>
-                    <textarea name="productDescription" id="" rows="4" cols="20"
+                    <label for="productDetail"> Product Detail</label>
+                    <textarea name="detail" id="" rows="4" cols="50"
                         placeholder="Product Details"></textarea>
                 </div>
                 <div class="selectCatagory">
-                    <label for="productCatagory">Catagory</label>
-                    <select name="productCatagory" id="">
-                        <option value="insencesWDGADG">insencesWDGADG</option>
-                        <option value="insences2">insences2</option>
-                        <option value="insences3">insences3</option>
-                        <option value="insences4">insences4</option>
+                    <label for="productCategory">Catagory</label>
+                    <select name="categoryName" id="">
+                        <option value="insencesWDGADG">Mobile</option>
+                        <option value="insences2">Smart Watch</option>
+                        <option value="insences3">Air Burds</option>
+                        <option value="insences4">Laptop</option>
                     </select>
                 </div>
                 <div class="productPrice">
                     <label for="productPrice">Price</label>
-                    <input type="number" name="productPrice" placeholder="Price">
+                    <input type="number" name="price" placeholder="Price">
                 </div>
                 <div class="productDiscount">
                     <label for="productDiscount">Discount</label>
-                    <input type="number" name="productDiscount" placeholder="Discount">
+                    <input type="number" name="discount" placeholder="Discount">
                 </div>
-
+                <div class="productQuantity">
+                    <label for="productQuantity">Quantity</label>
+                    <input type="number" name="quantity" placeholder="Quantity">
+                </div>
+                <div class="productProcessor">
+                    <label for="productProcessor">processor</label>
+                    <input type="text" name="processor" placeholder="processor">
+                </div>
+                <div class="productMemoryStorage">
+                    <label for="productMemoryStorage">Memory Storage</label>
+                    <input type="text" name="memoryStorage" placeholder="memoryStorage">
+                </div>
+                <div class="productRam">
+                    <label for="productRam">RAM</label>
+                    <input type="text" name="ram" placeholder="RAM">
+                </div>
+                <div class="productFrontCamera">
+                    <label for="productFrontCamera">Front Camera</label>
+                    <input type="text" name="frontCamera" placeholder="Front Camera">
+                </div>
+                <div class="productRearCamera">
+                    <label for="productRearCamera">Rear Camera</label>
+                    <input type="text" name="rearCamera" placeholder="Rear Camera">
+                </div> 
+                <div class="productBattery">
+                    <label for="productBattery">Rear Camera</label>
+                    <input type="text" name="battery" placeholder="Battery">
+                </div>
                 <div class="uploadFile">
                     <label for="productImage">Image</label>
                     <input type="file" name="productImage">
@@ -117,43 +144,59 @@
         <div class="rightSide">
             <div class="productsContainer">
                 <?php
-                    for ($i=0; $i <8 ; $i++) { 
+
+                    require "../../backend/database_connection.php";
+                    $selectQuery = 'select * from products';
+                    $result = $conn->query($selectQuery);
+
+                    if(!empty($result)){
+                        while ($row = $result->fetch_assoc()) {            
                 ?>
-                        <div class="productsBox">
+                <div class="productsBox">
                     <div class="imageBox">
-                        <img src="../../IMAGES/product1.png" alt="">
+                        <?php echo '<img src="../../backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
                     </div>
                     <div class="productDetailBox">
                         <div class="productNameCatagory">
-                            <div class="productName">Name: <span>Boat 172</span></div>
-                            <div class="productCatagory">Category: <span>Air Burds</span></div>
+                            <div class="productName">Name: <span><?php echo $row['productName']; ?></span></div>
+                            <div class="productCatagory">Category: <span><?php echo $row['categoryName']; ?></span></div>
                         </div>
                         <div class="productDescription">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, assumenda!
-                                 Quas nulla perferendis exercitationem at.</p>
+                            <p><?php echo $row['detail']; ?></p>
                         </div>
                         <div class="productPriceDiscount">
-                            <div class="productPrice">Price: <span>&#8377 1500</span></div>
-                            <div class="productDiscount">Discount: <span>10%</span></div>
+                            <div class="productPrice">Price: <span><?php echo $row['price']; ?></span></div>
+                            <div class="productDiscount">Discount: <span><span><?php echo $row['discount']; ?>%</span></div>
                         </div>
                         <div class="productEditDelete">
-                            <button class="productEdit">
-                                <!-- aa buutton ni andar no code che -->
-                                    <!-- data-id="' . $row['id'] . '" 
-                                    data-name="' . $row['productName'] . '" 
-                                    data-category="' . $row['productCatagory'] . '" 
-                                    data-description="' . $row['productDescription'] . '" 
-                                    data-price="' . $row['productPrice'] . '" 
-                                    data-discount="' . $row['productDiscount'] . '" 
-                                    data-image="' . $row['productImage'] . '"-->
+                            <button class="productEdit"
+                            <?php 
+                            echo '
+                                    data-productId="' . $row['product_id'] . '"
+                                    data-productName="' . $row['productName'] . '"
+                                    data-detail="' . $row['detail'] . '" 
+                                    data-categoryName="' . $row['categoryName'] . '" 
+                                    data-price="' . $row['price'] . '" 
+                                    data-discount="' . $row['discount'] . '"
+                                    data-quantity="' . $row['quantity'] . '"
+                                    data-processor="' . $row['processor'] . '" 
+                                    data-memoryStorage="' . $row['memoryStorage'] . '" 
+                                    data-ram="' . $row['ram'] . '" 
+                                    data-frontCamera="' . $row['frontCamera'] . '" 
+                                    data-rearCamera="' . $row['rearCamera'] . '"
+                                    data-battery="' . $row['battery'] . '"       
+                                    data-image="' . $row['productImage'] . '"
+                                '?>>
+
                                 <img src="./Assets/images/edit.png" alt="Edit"> Edit
                             </button>
-                            <a class="productDelete"><img src="./Assets/images/delete.png" alt="Edit">delete</a>
+                            <a class="productDelete"><img src="./Assets/images/delete.png" alt="Delete">delete</a>
                         </div>
                     </div>
                 </div>
                 <?php
-                    }
+                    } 
+                }
                 ?>
             </div>
 

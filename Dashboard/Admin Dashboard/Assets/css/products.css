@@ -138,11 +138,12 @@ Dashboard left side - end
   left: 0;
   z-index: 999;
   backdrop-filter: blur(5px);
+ 
 }
 
 #editFormContainer .formContainer {
   width: 600px;
-  /* height: 600px; */
+  height: 98vh;
   padding: 20px;
   background-color: #fff;
   position: absolute;
@@ -153,9 +154,11 @@ Dashboard left side - end
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   position: relative;
+  overflow: scroll;
+  scrollbar-width: none;
   background-color: #cadcfc;
   color: #00246b;
 }

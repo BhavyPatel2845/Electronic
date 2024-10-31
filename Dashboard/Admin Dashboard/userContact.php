@@ -84,7 +84,7 @@
                     </li>
 
                     <?php
-                        include "../../backend/database_connection.php";
+                        require "../../backend/database_connection.php";
                         
                         $selectQuery = "select userName,phoneNumber,email,message from contact";
                         $result = $conn->query($selectQuery);
