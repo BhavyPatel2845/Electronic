@@ -47,39 +47,6 @@ document.querySelectorAll('.deleteUserBtn').forEach(function(icon) {
    User Table - End 
 -----------------------*/
 
-// All buttons
-let buttonNextFirst = document.getElementById("buttonNextFirst");
-let buttonNextSecond = document.getElementById("buttonNextSecond"); 
-let buttonPrevFirst = document.getElementById("buttonPrevFirst"); 
-let buttonPrevSecond = document.getElementById("buttonPrevSecond"); 
-let submitButton = document.getElementById("submitButton");
-
-// All form boxes
-let firstInfoBox = document.getElementById("firstInfoBox");
-let secondInfoBox = document.getElementById("secondInfoBox");
-let thirdInfoBox = document.getElementById("thirdInfoBox");
-
-// "Next" and "Previous" buttons navigation for the add user form
-buttonNextFirst.addEventListener("click", function() {
-    firstInfoBox.style.display = "none";
-    secondInfoBox.style.display = "block";
-});
-
-buttonPrevFirst.addEventListener("click", function() {
-    secondInfoBox.style.display = "none";
-    firstInfoBox.style.display = "block";
-});
-
-buttonNextSecond.addEventListener("click", function() {
-    secondInfoBox.style.display = "none";
-    thirdInfoBox.style.display = "block";
-});
-
-buttonPrevSecond.addEventListener("click", function() {
-    thirdInfoBox.style.display = "none";
-    secondInfoBox.style.display = "block";
-});
-
 // Add/Edit User Sections
 const addUser = document.querySelector('.addUser');
 const editUser = document.querySelector('.editUser');
@@ -107,8 +74,6 @@ editUserBtn.forEach((btns)=>{
     });
 })
 
-
-
 closeAddUesr.addEventListener("click",()=>{
   addUser.style.display = "none";
 })
@@ -117,34 +82,88 @@ closeEditUesr.addEventListener("click",()=>{
   editUser.style.display = "none";
 })
 
-// Handling Next/Prev buttons for the "editUser" section
-let editButtonNextFirst = document.getElementById("editButtonNextFirst");
-let editButtonPrevFirst = document.getElementById("editButtonPrevFirst");
-let editButtonNextSecond = document.getElementById("editButtonNextSecond");
-let editButtonPrevSecond = document.getElementById("editButtonPrevSecond");
 
-// Form boxes for "edit user" section
-let editFirstInfoBox = document.getElementById("editFirstInfoBox");
-let editSecondInfoBox = document.getElementById("editSecondInfoBox");
-let editThirdInfoBox = document.getElementById("editThirdInfoBox");
 
-// "Next" and "Previous" buttons navigation for the "editUser" form
-editButtonNextFirst.addEventListener("click", function() {
-    editFirstInfoBox.style.display = "none";
-    editSecondInfoBox.style.display = "block";
+//  Edit User  
+
+/*-----------------
+    Edit form - start
+-------------------*/
+   
+const edtBtn = document.querySelectorAll('#editUser'); 
+const editForm = document.querySelector('#editUserContainer');
+const closeForm = document.querySelector('.close');
+
+// Form fields
+const userNameInput = document.querySelector('#editUserContainer input[name="editUserName"]');
+const userDateOfBirthInput = document.querySelector('#editUserContainer input[name="editDob"]');
+const userCityInput = document.querySelector('#editUserContainer input[name="editCity"]');
+const userPincodeInput = document.querySelector('#editUserContainer input[name="editPincode"]');
+const userPhoneNumberInput = document.querySelector('#editUserContainer input[name="editPhoneNumber"]');
+const userEmailInput = document.querySelector('#editUserContainer input[name="editEmail"]');
+const userIDInput = document.getElementById('editUserId');
+
+// Event listener for each edit button
+edtBtn.forEach(elems => {
+    elems.addEventListener("click", (btn) => {
+        
+        const userName = elems.getAttribute('data-userName');
+        const userDob = elems.getAttribute('data-dateOfBirth');
+        const userCity = elems.getAttribute('data-city');
+        const userPincode = elems.getAttribute('data-pincode');
+        const userPhoneNumber = elems.getAttribute('data-phoneNumber');
+        const userEmail = elems.getAttribute('data-email');
+        const userId = elems.getAttribute('data-userId');
+        
+        userNameInput.value = userName;
+        userDateOfBirthInput.value = userDob;
+        userCityInput.value = userCity;
+        userPincodeInput.value = userPincode;
+        userPhoneNumberInput.value = userPhoneNumber;
+        userEmailInput.value = userEmail;
+        userIDInput.value = userId;
+        
+        editForm.style.display = 'block';
+    });
 });
 
-editButtonPrevFirst.addEventListener("click", function() {
-    editSecondInfoBox.style.display = "none";
-    editFirstInfoBox.style.display = "block";
+//close form
+closeForm.addEventListener("click", (eve) => {
+    editForm.style.display = 'none';
 });
 
-editButtonNextSecond.addEventListener("click", function() {
-    editSecondInfoBox.style.display = "none";
-    editThirdInfoBox.style.display = "block";
+// Close the form when clicking outside form
+window.addEventListener("click", (eve) => {
+    if (eve.target === editForm) {
+        editForm.style.display = 'none';
+    }
 });
 
-editButtonPrevSecond.addEventListener("click", function() {
-    editThirdInfoBox.style.display = "none";
-    editSecondInfoBox.style.display = "block";
-});
+
+/*-----------------
+    Edit form - End
+-------------------*/
+
+
+/*--------------------
+    delete Product - Start
+---------------------*/
+
+// deleteProductBtn = document.querySelectorAll('.productDelete');
+// const productID = document.getElementById('productId');
+
+// deleteProductBtn.forEach(element => {
+//     element.addEventListener('click', function(){
+//         alert('delete button clicked');
+        
+//         const productid = elems.getAttribute('data-productId');
+//         productID.value = productid;
+//     })
+// });
+
+/*--------------------
+    delete Product - End
+---------------------*/
+
+
+

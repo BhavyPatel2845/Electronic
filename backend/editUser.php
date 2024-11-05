@@ -2,24 +2,25 @@
 
     include "database_connection.php";
 
-    if(isset($_POST['submit'])){
-        $userName = $_POST['userName'];
-        $dob = $_POST['dob'];
-        $city = $_POST['city'];
-        $pincode = $_POST['pincode'];
-        $phoneNumber = $_POST['phoneNumber'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+    if(isset($_POST['editSubmit'])){
+        $userName = $_POST['editUserName'];
+        $dob = $_POST['editDob'];
+        $city = $_POST['editCity'];
+        $pincode = $_POST['editPincode'];
+        $phoneNumber = $_POST['editPhoneNumber'];
+        $email = $_POST['editEmail'];
+        $userID = $_POST['editUserId'];
+        // $password = $_POST['password'];
     }
 
     $fields = [
-        'username' => $userName,
-        'dob' => $dob,
-        'city' => $city,
-        'pincode' => $pincode,
-        'phoneNumber' => $phoneNumber,
-        'email' => $email,
-        'password' => $password
+        'editUserName' => $userName,
+        'editDob' => $dob,
+        'editCity' => $city,
+        'editPincode' => $pincode,
+        'editPhoneNumber' => $phoneNumber,
+        'editEmail' => $email,
+        // 'password' => $password
     ];
 
     $errors = [];
@@ -57,15 +58,23 @@
         $city = mysqli_real_escape_string($conn, $city);
         $phoneNumber = mysqli_real_escape_string($conn, $phoneNumber);
         $email = mysqli_real_escape_string($conn, $email);
-        $password = mysqli_real_escape_string($conn, $password);
+        // $password = mysqli_real_escape_string($conn, $password);
 
-    $insertQuery = "insert into users(name,dob,city,pincode,phoneNumber,email)
-     values ('$userName','$dob', '$city', $pincode, $phoneNumber,'$email')";
+    $updateQuery = "UPDATE `users` SET 
+                `name` = '$userName', 
+                `dob` = '$dob',
+                `city` = '$city',  
+                `pincode` = '$pincode', 
+                `phoneNumber` = '$phoneNumber',
+                `email` = '$email'
+                WHERE `user_id` = '$userID'";
 
-    $loginTableQuery = "insert into login(email,password) values('$email','$password')";
+    $loginTableQuery = "UPDATE `login` SET 
+                `email` = '$email'
+                WHERE `login_id` = '$userID'";
 
-    if (mysqli_query($conn,$insertQuery) === TRUE && mysqli_query($conn,$loginTableQuery) === TRUE) {
-        header("location: ../login.php");
+    if (mysqli_query($conn,$updateQuery) === TRUE && mysqli_query($conn,$loginTableQuery) === TRUE) {
+        header("location: ../dashboard/Admin Dashboard/user.php");
     }
     else{
         echo "error";

@@ -74,11 +74,11 @@
                     <h3>Category Form</h3>
                     <form action="">
                         <p>Category Name</p>
-                        <input type="text" placeholder="category Name">
+                        <input type="text" placeholder="category Name" name="categoryName">
                         <p>Category Details</p>
-                        <textarea rows="10" cols="47" placeholder="category detail"></textarea>
+                        <textarea rows="10" cols="47" placeholder="category detail" name="categcoryDetail"></textarea>
                         <p>Category Image</p>
-                        <input type="file">
+                        <input type="file" name="categoryImage">
                         <button type="submit"> submit </button>
                     </form>
                 </div>
@@ -99,7 +99,7 @@
     <!---------
      Custom Js  
     ----------->
-    <script src="./Assets/js/dashboard.js"></script>
+    <script src="./Assets/js/addCategory.js"></script>
 
 
     <!---------------

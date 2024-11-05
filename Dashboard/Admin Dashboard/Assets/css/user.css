@@ -121,6 +121,43 @@
     align-items: center;
   }
   
+/* left Side Responsive */
+@media screen and (max-width: 990px) {
+    #dashboardContainer .leftSide{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        text-align: end;
+        align-items: end;
+        height: 0px;
+        transition: .5s ease-in-out;
+        background-color: #fff;
+        position: absolute;
+     box-shadow: 0 30px 30px -10px rgb(0 0 0 / 0.25);
+}
+#dashboardContainer .leftSide ul{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        line-height: 50px;
+        opacity: 0;
+        transition: .1s ease-in-out;
+}   
+  #dashboardHeader .logoAndBars i{
+    display: block;
+}
+
+#dashboardContainer .leftSide.active{
+    height: 100vh;
+}
+#dashboardContainer .leftSide ul.visible{
+    opacity: 1;
+    transition: 2s ease-in-out;
+}
+
+}
+
   
   /*--------------------------
   Dashboard left side - end
@@ -301,9 +338,12 @@
 #registerSectionEdit .container {
     position: relative;
     width: 400px;
-    height: 440px;
+    height: 80vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
     border-radius: 10px;
+}
+#registerSectionEdit .container{
+    height: 90vh;
 }
 
 #registerSectionAdd .container .formBox h3,
@@ -322,7 +362,17 @@
     align-items: center;
     text-align: center;
 }
-
+#editFirstInfoBox div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#editFirstInfoBox div p{
+    width: 70%;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 8px;
+}
 #registerSectionAdd .container form .formBox:nth-child(1),
 #registerSectionEdit .container form .formBox:nth-child(1) {
     display: flex; /* Show the first box initially */
@@ -346,7 +396,7 @@
 
 #registerSectionAdd .container form .formBox input,
 #registerSectionEdit .container form .formBox input {
-    width: 60%;
+    width: 70%;
     padding: 10px;
     margin-bottom: 15px;
     border: none;
@@ -390,6 +440,9 @@
     background-color: rgb(85, 85, 191); /* Change color on hover */
 }
 
+#editUserContainer input[name='editUserId']{
+    display: none;
+}
 
 .closeAddUser{
     position: absolute;

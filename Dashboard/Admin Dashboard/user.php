@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +24,13 @@
 </head>
 
 <body>
+    
+<?php
+    require '../../backend/database_connection.php';
+
+    $selectQuery = "select * from users";
+    $result = $conn->query($selectQuery);
+?>
 
     <!----------------------
      Dashboard Header - start 
@@ -54,38 +59,17 @@
     <div class="registerSection" id="registerSectionAdd">
         <div class="container" id="addUserContainer">
             <div class="closeAddUser">&#9986;</div>
-            <form action="./backend/register.php" method="post">
+            <form action="../../backend/registration.php" method="post">
                 <div class="formBox" id="firstInfoBox">
                     <h3>Add User</h3>
-                    <input type="text" name="firstName" placeholder="First Name.." required>
-                    <input type="text" name="middleName" placeholder="Mid Name..">
-                    <input type="text" name="lastName" placeholder="Last Name.." required>
-                    <input type="text" name="gender" placeholder="Gender.." required>
-                    <div class="button">
-                        <button type="button" id="buttonNextFirst">Next</button>
-                    </div>
-                </div>
-                <div class="formBox" id="secondInfoBox" style="display: none;">
-                    <h3>Contact Information</h3>
-                    <input type="email" name="email" placeholder="Email.." required>
-                    <input type="text" name="password" placeholder="Password.." required>
-                    <input type="text" name="phone" placeholder="Phone.." required>
-                    <input type="text" name="addressLine1" placeholder="Address Line 1.." required>
-                    <input type="text" name="addressLine2" placeholder="Address Line 2..">
-                    <div class="button">
-                        <button type="button" id="buttonPrevFirst">Prev</button>
-                        <button type="button" id="buttonNextSecond">Next</button>
-                    </div>
-                </div>
-                <div class="formBox" id="thirdInfoBox" style="display: none;">
-                    <h3>Additional Information</h3>
-                    <input type="number" name="pincode" placeholder="Pincode.." required>
-                    <input type="date" name="dob" placeholder="Date of Birth.." required>
-                    <input type="text" name="city" placeholder="City.." required>
-                    <input type="text" name="state" placeholder="State.." required>
-                    <input type="text" name="country" placeholder="Country.." required>
-                    <div class="button">
-                        <button type="button" id="buttonPrevSecond">Prev</button>
+                        <input type="text" placeholder="User Name" name="userName">
+                        <input type="date" placeholder="Date Of Birth..." name="dob">
+                        <input type="text" placeholder="City..." name="city" required> 
+                        <input type="number" placeholder="Pincode..." name="pincode" required>
+                        <input type="number" placeholder="Phone Number..." name="phoneNumber" required> 
+                        <input type="email" placeholder="Email..." name="email" required>
+                        <input type="password" placeholder="password..." name="password">
+                    <div class="button">                    
                         <button type="submit" name="submit" id="submitButton">Submit</button>
                     </div>
                 </div>
@@ -104,39 +88,39 @@
     <div class="registerSection" id="registerSectionEdit">
         <div class="container" id="editUserContainer">
         <div class="closeEditUser">&#9986;</div>
-            <form action="./backend/register.php" method="post">
+            <form action="../../backend/editUser.php" method="post">
                 <div class="formBox" id="editFirstInfoBox">
                     <h3>Edit User</h3>
-                    <input type="text" name="firstName" placeholder="First Name.." required>
-                    <input type="text" name="middleName" placeholder="Mid Name..">
-                    <input type="text" name="lastName" placeholder="Last Name.." required>
-                    <input type="text" name="gender" placeholder="Gender.." required>
-                    <div class="button">
-                        <button type="button" id="editButtonNextFirst">Next</button>
-                    </div>
-                </div>
-                <div class="formBox" id="editSecondInfoBox" style="display: none;">
-                    <h3>Contact Information</h3>
-                    <input type="email" name="email" placeholder="Email.." required>
-                    <input type="text" name="password" placeholder="Password.." required>
-                    <input type="text" name="phone" placeholder="Phone.." required>
-                    <input type="text" name="addressLine1" placeholder="Address Line 1.." required>
-                    <input type="text" name="addressLine2" placeholder="Address Line 2..">
-                    <div class="button">
-                        <button type="button" id="editButtonPrevFirst">Prev</button>
-                        <button type="button" id="editButtonNextSecond">Next</button>
-                    </div>
-                </div>
-                <div class="formBox" id="editThirdInfoBox" style="display: none;">
-                    <h3>Additional Information</h3>
-                    <input type="number" name="pincode" placeholder="Pincode.." required>
-                    <input type="date" name="dob" placeholder="Date of Birth.." required>
-                    <input type="text" name="city" placeholder="City.." required>
-                    <input type="text" name="state" placeholder="State.." required>
-                    <input type="text" name="country" placeholder="Country.." required>
-                    <div class="button">
-                        <button type="button" id="editButtonPrevSecond">Prev</button>
-                        <button type="submit" name="submit" id="submitButton">Submit</button>
+                        <div>
+                            <input type="text" placeholder="User Id" name="editUserId" id="editUserId">
+                        </div>
+                        <div>
+                            <p>User Name</p>
+                            <input type="text" placeholder="User Name" name="editUserName">
+                        </div>
+                        <div>
+                            <p>Date Of Birth</p>
+                            <input type="date" placeholder="Date Of Birth..." name="editDob">
+                        </div>
+                        <div>
+                            <p>city</p>
+                            <input type="text" placeholder="City..." name="editCity" required> 
+                        </div>
+                        <div>
+                            <p>Pincode</p>
+                            <input type="number" placeholder="Pincode..." name="editPincode" required>
+                        </div>
+                        <div>
+                            <p>Phone Number</p>
+                            <input type="number" placeholder="Phone Number..." name="editPhoneNumber" required> 
+                        </div>
+                        <div>
+                            <p>Email</p>
+                            <input type="email" placeholder="Email..." name="editEmail" required>
+                        </div>
+                        <!-- <input type="password" placeholder="password..." name="password"> -->
+                    <div class="button">                    
+                        <button type="submit" name="editSubmit" id="submitButton">Submit</button>
                     </div>
                 </div>
             </form>
@@ -184,12 +168,6 @@
 
                 <div class="title">
                     <h4>Users</h4>
-                    <!-- <select>
-                        <option value="">select</option>
-                        <option value="">select</option>
-                        <option value="">select</option>
-                        <option value="">select</option>
-                    </select> -->
                     <div class="addUserbtn">
                         <button> Add user </button>
                     </div>
@@ -198,37 +176,46 @@
 
                 <div class='usersTable'>
                     <table id='table'>
-                        <tr style='background-color: yellow;'>
+                        <tr>
                             <th>Id</th>
                             <th>User Name</th>
-                            <th>Email</th>
+                            <th>Date Of Birth</th>
                             <th>City</th>
-                            <th>Birth</th>
-                            <th>Country</th>
-                            <th>Active</th>
                             <th>Pincode</th>
+                            <th>Phone Number</th>
+                            <th> Email </th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
-
                         <?php
-                        for ($i=0; $i < 10; $i++) { 
-                        ?>
+                        if (!empty($result)) {
+                            while($row = $result->fetch_assoc()){
+                        ?> 
                                         <tr>
-                                            <td>1001</td>
-                                            <td>Bhavy</td>
-                                            <td>hello@gmail.com</td>
-                                            <td>Unjha</td>
-                                            
-                                            <td>1/1/2000</td>
-                                            <td>India</td>
-                                            <td>yes</td>
-                                            <td>384170</td>
-                                            <td ><i style='font-size:18px' class='fas editUserBtn'>&#xf304;</i></td>
+                                            <td><?php echo $row['user_id']; ?></td>
+                                            <td><?php echo $row['name']; ?></td>
+                                            <td><?php echo $row['dob']; ?></td>
+                                            <td><?php echo $row['city']; ?></td>                 
+                                            <td><?php echo $row['pincode']; ?></td>
+                                            <td><?php echo $row['phoneNumber']; ?></td>
+                                            <td><?php echo $row['email']; ?></td>
+                                            <td ><i style='font-size:18px' class='fas editUserBtn' id="editUser"
+                                            <?php 
+                                                echo '
+                                                data-userId="' . $row['user_id'] . '"
+                                                data-userName="' . $row['name'] . '"
+                                                data-dateOfBirth="' . $row['dob'] . '"
+                                                data-city="' . $row['city'] . '" 
+                                                data-pincode="' . $row['pincode'] . '" 
+                                                data-phoneNumber="' . $row['phoneNumber'] . '" 
+                                                data-email="' . $row['email'] . '"
+                                            '?>
+                                            >&#xf304;</i></td>
                                             <td><i style='font-size:18px' class='fas deleteUserBtn'>&#xf2ed;</i></td>
                                           </tr>";
                                 <?php
                                     }
+                                }
                                 ?>
 
                     </table>

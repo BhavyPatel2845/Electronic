@@ -121,6 +121,43 @@ li{
     align-items: center;
 }
 
+/* left Side Responsive */
+@media screen and (max-width: 990px) {
+    #dashboardContainer .leftSide{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        text-align: end;
+        align-items: end;
+        height: 0px;
+        transition: .5s ease-in-out;
+        background-color: #fff;
+        position: absolute;
+     box-shadow: 0 30px 30px -10px rgb(0 0 0 / 0.25);
+}
+#dashboardContainer .leftSide ul{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        line-height: 50px;
+        opacity: 0;
+        transition: .1s ease-in-out;
+}   
+  #dashboardHeader .logoAndBars i{
+    display: block;
+}
+
+#dashboardContainer .leftSide.active{
+    height: 100vh;
+}
+#dashboardContainer .leftSide ul.visible{
+    opacity: 1;
+    transition: 2s ease-in-out;
+}
+
+}
+
 
 /*--------------------------
  Dashboard left side - end
