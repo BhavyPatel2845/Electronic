@@ -27,9 +27,6 @@
     
 <?php
     require '../../backend/database_connection.php';
-
-    $selectQuery = "select * from users";
-    $result = $conn->query($selectQuery);
 ?>
 
     <!----------------------
@@ -188,6 +185,9 @@
                             <th>Delete</th>
                         </tr>
                         <?php
+                                            
+                        $selectQuery = "select * from users";
+                        $result = $conn->query($selectQuery);
                         if (!empty($result)) {
                             while($row = $result->fetch_assoc()){
                         ?> 

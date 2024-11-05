@@ -72,14 +72,14 @@
         <div class="addCategoryForm">
                 <div class="container">
                     <h3>Category Form</h3>
-                    <form action="">
+                    <form action="../../backend/addCategory.php" method="post" enctype="multipart/form-data">
                         <p>Category Name</p>
                         <input type="text" placeholder="category Name" name="categoryName">
                         <p>Category Details</p>
-                        <textarea rows="10" cols="47" placeholder="category detail" name="categcoryDetail"></textarea>
+                        <textarea rows="10" cols="47" placeholder="category detail" name="categoryDetail"></textarea>
                         <p>Category Image</p>
                         <input type="file" name="categoryImage">
-                        <button type="submit"> submit </button>
+                        <button type="submit" name="submit"> submit </button>
                     </form>
                 </div>
             </div>
