@@ -40,11 +40,11 @@
                 </div>
                 <div class="selectCatagory">
                     <label for="productCategory">Catagory</label>
-                    <select name="categoryName" id="">
-                        <option value="insencesWDGADG">Mobile</option>
-                        <option value="insences2">Smart Watch</option>
-                        <option value="insences3">Air Burds</option>
-                        <option value="insences4">Laptop</option>
+                    <select name="categoryName">
+                        <option value="Mobile">Mobile</option>
+                        <option value="Samrt Watch">Smart Watch</option>
+                        <option value="Air Burd">Air Burds</option>
+                        <option value="Laptop">Laptop</option>
                     </select>
                 </div>
                 <div class="productPrice">

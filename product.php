@@ -30,10 +30,17 @@
             include 'Header.php';
         ?>
 
-    
     <!------------------
      Product - start 
     ------------------->
+
+    <?php
+        require './backend/database_connection.php';
+        session_start();
+        $productSelectQuery = "select * from products";
+        $result = mysqli_query($conn, $productSelectQuery);
+    ?>
+
     <div class="productSection" id="productSection">
         <div class="productCategoryAndSort">
             <div class="productCategory">
@@ -50,8 +57,6 @@
                 <label for=""> Short By </label>
                 <select name="" id="">
                     <option value=""> Short By Latest</option>
-                    <option value=""> Short By Rating : High To Low</option>
-                    <option value=""> Short By Rating : Low To High</option>
                     <option value=""> Short By Price : High To Low</option>
                     <option value=""> Short By Price : Low To High</option>
                 </select>
@@ -60,14 +65,15 @@
         <div class="product">
                 <div class="productsContainer">
                     <?php
-                    for ($i=0; $i < 20 ; $i++) { 
+                        while($row = $result->fetch_assoc()){
                     ?>
+                    <img src="" alt="">
                     <div class="individualProductBox">
                         <div class="individualProductImageContainer">
-                            <img src="./IMAGES/laptop1.png" alt="">
+                            <?php echo '<img src="./backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
                         </div>
-                        <p class="productName">Lenovo IdesPad Slim 3</p>
-                        <p class="productPrice">&#8377; 60,000.00</p>
+                        <p class="productName"> <?php echo $row['productName'] ?> </p>
+                        <p class="productPrice">&#8377; <?php echo $row['price'] ?> </p>
                         <div class="productRating">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -75,16 +81,20 @@
                             <i class="fa-solid fa-star-half-stroke"></i>
                             <i class="fa-regular fa-star"></i>
                         </div>
-                        <div class="addToCart">
-                            <button>Add To Cart</button>
-                        </div>
+                        <form class="addToCart" action="./backend/productAddToCart.php" method="post"> 
+                            <input type="hidden" name="productId" id="productId" value="<?php echo $row['product_id'] ?>">  <!-- Make this hidden -->
+                            <button type="submit" name="cart_btn" 
+                            <?php echo 'data-productId="' . $row['product_id'] . '"'; ?>>Add To Cart</button>
+                        </form>
                     </div>
                     <?php
                     }
                     ?>
-                </div>
-            </div> 
+            </div>
+        </div> 
     </div>
+
+    
     <!------------------
      Product - End 
     ------------------->

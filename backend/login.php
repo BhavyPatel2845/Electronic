@@ -1,5 +1,7 @@
 <?php
-    include "database_connection.php";
+    require "database_connection.php";
+
+    session_start();
 
     if(isset($_POST['submit'])){
         $email = $_POST['email'];
@@ -33,20 +35,24 @@
     $selectQuery = "select * from login";
     $result = $conn->query($selectQuery);
 
-    $loginSuccess = FALSE ;
+    $_SESSION['isLoggedIn'] = FALSE ;
 
     if ($result->num_rows > 0 ) {
         while ($row = $result->fetch_assoc()) {
             if ($email === $row['email'] && $password === $row['password']) {
-                $loginSuccess = TRUE ;
+                
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['password'] = $row['password'];
+                $_SESSION['isLoggedIn'] = TRUE ;
             }
         }
-        if ($loginSuccess === TRUE) {
+        if ($_SESSION['isLoggedIn'] === TRUE) {
             echo "login successfully";
             header("location: ../index.php");
         }
         else{
-            echo "enter valid username  and password";
+            echo "<script> alert('Enter Valid Username And Password') </script>";
+            // header("location: ../login.php"); 
         }
     }
     else{

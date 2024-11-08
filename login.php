@@ -20,6 +20,7 @@
             <div class="loginTitle">
                 <h2>Login</h2>
             </div>
+            
             <form action="./backend/login.php" method="post">
                 <input type="email" placeholder="Email..." name="email" >
                 <input type="password" placeholder="password..." name="password" required> 

@@ -66,17 +66,13 @@ if (isset($_POST['submit'])) {
                     // Delete the old image from the server
                     if (!empty($oldImageName) && file_exists($targetDir . $oldImageName)) {
                         unlink($targetDir . $oldImageName);
-                        echo "bbbb";
-                    }
-                    else{
-                        echo "aaaaa";
                     }
 
                     // Update the product image in the database
                     $sqlUpdateImage = "UPDATE `products` SET `productImage` = '$imageNewName' WHERE `product_id` = '$productID'";
                     $image = mysqli_query($conn, $sqlUpdateImage);
                     if ($image === TRUE) {
-                        echo "complete";
+                        header('../dashboard/Admin Dashboard/products.php');
                     }
                     else{
                         echo "incomplete";
