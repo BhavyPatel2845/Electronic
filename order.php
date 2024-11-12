@@ -38,8 +38,8 @@
                                 </div>
                                 <textarea name="" id="" row="20" cols="40" placeholder="Address"></textarea>
                                 <input type="text"  placeholder="City">
-                                <input type="text"  placeholder="State">
                                 <input type="text"  placeholder="Pincode">
+                                <input type="text"  placeholder="State">
                                 <input type="text"  placeholder="Phone Number">
                                 <input type="text" placeholder="Email">
                             </div>
