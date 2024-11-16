@@ -1,9 +1,12 @@
 <?php
 
 require "./backend/database_connection.php";
-include "./backend/loginSession.php";
-
-if (isset($_SESSION['email'])) {
+require "./backend/loginSession.php";
+if(empty($_SESSION['email'])){
+    echo "<script> alert('Please Login') </script>";
+    header("Location: ./login.php");
+}
+else{
      $email = $_SESSION['email'];
     }
 ?>
@@ -53,7 +56,6 @@ if (isset($_SESSION['email'])) {
                 <h4>Price</h4>   
             </div>
             <?php
-
                 $selectQuery = "SELECT addtocart.cart_id, addtocart.quantity, products.productName,products.detail, products.price,products.productImage 
                 FROM addtocart JOIN products ON addtocart.product_id=products.product_id
                 WHERE addtocart.userEmail = '$email'";
@@ -116,7 +118,7 @@ if (isset($_SESSION['email'])) {
         </section>
         <section class="cartTotalPriceBox">
             <div class="subtotalCarts">
-            Subtotal (<?php echo $productCount ?> items) : <span>&#8377;<?php echo $totalPrice ?></span>
+            Subtotal (<?php echo $productCount ?> items) : <span>&#8377;<?php session_start(); echo $_SESSION['totalPrice'] = $totalPrice; ?></span>
             </div>
             <button type=""><a href="order.php">Check Out</a></button>
             <div class="otherProduct">

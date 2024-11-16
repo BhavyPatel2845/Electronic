@@ -66,8 +66,24 @@
         dashboard Right side - start
         --------------------------->
 
-        <div class="rightSide">
+        <?php 
+            require "../../backend/database_connection.php";
+            require "../../backend/loginSession.php";
 
+            if(empty($_SESSION['email'])){
+                echo "<script> alert('Please Login') </script>";
+                header("Location: ../../login.php");
+            }
+            else{
+                $email = $_SESSION['email'];
+            $selectQuery = "select * from users where email='$email'";
+
+            $result = mysqli_query($conn, $selectQuery);
+            if(!empty($result) && mysqli_num_rows($result) > 0){
+                while($row = mysqli_fetch_assoc($result)){
+             
+        ?>
+        <div class="rightSide">
             <!-- Edit profile page-->
             <div class="editProfile" id="editProfile">
                  <div class="registration" id="registration">
@@ -75,22 +91,31 @@
                          <div class="registrationTitle">
                             <h2>Edit Profile</h2>
                         </div>
-                        <form action="">
-                            <input type="email" placeholder="Full Name" required>
-                            <input type="email" placeholder="Date Of Birth..." required>
-                            <input type="password" placeholder="City..." required> 
-                            <input type="password" placeholder="Pincode..." required>
-                            <input type="password" placeholder="Phone Number..." required> 
-                            <input type="email" placeholder="Email..." required>
-                            <input type="password" placeholder="password..." required> 
+                        <form action="../../backend/editProfile.php" method="POST">
+                            <input name="user_id" type="hidden" value = "<?php echo $row['user_id'] ?>" required>
+                            <input name="userName" type="text" placeholder="Full Name" value = "<?php echo $row['name'] ?>" required>
+                            <input name="dob" type="date" placeholder="Date Of Birth..." value = "<?php echo $row['dob'] ?>" required>
+                            <input name="city" type="text" placeholder="City..." value = "<?php echo $row['city'] ?>" required> 
+                            <input name="pincode" type="number" placeholder="Pincode..." value = "<?php echo $row['pincode'] ?>" required>
+                            <input name="phoneNumber" type="number" placeholder="Phone Number..." value = "<?php echo $row['phoneNumber'] ?>" required> 
+                            <input name="email" type="email" placeholder="Email..." value = "<?php echo $row['email'] ?>" required>
                             <div class="registrationButton">
-                                <button type="submit">Sign In</button>
+                                <button type="submit" name="submit">Sign In</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        <?php
+       
+                }
+            }
+            else{
+                echo "no result found";
+            }
+        }
+        ?>
         <!-------------------------- 
         dashboard Right side - End
         --------------------------->

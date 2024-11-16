@@ -26,6 +26,16 @@
         <!--------------------------------     HOME-PAGE    ------------------------------>
 
         <div class="home">
+            <?php 
+            require "./backend/database_connection.php";
+                $selectCategory = "SELECT * FROM category";
+                $categoryResult = mysqli_query($conn,$selectCategory);
+                if(!empty($categoryResult)){
+                    while($row = $categoryResult->fetch_assoc()){
+                        echo "aaa";
+                    }
+                }
+            ?>
             <div class="slide active">
                 <div class="slide-content">
                     <h2>Mobiles</h2>
@@ -134,14 +144,17 @@
                     <div class="swiperContainer">
                         <div class="swiperWrapper">
                             <?php
-                                for ($i=0; $i < 10; $i++) { 
+                                $selectMobileProduct = "select * from products where categoryName = 'mobile'";
+                                $mobileProductResult = mysqli_query($conn,$selectMobileProduct);
+                                if (!empty($mobileProductResult)) {
+                                    while($row = $mobileProductResult->fetch_assoc()){
                             ?>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/home-image.png" alt="">
+                                    <?php echo '<img src="./backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
                                 </div>
-                                <p class="productName">Sumsang S23 Ultra</p>
-                                <p class="productPrice">&#8377; 96,000.00</p>
+                                <p class="productName"><?php echo $row['productName'] ?></p>
+                                <p class="productPrice">&#8377; <?php echo $row['price'] ?>  </p>
                                 <div class="productRating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -149,12 +162,15 @@
                                     <i class="fa-solid fa-star-half-stroke"></i>
                                     <i class="fa-regular fa-star"></i>
                                 </div>
-                                <div class="addToCart">
-                                    <button>Add To Cart</button>
-                                </div>
+                                <form class="addToCart" action="./backend/productAddToCart.php" method="post"> 
+                                    <input type="hidden" name="productId" id="productId" value="<?php echo $row['product_id'] ?>">  <!-- Make this hidden -->
+                                    <button type="submit" name="cart_btn" 
+                                    <?php echo 'data-productId="' . $row['product_id'] . '"'; ?>>Add To Cart</button>
+                                </form>
                             </div>
                             <?php
                                 }
+                            }
                             ?>
                         </div>
                 </div>
@@ -174,14 +190,17 @@
                     <div class="swiperContainer">
                         <div class="swiperWrapper">
                             <?php
-                                for ($i=0; $i < 10; $i++) { 
+                                $selectSmartWatchProduct = "select * from products where categoryName = 'smart watch'";
+                                $smartWatchResult = mysqli_query($conn,$selectSmartWatchProduct);
+                                if (!empty($smartWatchResult)) {
+                                    while($row = $smartWatchResult->fetch_assoc()){
                             ?>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product2.png" alt="">
+                                    <?php echo '<img src="./backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
                                 </div>
-                                <p class="productName">Realme Pro2</p>
-                                <p class="productPrice">&#8377; 4000.00</p>
+                                <p class="productName"><?php echo $row['productName'] ?></p>
+                                <p class="productPrice">&#8377; <?php echo $row['price'] ?> </p>
                                 <div class="productRating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -189,12 +208,15 @@
                                     <i class="fa-solid fa-star-half-stroke"></i>
                                     <i class="fa-regular fa-star"></i>
                                 </div>
-                                <div class="addToCart">
-                                    <button>Add To Cart</button>
-                                </div>
+                                <form class="addToCart" action="./backend/productAddToCart.php" method="post"> 
+                                    <input type="hidden" name="productId" id="productId" value="<?php echo $row['product_id'] ?>">  <!-- Make this hidden -->
+                                    <button type="submit" name="cart_btn" 
+                                    <?php echo 'data-productId="' . $row['product_id'] . '"'; ?>>Add To Cart</button>
+                                </form>
                             </div>
                             <?php
                                 }
+                            }
                             ?>
                         </div>
                     </div>
@@ -214,14 +236,17 @@
                     <div class="swiperContainer">
                         <div class="swiperWrapper">
                             <?php
-                                for ($i=0; $i < 10; $i++) { 
+                                $selectAirBurdsProduct = "select * from products where categoryName = 'air Burd'";
+                                $airBurdsResult = mysqli_query($conn,$selectAirBurdsProduct);
+                                if (!empty($airBurdsResult)) {
+                                    while($row = $airBurdsResult->fetch_assoc()){
                             ?>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/product1.png" alt="">
+                                    <?php echo '<img src="./backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
                                 </div>
-                                <p class="productName">Boat 172</p>
-                                <p class="productPrice">&#8377; 2000.00</p>
+                                <p class="productName"><?php echo $row['productName'] ?></p>
+                                <p class="productPrice">&#8377; <?php echo $row['price'] ?></p>
                                 <div class="productRating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -229,11 +254,14 @@
                                     <i class="fa-solid fa-star-half-stroke"></i>
                                     <i class="fa-regular fa-star"></i>
                                 </div>
-                                <div class="addToCart">
-                                    <button>Add To Cart</button>
-                                </div>
+                                <form class="addToCart" action="./backend/productAddToCart.php" method="post"> 
+                                    <input type="hidden" name="productId" id="productId" value="<?php echo $row['product_id'] ?>">  <!-- Make this hidden -->
+                                    <button type="submit" name="cart_btn" 
+                                    <?php echo 'data-productId="' . $row['product_id'] . '"'; ?>>Add To Cart</button>
+                                </form>
                             </div>
                             <?php
+                                    }
                                 }
                             ?>
                         </div>
@@ -254,14 +282,17 @@
                     <div class="swiperContainer">
                         <div class="swiperWrapper">
                             <?php
-                                for ($i=0; $i < 10; $i++){
+                                $selectLaptopProduct = "select * from products where categoryName = 'laptop'";
+                                $laptopResult = mysqli_query($conn,$selectLaptopProduct);
+                                if (!empty($laptopResult)) {
+                                    while($row = $laptopResult->fetch_assoc()){
                             ?>
                             <div class="individualProductBox productSwiperSlide">
                                 <div class="individualProductImageContainer">
-                                    <img src="./IMAGES/laptop1.png" alt="">
+                                    <?php echo '<img src="./backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
                                 </div>
-                                <p class="productName">Lenovo IdesPad Slim 3</p>
-                                <p class="productPrice">&#8377; 60,000.00</p>
+                                <p class="productName"><?php echo $row['productName'] ?></p>
+                                <p class="productPrice">&#8377; <?php echo $row['price'] ?></p>
                                 <div class="productRating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -269,12 +300,15 @@
                                     <i class="fa-solid fa-star-half-stroke"></i>
                                     <i class="fa-regular fa-star"></i>
                                 </div>
-                                <div class="addToCart">
-                                    <button>Add To Cart</button>
-                                </div>
+                                <form class="addToCart" action="./backend/productAddToCart.php" method="post"> 
+                                    <input type="hidden" name="productId" id="productId" value="<?php echo $row['product_id'] ?>">  <!-- Make this hidden -->
+                                    <button type="submit" name="cart_btn" 
+                                    <?php echo 'data-productId="' . $row['product_id'] . '"'; ?>>Add To Cart</button>
+                                </form>
                             </div>
                             <?php
                                 }
+                            }
                             ?>
                         </div>
                     </div>

@@ -1,5 +1,8 @@
 <?php
     session_start();
-    $_SESSION['email'];
-    $_SESSION['password'];
+    
+    // else{
+        $_SESSION['email'];
+        $_SESSION['password'];
+    // }
 ?>

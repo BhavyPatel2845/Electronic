@@ -42,6 +42,7 @@ li{
     justify-content: space-between;
     align-items: start;
     grid-gap: 40px;
+    
 }
 
 .checkOut .checkOutContainer .billingDetail{
@@ -58,7 +59,7 @@ li{
     width: 90%;
     margin: 20px 20px 50px;
 }
-.checkOut .checkOutContainer .billingDetail form{
+.checkOut .checkOutContainer .billingDetail .detail{
     width: 100%;
     display: flex;
     justify-content: center;
