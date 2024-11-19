@@ -68,7 +68,9 @@ else{
             ?>
             <div class="cartBoxes">
                 <div class="productCartImg">
-                    <img src="./IMAGES/product1.png" alt="">
+                    <?php
+                        echo '<img src="./backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' 
+                    ?>
                 </div>
                 <div class="productCartDetails">
                     <div class="colProductDetails">
@@ -118,9 +120,11 @@ else{
         </section>
         <section class="cartTotalPriceBox">
             <div class="subtotalCarts">
-            Subtotal (<?php echo $productCount ?> items) : <span>&#8377;<?php session_start(); echo $_SESSION['totalPrice'] = $totalPrice; ?></span>
+            Subtotal (<?php echo $productCount ?> items) : <span>&#8377;<?php echo $_SESSION['totalPrice'] = $totalPrice; ?></span>
             </div>
-            <button type=""><a href="order.php">Check Out</a></button>
+            <!-- <button type=""><a href="order.php">Check Out</a></button> -->
+             <!-- <a href="./order.php">check out</a> -->
+            <a href="./order.php"><button type="">Check Out</button></a>
             <div class="otherProduct">
             <a href="#">
                 See pair with your cart product.

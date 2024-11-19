@@ -1,3 +1,15 @@
+<?php
+
+require "./backend/generateOtp.php";
+
+if(!isset($_SESSION['varify'])){
+  header("location: ./forgetPassword.php");
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +27,7 @@
     <!-----------
      Custom CSS 
      ----------->
-    <link rel="stylesheet" href="./CSS/forgetPassword.css">
+    <link rel="stylesheet" href="./Assets/css/forgetPassword.css">
 </head>
 <body>
 
@@ -29,13 +41,13 @@
     <div class="forgetPasswordContainer">
         <div class="container">
             <form action="./backend/generateOtp.php" method="POST">
-            <h3>Enter Yout Otp</h3>     
-            <input type="number" name="inputOtp" class="<?php if(isset($_REQUEST['wrongOtp'])){ echo 'otpError'; } else { echo ''; } ?>"  placeholder="OTP..">  
-            <div class="generateOtp">    
-                <button id="btn" type="submit" name="submit">SUBMIT</button>
-                <button type="submit">RE-GENERATE OTP</button>
-            </div>
-        </form>
+                <h3>Enter Yout Otp</h3>     
+                <input type="number" name="inputOtp" class="<?php if(isset($_REQUEST['wrongOtp'])){ echo 'otpError'; } else { echo ''; } ?>"  placeholder="OTP">  
+                <div class="generateOtp">    
+                    <button id="btn" type="submit" name="submit" class="buttons">SUBMIT</button>
+                    <button type="submit" class="buttons" name="reGenerateOtp">RE-GENERATE OTP</button>
+                </div>
+            </form>
         </div>
 
     </div>

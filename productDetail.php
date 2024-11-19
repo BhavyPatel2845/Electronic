@@ -34,21 +34,41 @@
      Product - start 
     ----------------->
     <div class="product" id="product">
+        
+        <?php
+        
+        require "./backend/database_connection.php";
+            if (isset($_GET['id'])) {
+                $product_id = $_GET['id'];
+            } else {
+                echo "Product ID not provided.";
+            }
+
+            $selectQuery = "SELECT * FROM products WHERE product_id='$product_id'";
+            $result = mysqli_query($conn,$selectQuery);
+        
+            if(!empty($result)){
+                while($row = $result->fetch_assoc()){
+        ?>
         <div class="productContainer">
             <div class="left">
                 <div class="productImage">
-                    <img src="./IMAGES/home-image.png" alt="">
+                    <!-- <img src="./IMAGES/home-image.png" alt=""> -->
+                    <?php
+                    echo '<img src="./backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' 
+                    ?>
+                       
                 </div>
-                <div class="smallProductImage">
+                <!-- <div class="smallProductImage">
                     <img src="./IMAGES/home-image.png" alt="categories1">
                     <img src="./IMAGES/home-image.png" alt="categories2">
                     <img src="./IMAGES/home-image.png" alt="categories3">
                     <img src="./IMAGES/home-image.png" alt="categories4">
-                </div>
+                </div> -->
             </div>
             <div class="right productDetail">
                 <div class="productName">
-                    <h3>Samsung S23 Ultra </h3>
+                    <h3><?php echo $row['productName'] ?></h3>
                 </div>
                 <div class="rating">
                     <span class="rate">&#9733;</span>
@@ -59,49 +79,50 @@
                 </div>
                 <div class="price">
                     <h4>price  :</h4>
-                    <p>&#8377;97,000.00</p>
+                    <p>&#8377; <?php echo $row['price'] ?></p>
                 </div>
                 <div class="productDescription">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at incidunt,
-                        eaque laudantium voluptatibus praesentium nulla mollitia qui non.
-                        Quasi tempore dolor aliquid saepe alias quam error facere, officia beatae.
-                    </p>
+                    <p> <?php echo $row['detail'] ?> </p>
                 </div>
                 <div class="quantity">
                     <h4>Quantity  :</h4>
                     <input type="number" value="1">
                 </div>
-                <div class="addToCart">
-                    <button type="button">Add to Cart</button>
-                </div>
+                <form class="addToCart" action="./backend/productAddToCart.php" method="post"> 
+                    <input type="hidden" name="productId" id="productId" value="<?php echo $row['product_id'] ?>">  <!-- Make this hidden -->
+                    <button type="submit" name="cart_btn" 
+                    <?php echo 'data-productId="' . $row['product_id'] . '"'; ?>>Add To Cart</button>
+                </form>
             </div>
         </div>
-
+        <?php
+            if($row['categoryName']=='Mobile'){
+        ?>
         <div class="productTableInfo">
             <table>
                 <tr>
                     <th>Processor</th>
-                    <td>Snapdragon 8 Gen 2</td>
+                    <td><?php echo $row['processor'] ?></td>
                 </tr>
                 <tr>
                     <th>Memory Storage</th>
-                    <td>256 GB</td>
+                    <td><?php echo $row['memoryStorage'] ?></td>
                 </tr>
                 <tr>
                     <th>RAM</th>
-                    <td>12 GB</td>
+                    <td><?php echo $row['ram'] ?></td>
                 </tr>
                 <tr>
                     <th>Front-Camera</th>
-                    <td>12 MP</td>
+                    <td><?php echo $row['frontCamera'] ?></td>
                 </tr>
                 <tr>
                     <th>Rear-Camera</th>
-                    <td>200 MP</td>
+                    <td><?php echo $row['rearCamera'] ?></td>
                 </tr>
                 <tr>
                     <th>Battery</th>
-                    <td>4855mAh </td>
+                    <td><?php echo $row['frontCamera'] ?> </td>
                 </tr>
                 <tr>
                     <th>Warranty</th>
@@ -109,6 +130,11 @@
                 </tr>
             </table>
         </div>
+        <?php
+                    }
+                }
+            }
+        ?>
 
 
     <div class="productSlider" id="productSlider">

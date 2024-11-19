@@ -68,6 +68,9 @@ else{
 $updateLoginTable = "UPDATE login SET email='$email' WHERE login_id='$user_id'";
 
 if (mysqli_query($conn,$updateQuery) === TRUE && mysqli_query($conn,$updateLoginTable) === TRUE ) {
+    session_start();
+    unset($_SESSION['email']);
+    $_SESSION['email'] = $email;
     header("location: ../dashboard/User Dashboard/editProfile.php");
 }
 else{

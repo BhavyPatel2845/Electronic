@@ -69,9 +69,9 @@
                     ?>
                     <img src="" alt="">
                     <div class="individualProductBox">
-                        <div class="individualProductImageContainer">
+                        <a href="./productDetail.php?id=<?php echo $row['product_id']  ?>" class="individualProductImageContainer">
                             <?php echo '<img src="./backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
-                        </div>
+                        </a>
                         <p class="productName"> <?php echo $row['productName'] ?> </p>
                         <p class="productPrice">&#8377; <?php echo $row['price'] ?> </p>
                         <div class="productRating">
