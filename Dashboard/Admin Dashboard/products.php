@@ -190,7 +190,7 @@
 
                                 <img src="./Assets/images/edit.png" alt="Edit"> Edit
                             </button>
-                            <a class="productDelete"><img src="./Assets/images/delete.png" alt="Delete">delete</a>
+                            <a class="productDelete" href="../../backend/deleteProduct.php?id=<?php echo $row['product_id'] ?>"><img src="./Assets/images/delete.png" alt="Edit">delete</a>
                         </div>
                     </div>
                 </div>

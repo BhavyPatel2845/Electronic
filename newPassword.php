@@ -25,7 +25,7 @@ if (!isset($_SESSION['varify'])) {
     <!-----------
      Custom CSS 
      ----------->
-    <link rel="stylesheet" href="./Assets/css/forgetPassword.css">
+    <link rel="stylesheet" href="./css/forgetPassword.css">
 </head>
 
 <body>
@@ -61,9 +61,13 @@ if (!isset($_SESSION['varify'])) {
                 <div class="container">
                     <form action="./backend/generateOtp.php" method="post">
                         <h3>Enter Paasword</h3>
-                        <input type="password" name="newPassword" placeholder="New password">
-                        <input type="password" name="conformpassword" placeholder="Conform password"><br>
-                        <button type="submit" class="buttons">Submit</button>
+                        <div class="newPassword">
+                            <input type="password" name="newPassword" placeholder="New password">
+                            <input type="password" name="conformpassword" placeholder="Conform password"><br>
+                        </div>
+                        <div>
+                            <button type="submit" class="buttons">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>

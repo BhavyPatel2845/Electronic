@@ -15,7 +15,7 @@
     <!-----------
      Custom CSS 
      ----------->
-    <link rel="stylesheet" href="./Assets/css/forgetPassword.css">
+    <link rel="stylesheet" href="./CSS/forgetPassword.css">
 </head>
 <body>
 
@@ -48,18 +48,14 @@
 
         <div class="container">
             <form action="./backend/generateOtp.php" method="POST">
-            <h3>Forget Password</h3> 
-            <div class="byEmail">
-                <input type="email" name="email" placeholder="Email">
-            </div>
-            <div class="byPhoneNumber">
-                <input type="number" name="number" placeholder="Phone Number">
-            </div>
-            <div class="generateOtp">    
-                <button id="btn" type="button" class="buttons">BY NUMBER</button>
-                <button type="submit" class="buttons">GENERATE OTP</button>
-            </div>
-        </form>
+                <h3>Forget Password</h3> 
+                <div class="byEmail">
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+                <div class="generateOtp">    
+                    <button type="submit" class="buttons">GENERATE OTP</button>
+                </div>
+            </form>
         </div>
 
     </div>

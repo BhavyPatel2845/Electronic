@@ -27,7 +27,7 @@ if(!isset($_SESSION['varify'])){
     <!-----------
      Custom CSS 
      ----------->
-    <link rel="stylesheet" href="./Assets/css/forgetPassword.css">
+    <link rel="stylesheet" href="./css/forgetPassword.css">
 </head>
 <body>
 
@@ -41,9 +41,11 @@ if(!isset($_SESSION['varify'])){
     <div class="forgetPasswordContainer">
         <div class="container">
             <form action="./backend/generateOtp.php" method="POST">
-                <h3>Enter Yout Otp</h3>     
-                <input type="number" name="inputOtp" class="<?php if(isset($_REQUEST['wrongOtp'])){ echo 'otpError'; } else { echo ''; } ?>"  placeholder="OTP">  
-                <div class="generateOtp">    
+                <h3>Enter Yout Otp</h3> 
+                <div class="otp">    
+                    <input type="number" name="inputOtp" class="<?php if(isset($_REQUEST['wrongOtp'])){ echo 'otpError'; } else { echo ''; } ?>"  placeholder="OTP">  
+                </div>
+                <div class="submitOtp">    
                     <button id="btn" type="submit" name="submit" class="buttons">SUBMIT</button>
                     <button type="submit" class="buttons" name="reGenerateOtp">RE-GENERATE OTP</button>
                 </div>

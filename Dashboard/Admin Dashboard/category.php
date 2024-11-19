@@ -125,7 +125,8 @@
                                 '?>> 
                                 <img src="./Assets/images/edit.png" alt="Edit"> Edit
                             </button>
-                            <a class="categoryDelete" href=""><img src="./Assets/images/delete.png" alt="Edit">delete</a>
+                            <!-- <a class="categoryDelete" href=""><img src="./Assets/images/delete.png" alt="Edit">delete</a> -->
+                            <a class="categoryDelete" href="../../backend/deleteCategory.php?id=<?php echo $row['category_id'] ?>"><img src="./Assets/images/delete.png" alt="Edit">delete</a>
                         </div>
                     </div>
                 </div>
