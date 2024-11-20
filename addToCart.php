@@ -106,7 +106,7 @@ else{
                             <option value="10">Qty:10</option>
                         </select>
                         
-                        <a href="#">| Delete</a>
+                        <a class="productDelete" href="./backend/deleteCartItem.php?id=<?php echo $row['cart_id'] ?>">delete</a> 
                         <a href="#">| Share product</a>
                         <a href="#">| See more like this.</a>
                         <a href="#">| Save for later</a>

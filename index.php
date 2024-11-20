@@ -318,7 +318,9 @@
 
     <!-- =============FOOTER============= -->
 
-    <footer class="my-2 py-2"> 
+    <?php require "./footer.php"; ?>
+
+    <!-- <footer class="my-2 py-2"> 
         <div class="row mx-auto pt-4 container">
             <div class="footer-one col">
                 <img src="logo2.png" alt="">
@@ -383,8 +385,11 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <!-- =============j-script=================== -->
+
+    <script src="./JS/index.js"></script>
+
     <script>
         const togglebtn = document.querySelector('.toggle_btn')
         const togglebtnicn = document.querySelector('.toggle_btn i')

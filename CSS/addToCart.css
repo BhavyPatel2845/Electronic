@@ -155,7 +155,7 @@ li{
 }
 
 #cartSection .cartTotalPriceBox{
-    height: 30vh;
+    height: 100%;
     width: 25%;
     top: 2%;
     /* bottom: 0; */

@@ -1,6 +1,9 @@
 /* IMPORT header CSS */
 @import url("header.css");
 
+/* IMPORT footer CSS */
+@import url("footer.css");
+
 /* ==========HOME-SECTION============ */
 
 #home{

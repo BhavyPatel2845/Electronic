@@ -217,8 +217,7 @@
      Custom Js  
     ----------->
     <script src="./JS/about.js"></script>
-
-
+    
     <!---------------
      Fontawesome Kit 
     ---------------->

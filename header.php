@@ -42,3 +42,5 @@
             <a href="shop.html" class="action_btn">shop now</a>
         </div>
     </header>
+    
+    <!-- <script src="./JS/header.js"></script> -->

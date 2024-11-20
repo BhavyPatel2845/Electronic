@@ -1,387 +1,387 @@
-/********************  NAVIGATION  ******************/
-var hamburgerMenuIcon = document.querySelector(".hamburgerMenuIcon");
-var nav = document.querySelector("navigation");
-var navigationLinks = document.querySelector("#navigationLinks");
+// /********************  NAVIGATION  ******************/
+// var hamburgerMenuIcon = document.querySelector(".hamburgerMenuIcon");
+// var nav = document.querySelector("navigation");
+// var navigationLinks = document.querySelector("#navigationLinks");
 
-hamburgerMenuIcon.addEventListener("click", function () {
-  hamburgerMenuIcon.classList.toggle("burger_cross");
-  navigationLinks.classList.add("navigationLinksOpen");
-  navigationLinks.classList.toggle("navigationLinksClose");
-});
-
-
-/*************************  Home-Slider  **********************************/
+// hamburgerMenuIcon.addEventListener("click", function () {
+//   hamburgerMenuIcon.classList.toggle("burger_cross");
+//   navigationLinks.classList.add("navigationLinksOpen");
+//   navigationLinks.classList.toggle("navigationLinksClose");
+// });
 
 
-
-
-const slides = document.querySelectorAll('.slide');
-      let currentSlide = 0;
-
-      function showSlide(n) {
-         slides[currentSlide].classList.remove('active');
-         currentSlide = (n + slides.length) % slides.length; // Wrap around
-         slides[currentSlide].classList.add('active');
-      }
-
-      function nextSlide() {
-         showSlide(currentSlide + 1);
-      }
-
-      function prevSlide() {
-         showSlide(currentSlide - 1);
-      }
-
-      setInterval(nextSlide, 5000);
+// /*************************  Home-Slider  **********************************/
 
 
 
 
-/*************************  Review-Slider  **********************************/
+// const slides = document.querySelectorAll('.slide');
+//       let currentSlide = 0;
+
+//       function showSlide(n) {
+//          slides[currentSlide].classList.remove('active');
+//          currentSlide = (n + slides.length) % slides.length; // Wrap around
+//          slides[currentSlide].classList.add('active');
+//       }
+
+//       function nextSlide() {
+//          showSlide(currentSlide + 1);
+//       }
+
+//       function prevSlide() {
+//          showSlide(currentSlide - 1);
+//       }
+
+//       setInterval(nextSlide, 5000);
 
 
-const reviewSwiperContainer = document.querySelector("#customerReviewSlider .swiperContainer");
-const reviewSwiperWrapper = document.querySelector("#customerReviewSlider .swiperWrapper");
-const reviewSwiperSlide = document.querySelectorAll("#customerReviewSlider .reviewSwiperSlide");
-const reviewNextButton = document.querySelector("#customerReviewSlider .productSwiperButtonNext");
-const reviewPrevButton = document.querySelector("#customerReviewSlider .productSwiperButtonPrev");
 
-let Index = 0;
-window.addEventListener("resize", () => {
-  Index = 0;
-  reviewPrevButton.click();
-});
 
-function reviewUpdateSlidePosition() {
-  const slideWidth = reviewSwiperSlide[0].offsetWidth + 10;
-  const offset = -Index * slideWidth;
-  reviewSwiperWrapper.style.transform = `translateX(${offset}px)`;
-}
+// /*************************  Review-Slider  **********************************/
 
-reviewNextButton.addEventListener("click", function nextButton(){
- if (window.innerWidth > 1000) {
-    if (Index < reviewSwiperSlide.length - 4) {
-      Index++;
-    }
-  }else if (window.innerWidth > 750 && window.innerWidth < 1000) {
-    if (Index < reviewSwiperSlide.length - 3) {
-      Index++;
-    }
-  }else if (window.innerWidth > 550 && window.innerWidth < 750) {
-    if (Index < reviewSwiperSlide.length - 2) {
-      Index++;
-    }
-  } else if (window.innerWidth > 200 && window.innerWidth < 550) {
-    if (Index < reviewSwiperSlide.length - 1) {
-      Index++;
-    }
-  }
+
+// const reviewSwiperContainer = document.querySelector("#customerReviewSlider .swiperContainer");
+// const reviewSwiperWrapper = document.querySelector("#customerReviewSlider .swiperWrapper");
+// const reviewSwiperSlide = document.querySelectorAll("#customerReviewSlider .reviewSwiperSlide");
+// const reviewNextButton = document.querySelector("#customerReviewSlider .productSwiperButtonNext");
+// const reviewPrevButton = document.querySelector("#customerReviewSlider .productSwiperButtonPrev");
+
+// let Index = 0;
+// window.addEventListener("resize", () => {
+//   Index = 0;
+//   reviewPrevButton.click();
+// });
+
+// function reviewUpdateSlidePosition() {
+//   const slideWidth = reviewSwiperSlide[0].offsetWidth + 10;
+//   const offset = -Index * slideWidth;
+//   reviewSwiperWrapper.style.transform = `translateX(${offset}px)`;
+// }
+
+// reviewNextButton.addEventListener("click", function nextButton(){
+//  if (window.innerWidth > 1000) {
+//     if (Index < reviewSwiperSlide.length - 4) {
+//       Index++;
+//     }
+//   }else if (window.innerWidth > 750 && window.innerWidth < 1000) {
+//     if (Index < reviewSwiperSlide.length - 3) {
+//       Index++;
+//     }
+//   }else if (window.innerWidth > 550 && window.innerWidth < 750) {
+//     if (Index < reviewSwiperSlide.length - 2) {
+//       Index++;
+//     }
+//   } else if (window.innerWidth > 200 && window.innerWidth < 550) {
+//     if (Index < reviewSwiperSlide.length - 1) {
+//       Index++;
+//     }
+//   }
   
-  reviewUpdateSlidePosition();
+//   reviewUpdateSlidePosition();
 
-})
-reviewPrevButton.addEventListener("click", function prevButton(){
-  if (Index > 0) {
-    Index--;
-  }
+// })
+// reviewPrevButton.addEventListener("click", function prevButton(){
+//   if (Index > 0) {
+//     Index--;
+//   }
 
-  reviewUpdateSlidePosition();
-})
+//   reviewUpdateSlidePosition();
+// })
 
 
-/************************* MOBILE PRODUCT-SLIDER  **********************************/
+// /************************* MOBILE PRODUCT-SLIDER  **********************************/
         
-        const swiperContainer = document.querySelector(
-            "#productSlider .mobileProduct .swiperContainer"
-          );
-          const swiperWrapper = document.querySelector("#productSlider .mobileProduct .swiperWrapper");
-          const swiperSlides = document.querySelectorAll(
-            "#productSlider .mobileProduct .productSwiperSlide"
-          );
-          const nextButton = document.querySelector(
-            "#productSlider .mobileProduct .productSwiperButtonNext"
-          );
-          const prevButton = document.querySelector(
-            "#productSlider .mobileProduct .productSwiperButtonPrev"
-          );
+//         const swiperContainer = document.querySelector(
+//             "#productSlider .mobileProduct .swiperContainer"
+//           );
+//           const swiperWrapper = document.querySelector("#productSlider .mobileProduct .swiperWrapper");
+//           const swiperSlides = document.querySelectorAll(
+//             "#productSlider .mobileProduct .productSwiperSlide"
+//           );
+//           const nextButton = document.querySelector(
+//             "#productSlider .mobileProduct .productSwiperButtonNext"
+//           );
+//           const prevButton = document.querySelector(
+//             "#productSlider .mobileProduct .productSwiperButtonPrev"
+//           );
           
-          let currentIndex = 0;
-          window.addEventListener("resize", () => {
-            currentIndex = 0;
-            prevButton.click();
-          });
+//           let currentIndex = 0;
+//           window.addEventListener("resize", () => {
+//             currentIndex = 0;
+//             prevButton.click();
+//           });
           
-          function updateSlidePosition() {
-            const slideWidth = swiperSlides[0].offsetWidth + 10;
-            const offset = -currentIndex * slideWidth;
-            swiperWrapper.style.transform = `translateX(${offset}px)`;
-          }
+//           function updateSlidePosition() {
+//             const slideWidth = swiperSlides[0].offsetWidth + 10;
+//             const offset = -currentIndex * slideWidth;
+//             swiperWrapper.style.transform = `translateX(${offset}px)`;
+//           }
 
           
-          var productSliderInterval
-          var isCalled = false;
+//           var productSliderInterval
+//           var isCalled = false;
           
           
-          function nextButtonClick(clickType) {
-            if (window.innerWidth > 1200) {
-              if (currentIndex < swiperSlides.length - 5) {
-                currentIndex++;
-              }
-            } else if (window.innerWidth > 1000 && window.innerWidth < 1200) {
-              if (currentIndex < swiperSlides.length - 4) {
-                currentIndex++;
-              }
-            } else if (window.innerWidth > 628 && window.innerWidth < 1000) {
-              if (currentIndex < swiperSlides.length - 3) {
-                currentIndex++;
-              }
-            } else if (window.innerWidth > 496 && window.innerWidth < 628) {
-              if (currentIndex < swiperSlides.length - 2) {
-                currentIndex++;
-              }
-            } else if (window.innerWidth > 200 && window.innerWidth < 496) {
-              if (currentIndex < swiperSlides.length - 1) {
-                currentIndex++;
-              }
-            }
+//           function nextButtonClick(clickType) {
+//             if (window.innerWidth > 1200) {
+//               if (currentIndex < swiperSlides.length - 5) {
+//                 currentIndex++;
+//               }
+//             } else if (window.innerWidth > 1000 && window.innerWidth < 1200) {
+//               if (currentIndex < swiperSlides.length - 4) {
+//                 currentIndex++;
+//               }
+//             } else if (window.innerWidth > 628 && window.innerWidth < 1000) {
+//               if (currentIndex < swiperSlides.length - 3) {
+//                 currentIndex++;
+//               }
+//             } else if (window.innerWidth > 496 && window.innerWidth < 628) {
+//               if (currentIndex < swiperSlides.length - 2) {
+//                 currentIndex++;
+//               }
+//             } else if (window.innerWidth > 200 && window.innerWidth < 496) {
+//               if (currentIndex < swiperSlides.length - 1) {
+//                 currentIndex++;
+//               }
+//             }
           
-            updateSlidePosition();
+//             updateSlidePosition();
           
-            if (swiperSlides.length - 5 <= currentIndex) {
-              currentIndex = -1;
-            }
+//             if (swiperSlides.length - 5 <= currentIndex) {
+//               currentIndex = -1;
+//             }
           
-          }
+//           }
           
-          function previousButton(clickType) {
-            if (currentIndex > 0) {
-              currentIndex--;
-            }
+//           function previousButton(clickType) {
+//             if (currentIndex > 0) {
+//               currentIndex--;
+//             }
           
-            updateSlidePosition();
+//             updateSlidePosition();
           
-          }
+//           }
 
 
-/************************* SMARTWATCH PRODUCT-SLIDER  **********************************/
+// /************************* SMARTWATCH PRODUCT-SLIDER  **********************************/
     
-const smartWatchSwiperContainer = document.querySelector(
-  "#productSlider .smartWatchProduct .swiperContainer"
-);
-const smartWatchSwiperWrapper = document.querySelector("#productSlider .smartWatchProduct .swiperWrapper");
-const smartWatchSwiperSlides = document.querySelectorAll(
-  "#productSlider .smartWatchProduct .productSwiperSlide"
-);
-const smartWatchNextButton = document.querySelector(
-  "#productSlider .smartWatchProduct .productSwiperButtonNext"
-);
-const smartWatchPrevButton = document.querySelector(
-  "#productSlider .smartWatchProduct .productSwiperButtonPrev"
-);
+// const smartWatchSwiperContainer = document.querySelector(
+//   "#productSlider .smartWatchProduct .swiperContainer"
+// );
+// const smartWatchSwiperWrapper = document.querySelector("#productSlider .smartWatchProduct .swiperWrapper");
+// const smartWatchSwiperSlides = document.querySelectorAll(
+//   "#productSlider .smartWatchProduct .productSwiperSlide"
+// );
+// const smartWatchNextButton = document.querySelector(
+//   "#productSlider .smartWatchProduct .productSwiperButtonNext"
+// );
+// const smartWatchPrevButton = document.querySelector(
+//   "#productSlider .smartWatchProduct .productSwiperButtonPrev"
+// );
 
-let smartWatchCurrentIndex = 0;
-let smartWatchProductSliderInterval;
-var smartWatchIsCalled = false;
+// let smartWatchCurrentIndex = 0;
+// let smartWatchProductSliderInterval;
+// var smartWatchIsCalled = false;
 
-window.addEventListener("resize", () => {
-  smartWatchCurrentIndex = 0;
-  smartWatchUpdateSlidePosition();
-});
+// window.addEventListener("resize", () => {
+//   smartWatchCurrentIndex = 0;
+//   smartWatchUpdateSlidePosition();
+// });
 
-// Initialize autoplay on page load
+// // Initialize autoplay on page load
 
-function smartWatchUpdateSlidePosition() {
-  const smartWatchSlideWidth = smartWatchSwiperSlides[0].offsetWidth + 10; // Adjust for margin
-  const smartWatchOffset = -smartWatchCurrentIndex * smartWatchSlideWidth;
-  smartWatchSwiperWrapper.style.transform = `translateX(${smartWatchOffset}px)`;
-}
+// function smartWatchUpdateSlidePosition() {
+//   const smartWatchSlideWidth = smartWatchSwiperSlides[0].offsetWidth + 10; // Adjust for margin
+//   const smartWatchOffset = -smartWatchCurrentIndex * smartWatchSlideWidth;
+//   smartWatchSwiperWrapper.style.transform = `translateX(${smartWatchOffset}px)`;
+// }
 
 
-function smartWatchNextButtonClick() {
-    if (window.innerWidth > 1200) {
-    if (smartWatchCurrentIndex < smartWatchSwiperSlides.length - 5) {
-      smartWatchCurrentIndex++;
-    }
-  } else if (window.innerWidth > 1000 && window.innerWidth < 1200) {
-    if (smartWatchCurrentIndex < smartWatchSwiperSlides.length - 4) {
-      smartWatchCurrentIndex++;
-    }
-  } else if (window.innerWidth > 628 && window.innerWidth < 1000) {
-    if (smartWatchCurrentIndex < smartWatchSwiperSlides.length - 3) {
-      smartWatchCurrentIndex++;
-    }
-  } else if (window.innerWidth > 496 && window.innerWidth < 628) {
-    if (smartWatchCurrentIndex < smartWatchSwiperSlides.length - 2) {
-      smartWatchCurrentIndex++;
-    }
-  } else if (window.innerWidth > 200 && window.innerWidth < 496) {
-    if (smartWatchCurrentIndex < smartWatchSwiperSlides.length - 1) {
-      smartWatchCurrentIndex++;
-    }
-  }
-  smartWatchUpdateSlidePosition();
+// function smartWatchNextButtonClick() {
+//     if (window.innerWidth > 1200) {
+//     if (smartWatchCurrentIndex < smartWatchSwiperSlides.length - 5) {
+//       smartWatchCurrentIndex++;
+//     }
+//   } else if (window.innerWidth > 1000 && window.innerWidth < 1200) {
+//     if (smartWatchCurrentIndex < smartWatchSwiperSlides.length - 4) {
+//       smartWatchCurrentIndex++;
+//     }
+//   } else if (window.innerWidth > 628 && window.innerWidth < 1000) {
+//     if (smartWatchCurrentIndex < smartWatchSwiperSlides.length - 3) {
+//       smartWatchCurrentIndex++;
+//     }
+//   } else if (window.innerWidth > 496 && window.innerWidth < 628) {
+//     if (smartWatchCurrentIndex < smartWatchSwiperSlides.length - 2) {
+//       smartWatchCurrentIndex++;
+//     }
+//   } else if (window.innerWidth > 200 && window.innerWidth < 496) {
+//     if (smartWatchCurrentIndex < smartWatchSwiperSlides.length - 1) {
+//       smartWatchCurrentIndex++;
+//     }
+//   }
+//   smartWatchUpdateSlidePosition();
 
-if (smartWatchSwiperSlides.length - 5 <= smartWatchCurrentIndex) {
-  smartWatchCurrentIndex = -1;
-}
-}
+// if (smartWatchSwiperSlides.length - 5 <= smartWatchCurrentIndex) {
+//   smartWatchCurrentIndex = -1;
+// }
+// }
 
-function smartWatchPreviousButton(clickType) {
-  if (smartWatchCurrentIndex > 0) {
-    smartWatchCurrentIndex--;
-  }
+// function smartWatchPreviousButton(clickType) {
+//   if (smartWatchCurrentIndex > 0) {
+//     smartWatchCurrentIndex--;
+//   }
 
-  smartWatchUpdateSlidePosition();
+//   smartWatchUpdateSlidePosition();
 
-  if (smartWatchSwiperSlides.length - 5 <= smartWatchCurrentIndex) {
-    smartWatchCurrentIndex = -1;
-  }
-}
+//   if (smartWatchSwiperSlides.length - 5 <= smartWatchCurrentIndex) {
+//     smartWatchCurrentIndex = -1;
+//   }
+// }
 
-/************************* AIR BURDS PRODUCT-SLIDER  **********************************/
+// /************************* AIR BURDS PRODUCT-SLIDER  **********************************/
     
-const airburdSwiperContainer = document.querySelector(
-  "#productSlider .airBurdProduct .swiperContainer"
-);
-const airburdSwiperWrapper = document.querySelector("#productSlider .airBurdProduct .swiperWrapper");
-const airburdSwiperSlides = document.querySelectorAll(
-  "#productSlider .airBurdProduct .productSwiperSlide"
-);
-const airburdNextButton = document.querySelector(
-  "#productSlider .airBurdProduct .productSwiperButtonNext"
-);
-const airburdPrevButton = document.querySelector(
-  "#productSlider .airBurdProduct .productSwiperButtonPrev"
-);
+// const airburdSwiperContainer = document.querySelector(
+//   "#productSlider .airBurdProduct .swiperContainer"
+// );
+// const airburdSwiperWrapper = document.querySelector("#productSlider .airBurdProduct .swiperWrapper");
+// const airburdSwiperSlides = document.querySelectorAll(
+//   "#productSlider .airBurdProduct .productSwiperSlide"
+// );
+// const airburdNextButton = document.querySelector(
+//   "#productSlider .airBurdProduct .productSwiperButtonNext"
+// );
+// const airburdPrevButton = document.querySelector(
+//   "#productSlider .airBurdProduct .productSwiperButtonPrev"
+// );
 
-let airburdCurrentIndex = 0;
-let airburdProductSliderInterval;
-let airBurdIsCalled = false;
-
-
-window.addEventListener("resize", () => {
-  airburdUpdateSlidePosition();
-});
-
-function airburdUpdateSlidePosition() {
-  const airburdSlideWidth = airburdSwiperSlides[0].offsetWidth + 10; // Adjust for margin
-  const airburdOffset = -airburdCurrentIndex * airburdSlideWidth;
-  airburdSwiperWrapper.style.transform = `translateX(${airburdOffset}px)`;
-}
-
-function airburdNextButtonClick() {
-    if (window.innerWidth > 1200) {
-    if (airburdCurrentIndex < airburdSwiperSlides.length - 5) {
-      airburdCurrentIndex++;
-    }
-  } else if (window.innerWidth > 1000 && window.innerWidth < 1200) {
-    if (airburdCurrentIndex < airburdSwiperSlides.length - 4) {
-      airburdCurrentIndex++;
-    }
-  } else if (window.innerWidth > 628 && window.innerWidth < 1000) {
-    if (airburdCurrentIndex < airburdSwiperSlides.length - 3) {
-      airburdCurrentIndex++;
-    }
-  } else if (window.innerWidth > 496 && window.innerWidth < 628) {
-    if (airburdCurrentIndex < airburdSwiperSlides.length - 2) {
-      airburdCurrentIndex++;
-    }
-  } else if (window.innerWidth > 200 && window.innerWidth < 496) {
-    if (airburdCurrentIndex < airburdSwiperSlides.length - 1) {
-      airburdCurrentIndex++;
-    }
-  }
-  airburdUpdateSlidePosition();
-
-if (airburdSwiperSlides.length - 5 <= airburdCurrentIndex) {
-  airburdCurrentIndex = -1;
-}
-}
+// let airburdCurrentIndex = 0;
+// let airburdProductSliderInterval;
+// let airBurdIsCalled = false;
 
 
-function airburdPreviousButton(clickType) {
-  if (airburdCurrentIndex > 0) {
-    airburdCurrentIndex--;
-  }
+// window.addEventListener("resize", () => {
+//   airburdUpdateSlidePosition();
+// });
 
-  airburdUpdateSlidePosition();
+// function airburdUpdateSlidePosition() {
+//   const airburdSlideWidth = airburdSwiperSlides[0].offsetWidth + 10; // Adjust for margin
+//   const airburdOffset = -airburdCurrentIndex * airburdSlideWidth;
+//   airburdSwiperWrapper.style.transform = `translateX(${airburdOffset}px)`;
+// }
 
-  if (airburdSwiperSlides.length - 5 <= airburdCurrentIndex) {
-    airburdCurrentIndex = -1;
-  }
-}
+// function airburdNextButtonClick() {
+//     if (window.innerWidth > 1200) {
+//     if (airburdCurrentIndex < airburdSwiperSlides.length - 5) {
+//       airburdCurrentIndex++;
+//     }
+//   } else if (window.innerWidth > 1000 && window.innerWidth < 1200) {
+//     if (airburdCurrentIndex < airburdSwiperSlides.length - 4) {
+//       airburdCurrentIndex++;
+//     }
+//   } else if (window.innerWidth > 628 && window.innerWidth < 1000) {
+//     if (airburdCurrentIndex < airburdSwiperSlides.length - 3) {
+//       airburdCurrentIndex++;
+//     }
+//   } else if (window.innerWidth > 496 && window.innerWidth < 628) {
+//     if (airburdCurrentIndex < airburdSwiperSlides.length - 2) {
+//       airburdCurrentIndex++;
+//     }
+//   } else if (window.innerWidth > 200 && window.innerWidth < 496) {
+//     if (airburdCurrentIndex < airburdSwiperSlides.length - 1) {
+//       airburdCurrentIndex++;
+//     }
+//   }
+//   airburdUpdateSlidePosition();
 
-/************************* LAPTOP PRODUCT-SLIDER  **********************************/
+// if (airburdSwiperSlides.length - 5 <= airburdCurrentIndex) {
+//   airburdCurrentIndex = -1;
+// }
+// }
+
+
+// function airburdPreviousButton(clickType) {
+//   if (airburdCurrentIndex > 0) {
+//     airburdCurrentIndex--;
+//   }
+
+//   airburdUpdateSlidePosition();
+
+//   if (airburdSwiperSlides.length - 5 <= airburdCurrentIndex) {
+//     airburdCurrentIndex = -1;
+//   }
+// }
+
+// /************************* LAPTOP PRODUCT-SLIDER  **********************************/
     
-const laptopSwiperContainer = document.querySelector(
-  "#productSlider .laptopProduct .swiperContainer"
-);
-const laptopSwiperWrapper = document.querySelector("#productSlider .laptopProduct .swiperWrapper");
-const laptopSwiperSlides = document.querySelectorAll(
-  "#productSlider .laptopProduct .productSwiperSlide"
-);
-const laptopNextButton = document.querySelector(
-  "#productSlider .laptopProduct .productSwiperButtonNext"
-);
-const laptopPrevButton = document.querySelector(
-  "#productSlider .laptopProduct .productSwiperButtonPrev"
-);
+// const laptopSwiperContainer = document.querySelector(
+//   "#productSlider .laptopProduct .swiperContainer"
+// );
+// const laptopSwiperWrapper = document.querySelector("#productSlider .laptopProduct .swiperWrapper");
+// const laptopSwiperSlides = document.querySelectorAll(
+//   "#productSlider .laptopProduct .productSwiperSlide"
+// );
+// const laptopNextButton = document.querySelector(
+//   "#productSlider .laptopProduct .productSwiperButtonNext"
+// );
+// const laptopPrevButton = document.querySelector(
+//   "#productSlider .laptopProduct .productSwiperButtonPrev"
+// );
 
-let laptopCurrentIndex = 0;
-let laptopProductSliderInterval;
-var laptopIsCalled = false;
+// let laptopCurrentIndex = 0;
+// let laptopProductSliderInterval;
+// var laptopIsCalled = false;
 
-window.addEventListener("resize", () => {
-  laptopCurrentIndex = 0;
-  laptopUpdateSlidePosition();
-});
+// window.addEventListener("resize", () => {
+//   laptopCurrentIndex = 0;
+//   laptopUpdateSlidePosition();
+// });
 
-// Initialize autoplay on page load
+// // Initialize autoplay on page load
 
-function laptopUpdateSlidePosition() {
-  const laptopSlideWidth = laptopSwiperSlides[0].offsetWidth + 10; // Adjust for margin
-  const laptopOffset = -laptopCurrentIndex * laptopSlideWidth;
-  laptopSwiperWrapper.style.transform = `translateX(${laptopOffset}px)`;
-}
+// function laptopUpdateSlidePosition() {
+//   const laptopSlideWidth = laptopSwiperSlides[0].offsetWidth + 10; // Adjust for margin
+//   const laptopOffset = -laptopCurrentIndex * laptopSlideWidth;
+//   laptopSwiperWrapper.style.transform = `translateX(${laptopOffset}px)`;
+// }
 
 
-function laptopNextButtonClick() {
-    if (window.innerWidth > 1200) {
-    if (laptopCurrentIndex < laptopSwiperSlides.length - 5) {
-      laptopCurrentIndex++;
-    }
-  } else if (window.innerWidth > 1000 && window.innerWidth < 1200) {
-    if (laptopCurrentIndex < laptopSwiperSlides.length - 4) {
-      laptopCurrentIndex++;
-    }
-  } else if (window.innerWidth > 628 && window.innerWidth < 1000) {
-    if (laptopCurrentIndex < laptopSwiperSlides.length - 3) {
-      laptopCurrentIndex++;
-    }
-  } else if (window.innerWidth > 496 && window.innerWidth < 628) {
-    if (laptopCurrentIndex < laptopSwiperSlides.length - 2) {
-      laptopCurrentIndex++;
-    }
-  } else if (window.innerWidth > 200 && window.innerWidth < 496) {
-    if (laptopCurrentIndex < laptopSwiperSlides.length - 1) {
-      laptopCurrentIndex++;
-    }
-  }
-  laptopUpdateSlidePosition();
+// function laptopNextButtonClick() {
+//     if (window.innerWidth > 1200) {
+//     if (laptopCurrentIndex < laptopSwiperSlides.length - 5) {
+//       laptopCurrentIndex++;
+//     }
+//   } else if (window.innerWidth > 1000 && window.innerWidth < 1200) {
+//     if (laptopCurrentIndex < laptopSwiperSlides.length - 4) {
+//       laptopCurrentIndex++;
+//     }
+//   } else if (window.innerWidth > 628 && window.innerWidth < 1000) {
+//     if (laptopCurrentIndex < laptopSwiperSlides.length - 3) {
+//       laptopCurrentIndex++;
+//     }
+//   } else if (window.innerWidth > 496 && window.innerWidth < 628) {
+//     if (laptopCurrentIndex < laptopSwiperSlides.length - 2) {
+//       laptopCurrentIndex++;
+//     }
+//   } else if (window.innerWidth > 200 && window.innerWidth < 496) {
+//     if (laptopCurrentIndex < laptopSwiperSlides.length - 1) {
+//       laptopCurrentIndex++;
+//     }
+//   }
+//   laptopUpdateSlidePosition();
 
-if (laptopSwiperSlides.length - 5 <= laptopCurrentIndex) {
-    laptopCurrentIndex = -1;
-}
-}
+// if (laptopSwiperSlides.length - 5 <= laptopCurrentIndex) {
+//     laptopCurrentIndex = -1;
+// }
+// }
 
-function laptopPreviousButton(clickType) {
-  if (laptopCurrentIndex > 0) {
-    laptopCurrentIndex--;
-  }
+// function laptopPreviousButton(clickType) {
+//   if (laptopCurrentIndex > 0) {
+//     laptopCurrentIndex--;
+//   }
 
-  laptopUpdateSlidePosition();
+//   laptopUpdateSlidePosition();
 
-  if (laptopSwiperSlides.length - 5 <= laptopCurrentIndex) {
-    laptopCurrentIndex = -1;
-  }
-}
+//   if (laptopSwiperSlides.length - 5 <= laptopCurrentIndex) {
+//     laptopCurrentIndex = -1;
+//   }
+// }

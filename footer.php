@@ -3,10 +3,6 @@
             <div class="companyDetails">
                 <div class="nameAndLogo">
                     <img src="./IMAGES/logo.png">
-                    <div class="companyName">
-                        <h4>SmartTech</h4>
-                        <p>Electronics Store</p>
-                    </div>
                 </div>
                 <div class="companyAddress">
                     <p>4517 Washington Ave. Manchester, Kentucky 39495 ashington Ave. Manchester,</p>
@@ -26,7 +22,7 @@
                 <div></div>
             </div>
             <div class="findItFast">
-                <h3>Find It Fast</h3>
+                <h3>Featured</h3>
                 <div class="footerLinks">
                     <a href="">Smart Phones</a>
                     <a href="">Watches </a>

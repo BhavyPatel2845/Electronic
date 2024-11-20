@@ -163,7 +163,6 @@ li{
 /*--------------------------
  Dashboard left side - end
 ---------------------------*/
-
 /*--------------------------
  Dashboard Right side - start 
 ---------------------------*/
@@ -175,65 +174,49 @@ li{
     justify-content: start;
     align-items: center;
     text-align: center;
-    background-color: #00246b;
 }
 #dashboardContainer .rightSide .orderHistorySection{
     width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    text-align: start;
-    flex-direction: column;
-    scrollbar-width: none;
-    overflow: scroll;
-}
-#dashboardContainer .rightSide .orderHistorySection .orderContainer{
-    width: 1200px;
-    height: 500px;
-    margin: 30px 0px;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #cadcfc;
-}
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails{
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: space-between;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: #cadcfc;
-    border-bottom: 1px solid #00246b;
-}
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .leftDetail{
-    width: 50%;
     height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    line-height: 25px;
-}
-
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .leftDetail h6{
-    font-size: 15px;
-}
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .rightDetail{
-    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    line-height: 25px;
+    text-align: start;
+    scrollbar-width: none;
+    overflow: scroll;
 }
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .rightDetail .orderId{
+
+#dashboardContainer .rightSide .orderHistoryHeader{
+    margin-top: 20px;
+    width: 93%;
     display: flex;
+    justify-content: start;
 }
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .rightDetail .viewOrderDetailsAndInvoice{
+#dashboardContainer .rightSide .orderHistorySection .orderContainer{
+    width: 1200px;
+    height: 400px;
+    margin: 30px 0px;
+    border-radius: 10px;
+    background-color: #efecec;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails{
+    height: 15%;
     display: flex;
-    font-size: 15px;
+    flex-direction: column;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    line-height: 28px;
+    padding: 10px;
+    background-color: #b8afaf;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .orderId{
+    display: flex;
+    grid-gap: 10px;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .viewOrderDetailsAndInvoice{
+    display: flex;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails{
     width: 100%;
@@ -242,16 +225,16 @@ li{
     justify-content: space-between;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails{
-    width: 80%;
-}
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftHeading{
     width: 100%;
+}
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .bottomHeading{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: start;
+    margin: 0px 15px;
     margin-top: 20px;
+    line-height: 25px;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .product{
     width: 95%;
@@ -262,85 +245,42 @@ li{
     margin: 40px 0px 0px 20px;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .product .productImage{
-    width: 150px;
-    height: 120px;
+    width: 180px;
+    height: 150px;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .product .productImage img{
     width: 100%;
     height: 100%;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .product .productName{
-    width: 600px;
+    width: 82%;
+    display: flex;
+    flex-direction: column;
     padding-top: 10px;
-    line-height: 25px;
-    display: flex;
-    flex-direction: column;
+    line-height: 22px;
+    grid-gap: 10px;
 }
-
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .product .productName h4{
-    margin: 8px 15px;
-    font-size: 18px;
-}
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftButtons{
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .buyViewButtons{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
+    grid-gap: 15px;
 }
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftButtons button{
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .buyViewButtons button{
     width: 200px;
-    padding: 15px 25px;
-    letter-spacing: 1px;
-    border-radius: 30px;
+    padding: 8px 25px;
+    border-radius: 8px;
+    font-size: var(--mediumFont);
+    font-weight: var(--mediumFontWeight);
     cursor: pointer;
-    border: none;
-    background-color: #00246b;
-    color: #cadcfc;
-}
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftButtons button:hover{
-    background-color: #5086e4;
-}
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderLeftDetails .leftButtons button:nth-child(1){
-    margin-right: 10px;
 }
 
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails{
-    width: 50%;
-    height: 100%; 
-}
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .rightButtons{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .rightButtons button{
-    width: 300px;
-    border-radius: 30px;
-    padding: 15px 25px;
-    margin-bottom: 10px;
-    outline: none;
-    background-color: #fff;
-    letter-spacing: 1px;
-    border: none;
-    cursor: pointer;
-    background-color: #00246b;
-    color: #cadcfc;
-}
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .rightButtons button:hover{
-    background-color: #5086e4;
-}
-
-#dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails .orderRightDetails .threeDot{
-    display: none;
-}
-#dashboardContainer p{
-    margin-left: 20px;
+#dashboardContainer .rightSide .orderHistorySection .orderContainer .archiveOrder{
+    border-top: 1px solid #b8afaf;
+    padding: 10px;
 }
 
 /*--------------------------
@@ -418,9 +358,7 @@ li{
     }
 }
 
-
-@media screen and (max-width: 600px) {
-   
+@media screen and (max-width: 600px) {   
     #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderBottomDetails{
         display: flex;
         flex-direction: row;

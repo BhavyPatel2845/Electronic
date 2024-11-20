@@ -21,6 +21,7 @@
         'address' => $address,
         'city' => $city,
         'pincode' => $pincode,
+        'state' => $state,
         'phoneNumber' => $phoneNumber,
         'email' => $email,
         'paymentMethod' => $paymentMethod
@@ -56,21 +57,35 @@
         $address = mysqli_real_escape_string($conn, $address);
         $pincode = mysqli_real_escape_string($conn, $pincode);
         $city = mysqli_real_escape_string($conn, $city);
+        $state = mysqli_real_escape_string($conn, $state);
         $phoneNumber = mysqli_real_escape_string($conn, $phoneNumber);
         $email = mysqli_real_escape_string($conn, $email);
         $totalprice = mysqli_real_escape_string($conn, $totalPrice);
         $paymentMethod = mysqli_real_escape_string($conn, $paymentMethod);
         
 
-    $insertQuery = "insert into checkout(firstName,lastName,address,city,pincode,phoneNumber,email,totalPrice,paymentMethod)
-     values ('$firstName','$lastName','$address', '$city', $pincode, $phoneNumber, '$email', $totalPrice, '$paymentMethod')";
+    $insertQuery = "insert into checkout(firstName,lastName,address,city,pincode,state,phoneNumber,email)
+     values ('$firstName','$lastName','$address', '$city', $pincode,'$state', $phoneNumber, '$email')";
 
     if (mysqli_query($conn,$insertQuery) === TRUE) {
         if($paymentMethod === 'UPI'){        
-            header("location: ../dashboard/Admin Dashboard/payment.php");
+            echo "
+                <script>
+                    window.location.href = '../payment.php';
+                </script>";
         }
         else{
-            header("location: ../dashboard/Admin Dashboard/orderHistory.php");
+
+            $orderComplete = "INSERT INTO orders(totalPrice,paymentMethod,userEmail) 
+            values ('$totalPrice','$paymentMethod','$email')";
+
+            if(mysqli_query($conn,$orderComplete) === TRUE){
+                echo "
+                <script>
+                    alert('ORDER Complete');
+                    window.location.href = '../Dashboard/User Dashboard/orderHistory.php';
+                </script>";
+            }
         }
     }
 
