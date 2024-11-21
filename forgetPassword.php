@@ -30,7 +30,10 @@
     
 
     <div class="forgetPasswordContainer">
-    <?php if (isset($_REQUEST['otpMsg'])) { ?>
+    
+
+        <div class="container">
+        <?php if (isset($_REQUEST['otpMsg'])) { ?>
                     <div class="errorMessage">
                        <?php echo $_REQUEST['otpMsg']; ?>
                         </div>
@@ -45,8 +48,6 @@
                        <?php echo $_REQUEST['wrongEmailMsg']; ?>
                         </div>
                     <?php } ?>
-
-        <div class="container">
             <form action="./backend/generateOtp.php" method="POST">
                 <h3>Forget Password</h3> 
                 <div class="byEmail">

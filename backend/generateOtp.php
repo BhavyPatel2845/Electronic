@@ -276,7 +276,11 @@ if (isset($_POST['email'])) {
 		$_SESSION['inputOtp'] = $inputOtp;
 		header("location: ../newPassword.php");
 	} else {
-		header("location: ../otp.php?wrongOtp");
+		echo "
+		<script>
+			window.location.href = '../otp.php?wrongOtp=Wrong OTP';
+		</script>";
+		// header("location: ../otp.php?wrongOtp");
 	}
 
 } else if (isset($_POST['newPassword']) && isset($_POST['conformpassword'])) {
@@ -299,7 +303,12 @@ if (isset($_POST['email'])) {
 			if ($query === true) {
 				unset($_SESSION['inputOtp']);
 				unset($_SESSION['varify']);
-				header("location: ../login.php?passwordChangeSuccess=Your password has been changed successfully!");
+				echo "
+				<script>
+					alert('Password Change Successfully');
+					window.location.href = '../login.php?passwordChangeSuccess=Your password has been changed successfully!';
+				</script>";
+				// header("location: ../login.php?passwordChangeSuccess=Your password has been changed successfully!");
 			} else {
 				header("location: ../newPassword.php?updateError=Error updating password:");
 			}

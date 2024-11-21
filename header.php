@@ -30,7 +30,7 @@
             </div>
             <div class="loginAndRegister">
                 <a href="./login.php" class="action_btn"> Login </a> |
-                <a href="./login.php" class="action_btn"> Registration </a> |
+                <a href="./registration.php" class="action_btn"> Registration </a> |
             </div>   
             </div>
         </div>

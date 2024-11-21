@@ -40,6 +40,11 @@ if(!isset($_SESSION['varify'])){
 
     <div class="forgetPasswordContainer">
         <div class="container">
+                <?php if (isset($_REQUEST['wrongOtp'])) { ?>
+                    <div class="errorMessage">
+                       <?php echo $_REQUEST['wrongOtp']; ?>
+                        </div>
+                <?php } ?>
             <form action="./backend/generateOtp.php" method="POST">
                 <h3>Enter Yout Otp</h3> 
                 <div class="otp">    

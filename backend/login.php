@@ -47,16 +47,21 @@
             }
         }
         if ($_SESSION['isLoggedIn'] === TRUE) {
-            echo "login successfully";
-            header("location: ../index.php");
+            echo "
+            <script>
+                alert('Login Successfully');
+                window.location.href = '../index.php';
+            </script>";
         }
         else{
-            echo "<script> alert('Enter Valid Username And Password') </script>";
-            // header("location: ../login.php"); 
+            // echo "<script> alert('Enter Valid Username And Password') </script>";
+            // // header("location: ../login.php");
+            echo "
+            <script>
+                alert('Enter Valid Username And Password');
+                window.location.href = '../login.php';
+            </script>"; 
         }
-    }
-    else{
-        echo "please register ";
     }
 }
 

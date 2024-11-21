@@ -37,7 +37,8 @@ if (!isset($_SESSION['varify'])) {
 
         <div class="forgetPassword" id="forgetPassword">
             <div class="forgetPasswordContainer">
-
+                <div class="container">
+                    
                 <?php if (isset($_REQUEST['passwordError'])) { ?>
                     <div class="errorMessage">
                         <?php echo $_REQUEST['passwordError']; ?>
@@ -58,7 +59,6 @@ if (!isset($_SESSION['varify'])) {
                         <?php echo $_REQUEST['emptyError']; ?>
                     </div>
                 <?php } ?>
-                <div class="container">
                     <form action="./backend/generateOtp.php" method="post">
                         <h3>Enter Paasword</h3>
                         <div class="newPassword">

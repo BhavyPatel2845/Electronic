@@ -47,7 +47,12 @@
     if (!empty($errors)) {
 
         foreach ($errors as $error) {
-            echo "$error <br> ";
+            // echo "$error <br> ";
+            echo "
+                <script>
+                    alert('$error');
+                    window.location.href = '../registration.php';
+                </script>";
         }
     }
     else{
@@ -65,7 +70,12 @@
     $loginTableQuery = "insert into login(email,password) values('$email','$password')";
 
     if (mysqli_query($conn,$insertQuery) === TRUE && mysqli_query($conn,$loginTableQuery) === TRUE) {
-        header("location: ../login.php");
+        // header("location: ../login.php");
+        echo "
+        <script>
+            alert('Registration Successfully !');
+            window.location.href = '../login.php';
+        </script>";
     }
     else{
         echo "error";
