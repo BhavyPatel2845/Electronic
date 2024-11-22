@@ -35,10 +35,10 @@
     ------------------->
 
     <?php
-        require './backend/database_connection.php';
-        session_start();
-        $productSelectQuery = "select * from products";
-        $result = mysqli_query($conn, $productSelectQuery);
+        // require './backend/database_connection.php';
+        // session_start();
+        // $productSelectQuery = "select * from products";
+        // $result = mysqli_query($conn, $productSelectQuery);
     ?>
 
     <div class="productSection" id="productSection">
@@ -84,6 +84,11 @@
         <div class="product">
                 <div class="productsContainer">
                     <?php
+                    
+                        require './backend/database_connection.php';
+                        // session_start();
+                        $productSelectQuery = "select * from products ORDER BY product_id DESC LIMIT 20";
+                        $result = mysqli_query($conn, $productSelectQuery);
                         while($row = $result->fetch_assoc()){
                     ?>
                     <img src="" alt="">

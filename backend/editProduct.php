@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     $categoryName = $_POST['categoryName'];
     $price = $_POST['price'];
     $discount = $_POST['discount'];
-    $quantity = $_POST['quantity'];
+    // $quantity = $_POST['quantity'];
     $processor = $_POST['processor'];
     $memoryStorage = $_POST['memoryStorage'];
     $ram = $_POST['ram'];
@@ -27,7 +27,6 @@ if (isset($_POST['submit'])) {
                 `categoryName` = '$categoryName',  
                 `price` = '$price', 
                 `discount` = '$discount',
-                `quantity` = '$quantity',
                 `processor` = '$processor',
                 `memoryStorage` = '$memoryStorage',
                 `ram` = '$ram',

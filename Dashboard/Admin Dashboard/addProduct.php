@@ -67,7 +67,7 @@
                         </select>
                         <input type="text" placeholder="Product Price" name="price" required>
                         <input type="text" placeholder="Product discount" name="discount" required>
-                        <input type="text" placeholder="Product Quantity" name="quantity" required>
+                        <!-- <input type="text" placeholder="Product Quantity" name="quantity" required> -->
                         <input type="text" placeholder="Processor" name="processor">
                         <input type="text" placeholder="Memory Storage" name="memoryStorage">
                         <input type="text" placeholder="RAM" name="ram">

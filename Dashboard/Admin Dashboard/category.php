@@ -99,7 +99,7 @@
             <div class="categoryContainer">
                 <?php
                     require "../../backend/database_connection.php";
-                    $selectQuery = "select * from category";
+                    $selectQuery = "select * from category ORDER BY category_id DESC";
                     $result = mysqli_query($conn,$selectQuery);
 
                     if (!empty($result)) {

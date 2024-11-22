@@ -10,7 +10,7 @@ if (isset($_POST["submit"]) && isset($_FILES["productImage"])) {
     $categoryName = $_POST['categoryName'];
     $price = $_POST['price'];
     $discount = $_POST['discount'];
-    $quantity = $_POST['quantity'];
+    // $quantity = $_POST['quantity'];
     $processor = $_POST['processor'];
     $memoryStorage = $_POST['memoryStorage'];
     $ram = $_POST['ram'];
@@ -29,8 +29,8 @@ if (isset($_POST["submit"]) && isset($_FILES["productImage"])) {
         'productName' => $productName,
         'productDetail' => $detail,
         'categoryName' => $categoryName,
-        'price' => $price,
-        'quantity' => $quantity
+        'price' => $price
+        // 'quantity' => $quantity
     ];
 
     $errors = [];
@@ -64,7 +64,7 @@ if (isset($_POST["submit"]) && isset($_FILES["productImage"])) {
                 $detail = mysqli_real_escape_string($conn, $detail);
                 $categoryName = mysqli_real_escape_string($conn, $categoryName);
                 $price = mysqli_real_escape_string($conn, $price);
-                $quantity = mysqli_real_escape_string($conn, $quantity);
+                // $quantity = mysqli_real_escape_string($conn, $quantity);
                 $processor = mysqli_real_escape_string($conn, $processor);
                 $memoryStorage = mysqli_real_escape_string($conn, $memoryStorage);
                 $ram = mysqli_real_escape_string($conn, $ram);
@@ -73,8 +73,8 @@ if (isset($_POST["submit"]) && isset($_FILES["productImage"])) {
                 $battery = mysqli_real_escape_string($conn, $battery);
 
                 // Insert into the database
-                $insertQuery = "INSERT INTO products (productName, detail, categoryName, price, discount, quantity, processor, memoryStorage, ram, frontCamera, rearCamera, battery, productImage) 
-                                VALUES ('$productName', '$detail', '$categoryName', $price, $discount, $quantity, '$processor', '$memoryStorage', '$ram', '$frontCamera', '$rearCamera', '$battery', '$newImgName')";
+                $insertQuery = "INSERT INTO products (productName, detail, categoryName, price, discount, processor, memoryStorage, ram, frontCamera, rearCamera, battery, productImage) 
+                                VALUES ('$productName', '$detail', '$categoryName', $price, $discount,'$processor', '$memoryStorage', '$ram', '$frontCamera', '$rearCamera', '$battery', '$newImgName')";
 
                 if ($conn->query($insertQuery) === TRUE) {
                     echo "

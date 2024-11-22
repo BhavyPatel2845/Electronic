@@ -12,7 +12,7 @@ const productCategorySelect = document.querySelector('select[name="categoryName"
 const productDetailTextarea = document.querySelector('textarea[name="detail"]');
 const productPriceInput = document.querySelector('input[name="price"]');
 const productDiscountInput = document.querySelector('input[name="discount"]');
-const productQuantityInput = document.querySelector('input[name="quantity"]');
+// const productQuantityInput = document.querySelector('input[name="quantity"]');
 const productProcessorInput = document.querySelector('input[name="processor"]');
 const productMemoryStorageInput = document.querySelector('input[name="memoryStorage"]');
 const productRamInput = document.querySelector('input[name="ram"]');
@@ -31,7 +31,7 @@ edtBtn.forEach(elems => {
         const productDetail = elems.getAttribute('data-detail');
         const productPrice = elems.getAttribute('data-price');
         const productDiscount = elems.getAttribute('data-discount');
-        const productQuantity = elems.getAttribute('data-quantity');
+        // const productQuantity = elems.getAttribute('data-quantity');
         const productProcessor = elems.getAttribute('data-processor');
         const productMemoryStorage = elems.getAttribute('data-memoryStorage');
         const productRam = elems.getAttribute('data-ram');
@@ -46,7 +46,7 @@ edtBtn.forEach(elems => {
         productDetailTextarea.value = productDetail;
         productPriceInput.value = productPrice;
         productDiscountInput.value = productDiscount;
-        productQuantityInput.value = productQuantity;
+        // productQuantityInput.value = productQuantity;
         productProcessorInput.value = productProcessor;
         productMemoryStorageInput.value = productMemoryStorage;
         productRamInput.value = productRam;

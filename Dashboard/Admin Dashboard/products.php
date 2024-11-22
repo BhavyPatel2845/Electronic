@@ -55,10 +55,10 @@
                     <label for="productDiscount">Discount</label>
                     <input type="number" name="discount" placeholder="Discount">
                 </div>
-                <div class="productQuantity">
+                <!-- <div class="productQuantity">
                     <label for="productQuantity">Quantity</label>
                     <input type="number" name="quantity" placeholder="Quantity">
-                </div>
+                </div> -->
                 <div class="productProcessor">
                     <label for="productProcessor">processor</label>
                     <input type="text" name="processor" placeholder="processor">
@@ -146,7 +146,7 @@
                 <?php
 
                     require "../../backend/database_connection.php";
-                    $selectQuery = 'select * from products';
+                    $selectQuery = 'select * from products ORDER BY product_id DESC';
                     $result = $conn->query($selectQuery);
 
                     if(!empty($result)){
@@ -178,7 +178,6 @@
                                     data-categoryName="' . $row['categoryName'] . '" 
                                     data-price="' . $row['price'] . '" 
                                     data-discount="' . $row['discount'] . '"
-                                    data-quantity="' . $row['quantity'] . '"
                                     data-processor="' . $row['processor'] . '" 
                                     data-memoryStorage="' . $row['memoryStorage'] . '" 
                                     data-ram="' . $row['ram'] . '" 

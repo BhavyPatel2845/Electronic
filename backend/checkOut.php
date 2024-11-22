@@ -80,13 +80,20 @@
         if ($result->num_rows > 0) {
             // Loop through the results
             while ($row = $result->fetch_assoc()) {
+                $price = $row['price'] * $row['quantity'];
+                // echo $price;
                 $insertOrder = "INSERT INTO orders(product_id,userEmail, paymentMethod, price) 
-                VALUES ('" . $row['product_id'] . "','" . $_SESSION['email'] . "', '$paymentMethod', '" . $row['price'] . "')";  
+                VALUES ('" . $row['product_id'] . "','" . $_SESSION['email'] . "', '$paymentMethod', '$price')";  
                 if(mysqli_query($conn,$insertOrder) === TRUE){
                     $deleteCartItem = "DELETE FROM addtocart WHERE cart_id = '" . $row['cart_id'] . "' ;";
                     mysqli_query($conn,$deleteCartItem);                 
                 }
             }
+            echo "
+            <script>
+                alert('Order Successfully');
+                window.location.href = '../dashboard/User Dashboard/orderHistory.php';
+            </script>";
         } else {
             echo "
             <script>

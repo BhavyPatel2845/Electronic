@@ -85,13 +85,32 @@
                             </div>
                         </div>
                         <div class="detail">
+                            <!-- <h6>Total Sale</h6>
+                            <p>&#8377;50,00,000.00</p> -->
+                            <?php
+                                require "../../backend/database_connection.php";
+                                $sql = "SELECT price from orders";
+                                $result = $conn->query($sql);
+                                $price = 0;
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()){
+                                        $price = $price + $row['price'];
+                                    }                               
+                            ?>
                             <h6>Total Sale</h6>
-                            <p>&#8377;50,00,000.00</p>
+                            <p>&#8377;<?php echo $price  ?></p>
+                            <?php
+                                } else {
+                                    echo "0";
+                                }
+                            ?>
                         </div>
                         <div class="moreInfo">
                             <p>More Info</p>
                         </div>
                     </div>
+
+                    
 
                     <div class="detailContainer">
                         <div class="imageContainer">
@@ -100,38 +119,21 @@
                             </div>
                         </div>
                         <div class="detail">
-                            <h6>Total Profit</h6>
-                            <p>&#8377;12,00,000.00</p>
-                        </div>
-                        <div class="moreInfo">
-                            <p>More Info</p>
-                        </div>
-                    </div>
-
-                    <div class="detailContainer">
-                        <div class="imageContainer">
-                            <div class="image">
-                                <i class="fa-solid fa-recycle"></i>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h6>Refund</h6>
-                            <p>&#8377;70,000.00</p>
-                        </div>
-                        <div class="moreInfo">
-                            <p>More Info</p>
-                        </div>
-                    </div>
-
-                    <div class="detailContainer">
-                        <div class="imageContainer">
-                            <div class="image">
-                                <i class="fa-solid fa-recycle"></i>
-                            </div>
-                        </div>
-                        <div class="detail">
+                        <?php
+                                require "../../backend/database_connection.php";
+                                $sql = "SELECT COUNT(DISTINCT userEmail) AS unique_customer FROM orders";
+                                $result = $conn->query($sql);
+                                
+                                if ($result->num_rows > 0) {
+                                    $row = $result->fetch_assoc();                               
+                            ?>
                             <h6>Customer</h6>
-                            <p> 540</p>
+                            <p><?php echo $row['unique_customer']  ?></p>
+                            <?php
+                                } else {
+                                    echo "0";
+                                }
+                            ?>
                         </div>
                         <div class="moreInfo">
                             <p>More Info</p>
@@ -145,8 +147,21 @@
                             </div>
                         </div>
                         <div class="detail">
+                        <?php
+                                require "../../backend/database_connection.php";
+                                $sql = "SELECT COUNT(DISTINCT product_id) AS unique_product FROM products";
+                                $result = $conn->query($sql);
+                                
+                                if ($result->num_rows > 0) {
+                                    $row = $result->fetch_assoc();                               
+                            ?>
                             <h6>Products</h6>
-                            <p>320</p>
+                            <p><?php echo $row['unique_product']  ?></p>
+                            <?php
+                                } else {
+                                    echo "0";
+                                }
+                            ?>
                         </div>
                         <div class="moreInfo">
                             <p>More Info</p>
@@ -160,78 +175,21 @@
                             </div>
                         </div>
                         <div class="detail">
+                            <?php
+                                require "../../backend/database_connection.php";
+                                $sql = "SELECT COUNT(DISTINCT user_id) AS unique_users FROM users";
+                                $result = $conn->query($sql);
+                                
+                                if ($result->num_rows > 0) {
+                                    $row = $result->fetch_assoc();                               
+                            ?>
                             <h6>Users</h6>
-                            <p>1024</p>
-                        </div>
-                        <div class="moreInfo">
-                            <p>More Info</p>
-                        </div>
-                    </div>
-                    <div class="detailContainer">
-                        <div class="imageContainer">
-                            <div class="image">
-                                <i class="fa-solid fa-recycle"></i>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h6>Users</h6>
-                            <p>124</p>
-                        </div>
-                        <div class="moreInfo">
-                            <p>More Info</p>
-                        </div>
-                    </div>
-                    <div class="detailContainer">
-                        <div class="imageContainer">
-                            <div class="image">
-                                <i class="fa-solid fa-recycle"></i>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h6>Users</h6>
-                            <p>124</p>
-                        </div>
-                        <div class="moreInfo">
-                            <p>More Info</p>
-                        </div>
-                    </div>
-                    <div class="detailContainer">
-                        <div class="imageContainer">
-                            <div class="image">
-                                <i class="fa-solid fa-recycle"></i>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h6>Users</h6>
-                            <p>124</p>
-                        </div>
-                        <div class="moreInfo">
-                            <p>More Info</p>
-                        </div>
-                    </div>
-                    <div class="detailContainer">
-                        <div class="imageContainer">
-                            <div class="image">
-                                <i class="fa-solid fa-recycle"></i>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h6>Users</h6>
-                            <p>124</p>
-                        </div>
-                        <div class="moreInfo">
-                            <p>More Info</p>
-                        </div>
-                    </div>
-                    <div class="detailContainer">
-                        <div class="imageContainer">
-                            <div class="image">
-                                <i class="fa-solid fa-recycle"></i>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <h6>Users</h6>
-                            <p>124</p>
+                            <p><?php echo $row['unique_users']  ?></p>
+                            <?php
+                                } else {
+                                    echo "0";
+                                }
+                            ?>
                         </div>
                         <div class="moreInfo">
                             <p>More Info</p>
