@@ -74,23 +74,47 @@ if (isset($_POST["submit"]) && isset($_FILES["categoryImage"])) {
                                     VALUES ('$categoryName', '$detail', '$newImgName')";
 
                     if ($conn->query($insertQuery) === TRUE) {
-                        echo "success";
-                        header("Location: ../Dashboard/Admin Dashboard/category.php");
+                        echo "
+                        <script>
+                            alert('Category Added Successfully');
+                            window.location.href = '../dashboard/Admin Dashboard/category.php';
+                        </script>";
                         exit();
                     } else {
-                        echo "Error: " . $conn->error;
+                        // echo "Error: " . $conn->error;
+                        
+                        echo "
+                        <script>
+                            alert('$conn->error');
+                            window.location.href = '../dashboard/Admin Dashboard/category.php';
+                        </script>";
                     }
                 } else {
-                    echo "Failed to upload the image.";
+                    // echo "Failed to upload the image.";
+                    echo "
+                        <script>
+                            alert('Failed to upload the image.');
+                            window.location.href = '../dashboard/Admin Dashboard/addCategory.php';
+                        </script>";
                 }
             } else {
-                echo "Invalid image type. Only JPG, PNG, and JPEG are allowed.";
+                // echo "Invalid image type. Only JPG, PNG, and JPEG are allowed.";
+                echo "
+                        <script>
+                            alert('Invalid image type. Only JPG, PNG, and JPEG are allowed.');
+                            window.location.href = '../dashboard/Admin Dashboard/addCategory.php';
+                        </script>";
             }
         }
 
         // Display errors if any
         foreach ($errors as $error) {
-            echo $error . "<br>";
+            // echo $error . "<br>";
+            echo "
+                <script>
+                    alert('$errors');
+                    window.location.href = '../dashboard/Admin Dashboard/addCategory.php';
+                </script>";
         }
     }
 }

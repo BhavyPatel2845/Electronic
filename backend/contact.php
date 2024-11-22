@@ -32,7 +32,12 @@
     if (!empty($errors)) {
 
         foreach ($errors as $error) {
-            echo "$error <br> ";
+            // echo "$error <br> ";
+            echo "
+            <script>
+                alert('$error');
+                window.location.href = '../contact.php';
+            </script>";
         }
     }
     else{
@@ -44,10 +49,20 @@
         $insertQuery = "insert into contact(userName,phoneNumber,email,message) values('$userName',$phoneNumber,'$email','$message')";
 
         if (mysqli_query($conn,$insertQuery) === TRUE) {
-            echo "<script> alert('Successfully Sent Message') </script>";
+            // echo "<script> alert('Successfully Sent Message') </script>";
+            echo "
+            <script>
+                alert('Successfully Sent Message');
+                window.location.href = '../index.php';
+            </script>";
         }
         else{
-            echo "<script> alert('Resend Message') </script>";
+            // echo "<script> alert('Resend Message') </script>";
+            echo "
+            <script>
+                alert('Resend Message');
+                window.location.href = '../index.php';
+            </script>";
         }
     }
 

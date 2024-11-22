@@ -16,10 +16,20 @@ if ($result === true) {
     while ($row = mysqli_fetch_array($query)) {
         unlink("../../productImageUpload/{$row['productImage']}");
     }
-    header("location: ../Dashboard/Admin Dashboard/products.php");
+    // header("location: ../Dashboard/Admin Dashboard/products.php");
+    echo "
+            <script>
+                alert('Product Successfully Deleted');
+                window.location.href = '../dashboard/Admin Dashboard/products.php';
+            </script>";
 }
 else{
-    echo "product Delete Error";
+    // echo "product Delete Error";
+    echo "
+            <script>
+                alert('Category Delete Error');
+                window.location.href = '../dashboard/Admin Dashboard/category.php';
+            </script>";
 }
 
 

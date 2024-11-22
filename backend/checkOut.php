@@ -2,6 +2,8 @@
 
     include "database_connection.php";
 
+    require './loginSession.php';
+
     if(isset($_POST['submit'])){
         $firstName = $_POST['firstName'];
         $lastName = $_POST['lastName'];
@@ -68,6 +70,31 @@
      values ('$firstName','$lastName','$address', '$city', $pincode,'$state', $phoneNumber, '$email')";
 
     if (mysqli_query($conn,$insertQuery) === TRUE) {
+        $email = $_SESSION['email'];
+        $selectCartData = "SELECT addtocart.cart_id, addtocart.quantity,addtocart.product_id, products.productName,products.detail, products.price,products.productImage 
+                FROM addtocart JOIN products ON addtocart.product_id=products.product_id
+                WHERE addtocart.userEmail = '$email'";
+            
+        $result = mysqli_query($conn,$selectCartData);
+
+        if ($result->num_rows > 0) {
+            // Loop through the results
+            while ($row = $result->fetch_assoc()) {
+                $insertOrder = "INSERT INTO orders(product_id,userEmail, paymentMethod, price) 
+                VALUES ('" . $row['product_id'] . "','" . $_SESSION['email'] . "', '$paymentMethod', '" . $row['price'] . "')";  
+                if(mysqli_query($conn,$insertOrder) === TRUE){
+                    $deleteCartItem = "DELETE FROM addtocart WHERE cart_id = '" . $row['cart_id'] . "' ;";
+                    mysqli_query($conn,$deleteCartItem);                 
+                }
+            }
+        } else {
+            echo "
+            <script>
+                alert('No Product Found In Cart');
+                window.location.href = '../addToCart.php';
+            </script>";
+        }
+
         if($paymentMethod === 'UPI'){        
             $apikey = "rzp_test_RSK7K0PuoUp9b7";
         ?>
@@ -90,19 +117,6 @@
         <input type="hidden" custom="Hidden Element" name="hidden"/>
         </form>
         <?php
-        }
-        else{
-
-            $orderComplete = "INSERT INTO orders(totalPrice,paymentMethod,userEmail) 
-            values ('$totalPrice','$paymentMethod','$email')";
-
-            if(mysqli_query($conn,$orderComplete) === TRUE){
-                echo "
-                <script>
-                    alert('ORDER Complete');
-                    window.location.href = '../Dashboard/User Dashboard/orderHistory.php';
-                </script>";
-            }
         }
     }
 

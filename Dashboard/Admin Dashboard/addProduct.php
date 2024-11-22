@@ -42,10 +42,28 @@
                         <textarea rows="10" cols="47" placeholder="Product detail" name="productDetail" required></textarea>
                         <select name="categoryName" required>
                             <option value="">Select Category</option>
-                            <option value="Mobile">Mobile</option>
-                            <option value="Smart Watch">Smart Watch</option>
-                            <option value="Air Buds">Air Buds</option>
-                            <option value="Laptop">Laptop</option>
+                            <?php
+                                require "../../backend/database_connection.php";
+
+                                // Corrected query
+                                $selectCategory = "SELECT * FROM category";
+
+                                // Execute the query
+                                $result = mysqli_query($conn, $selectCategory);
+
+                                // Check if the query was successful and if it has rows
+                                if ($result && $result->num_rows > 0) {
+                                    // Loop through each row and display the category name
+                                    while ($row = $result->fetch_assoc()) {
+                                        // echo $row['categoryName'];
+                                    ?>
+                                    <option value="<?php echo $row['categoryName'] ?>"><?php echo $row['categoryName'] ?></option>
+                                    <?php
+                                            }
+                                            } else {
+                                                echo "No categories found.";
+                                            }
+                                    ?>
                         </select>
                         <input type="text" placeholder="Product Price" name="price" required>
                         <input type="text" placeholder="Product discount" name="discount" required>

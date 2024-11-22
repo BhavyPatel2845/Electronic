@@ -77,7 +77,12 @@ if (isset($_POST["submit"]) && isset($_FILES["productImage"])) {
                                 VALUES ('$productName', '$detail', '$categoryName', $price, $discount, $quantity, '$processor', '$memoryStorage', '$ram', '$frontCamera', '$rearCamera', '$battery', '$newImgName')";
 
                 if ($conn->query($insertQuery) === TRUE) {
-                    header("Location: ../Dashboard/Admin Dashboard/products.php");
+                    echo "
+                    <script>
+                        alert('Product Successfully Added');
+                        window.location.href = '../Dashboard/Admin Dashboard/products.php';
+                    </script>";
+                    // header("Location: ../Dashboard/Admin Dashboard/products.php");
                     exit();
                 } else {
                     echo "Error: " . $conn->error;

@@ -73,153 +73,43 @@
                 <ul>
                     <li id="headerOflist">
                         <div class="id">Id</div>
-                        <div class="name">Name</div>
+                        <div class="name">Email</div>
                         <div class="payment">Payment</div>
-                        <div class="type">Type</div>
                         <div class="status">Status</div>
                         <div class="total">Total</div>
                         <div class="action">Action</div>
                     </li>
-                    <li class="listOfHistory">
-                        <div class="id">#2343</div>
-                        <div class="name">Raaj</div>
-                        <div class="payment">cash</div>
-                        <div class="type">Delivery</div>
-                        <div class="status yellow">Delivered</div>
-                        <div class="total">350.00</div>
+                    <?php
+                        require "../../backend/database_connection.php";
+
+                        $selectOrder = "SELECT * FROM orders";
+                        $result = mysqli_query($conn,$selectOrder);
+                        if ($result && $result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()){
+
+                       ?>
+                            <li class="listOfHistory">
+                        <div class="id"><?php echo $row['order_id'] ?></div>
+                        <div class="name"><?php echo $row['userEmail'] ?></div>
+                        <div class="payment"><?php echo $row['paymentMethod'] ?></div>
+                        <div class="type"><?php echo $row['orderStatus'] ?></div>
+                        <div class="total"><?php echo $row['price'] ?></div>
                         <div class="action">
                             <div class="actionbox" id="actionBox1">
                                 <div class="refund danger"><a href="#" class="danger">Refund</a></div>
                                 <div class="refund danger"><a href="#">Message</a></div>
                             </div>
                         </div>
-                    </li>                   
-                    <li class="listOfHistory">
-                        <div class="id">#2343</div>
-                        <div class="name">Raaj</div>
-                        <div class="payment">cash</div>
-                        <div class="type">Delivery</div>
-                        <div class="status danger">Canceled</div>
-                        <div class="total">350.00</div>
-                        <div class="action">
-                            <div class="actionbox" id="actionBox1">
-                                <div class="refund danger"><a href="#" class="danger">Refund</a></div>
-                                <div class="refund danger"><a href="#">Message</a></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="listOfHistory">
-                        <div class="id">#2343</div>
-                        <div class="name">Raaj Prajapati</div>
-                        <div class="payment">cash</div>
-                        <div class="type">Collection</div>
-                        <div class="status">Collected</div>
-                        <div class="total">350.00</div>
-                        <div class="action">
-                            <div class="actionbox" id="actionBox1">
-                                <div class="refund danger"><a href="#" class="danger">Refund</a></div>
-                                <div class="refund danger"><a href="#">Message</a></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="listOfHistory">
-                        <div class="id">#2343</div>
-                        <div class="name">Raaj</div>
-                        <div class="payment">cash</div>
-                        <div class="type">Delivery</div>
-                        <div class="status yellow">Delivered</div>
-                        <div class="total">350.00</div>
-                        <div class="action">
-                            <div class="actionbox" id="actionBox1">
-                                <div class="refund danger"><a href="#" class="danger">Refund</a></div>
-                                <div class="refund danger"><a href="#">Message</a></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="listOfHistory">
-                        <div class="id">#2343</div>
-                        <div class="name">Raaj</div>
-                        <div class="payment">cash</div>
-                        <div class="type">Delivery</div>
-                        <div class="status yellow">Delivered</div>
-                        <div class="total">350.00</div>
-                        <div class="action">
-                            <div class="actionbox" id="actionBox1">
-                                <div class="refund danger"><a href="#" class="danger">Refund</a></div>
-                                <div class="refund danger"><a href="#">Message</a></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="listOfHistory">
-                        <div class="id">#2343</div>
-                        <div class="name">Raaj</div>
-                        <div class="payment">cash</div>
-                        <div class="type">Delivery</div>
-                        <div class="status danger">Canceled</div>
-                        <div class="total">350.00</div>
-                        <div class="action">
-                            <div class="actionbox" id="actionBox1">
-                                <div class="refund danger"><a href="#" class="danger">Refund</a></div>
-                                <div class="refund danger"><a href="#">Message</a></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="listOfHistory">
-                        <div class="id">#2343</div>
-                        <div class="name">Raaj</div>
-                        <div class="payment">cash</div>
-                        <div class="type">Collection</div>
-                        <div class="status">Collected</div>
-                        <div class="total">350.00</div>
-                        <div class="action">
-                            <div class="actionbox" id="actionBox1">
-                                <div class="refund danger"><a href="#" class="danger">Refund</a></div>
-                                <div class="refund danger"><a href="#">Message</a></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="listOfHistory">
-                        <div class="id">#2343</div>
-                        <div class="name">Raaj</div>
-                        <div class="payment">cash</div>
-                        <div class="type">Delivery</div>
-                        <div class="status danger">Canceled</div>
-                        <div class="total">350.00</div>
-                        <div class="action">
-                            <div class="actionbox" id="actionBox1">
-                                <div class="refund danger"><a href="#" class="danger">Refund</a></div>
-                                <div class="refund danger"><a href="#">Message</a></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="listOfHistory">
-                        <div class="id">#2343</div>
-                        <div class="name">Raaj</div>
-                        <div class="payment">cash</div>
-                        <div class="type">Delivery</div>
-                        <div class="status yellow">Delivered</div>
-                        <div class="total">350.00</div>
-                        <div class="action">
-                            <div class="actionbox" id="actionBox1">
-                                <div class="refund danger"><a href="#" class="danger">Refund</a></div>
-                                <div class="refund danger"><a href="#">Message</a></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="listOfHistory">
-                        <div class="id">#2343</div>
-                        <div class="name">Raaj</div>
-                        <div class="payment">cash</div>
-                        <div class="type">Delivery</div>
-                        <div class="status yellow">Delivered</div>
-                        <div class="total">350.00</div>
-                        <div class="action">
-                            <div class="actionbox" id="actionBox1">
-                                <div class="refund danger"><a href="#" class="danger">Refund</a></div>
-                                <div class="refund danger"><a href="#">Message</a></div>
-                            </div>
-                        </div>
-                    </li>
+                    </li> 
+                       <?php
+                            }
+                        }
+                        else{
+                            echo "bbb";
+                        }
+                       ?>
+                                      
+                    
                 </ul>
 
             </div>

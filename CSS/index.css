@@ -158,7 +158,11 @@
     }
     .product img{
         height: 220px;
-        width: 170px;
+        /* width: 170px; */
+        width: auto;
+        /* background-color: red; */
+        /* mix-blend-mode: color-burn; */
+        mix-blend-mode:darken ;
     }
     .product{
         cursor: pointer;
@@ -199,7 +203,7 @@
 
 /* ===============Banner============ */
 #banner{
-    background-image: url('back2.jpg');
+    background-image: url('../IMAGES/back2.jpg');
     width: 100%;
     height: 60vh;
     color: #fff;
@@ -211,7 +215,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-color: red;
 }
 #banner h4{
     color: orange;
@@ -388,8 +391,7 @@
 
 
 #featured,
-#products,
-#banner{
+#products{
     margin-top: 0px !important; 
     margin-bottom: 0px !important; 
     padding-top: 1px !important;

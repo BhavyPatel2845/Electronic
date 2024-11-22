@@ -47,10 +47,29 @@
                 <label for=""> Category </label>
                 <select name="" id="">
                     <option value=""> All Products </option>
-                    <option value=""> Mobiles </option>
-                    <option value=""> Smart Watches </option>
-                    <option value=""> Air Burds </option>
-                    <option value=""> Laptops </option>
+                    <?php
+                                require "./backend/database_connection.php";
+
+                                // Corrected query
+                                $selectCategory = "SELECT * FROM category";
+
+                                // Execute the query
+                                $resultCategory = mysqli_query($conn, $selectCategory);
+
+                                // Check if the query was successful and if it has rows
+                                if ($resultCategory && $result->num_rows > 0) {
+                                    // Loop through each row and display the category name
+                                    while ($row = $resultCategory->fetch_assoc()) {
+                                        // echo $row['categoryName'];
+                                    ?>
+                                    <option value="<?php echo $row['categoryName'] ?>"><?php echo $row['categoryName'] ?></option>
+                                    <?php
+                                            }
+                                            } else {
+                                                echo "No categories found.";
+                                            }
+                                    ?>
+       
                 </select>
             </div>
             <div class="productSort">
