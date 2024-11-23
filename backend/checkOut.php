@@ -92,7 +92,7 @@
             echo "
             <script>
                 alert('Order Successfully');
-                window.location.href = '../dashboard/User Dashboard/orderHistory.php';
+                // window.location.href = '../dashboard/User Dashboard/orderHistory.php';
             </script>";
         } else {
             echo "
