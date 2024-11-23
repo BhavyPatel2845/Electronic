@@ -99,10 +99,29 @@
                         <p class="productName"> <?php echo $row['productName'] ?> </p>
                         <p class="productPrice">&#8377; <?php echo $row['price'] ?> </p>
                         <div class="productRating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <?php
+
+                            // $productName = $row['productName'];
+                            // // echo $productName;
+                            //     // require "./backend/database_connection.php";
+                            //     $selectRating = "SELECT * FROM feedback WHERE productName = '$productName' ";
+                            //     $resultRating = mysqli_query($conn,$selectRating);
+
+                            //     if (!($resultRating)) {
+                            //         while($rowRating = $resultRating->fetch_assoc()){
+                            //             echo "aaa";
+                            //         } 
+                            //     }
+                            //     else{
+                            //         echo "bbb";
+                            //     }
+
+                            ?>
+                            <input type="text">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </div>
                         <form class="addToCart" action="./backend/productAddToCart.php" method="post"> 
@@ -141,6 +160,61 @@
      Fontawesome Kit 
     ---------------->
     <script src="https://kit.fontawesome.com/a669b51611.js" crossorigin="anonymous"></script>
+
+    <!-- =============j-script=================== -->
+
+    <script>
+        const togglebtn = document.querySelector('.toggle_btn')
+        const togglebtnicn = document.querySelector('.toggle_btn i')
+        const dropdown = document.querySelector('#sidebar')
+
+        togglebtn.onclick = function () {
+            dropdown.classList.toggle('open')
+            const isopen = dropdown.classList.contains('open')
+
+            togglebtnicn.classList = isopen
+                 ?'fa-solid fa-xmark'
+                 :'fa-solid fa-bars' 
+                
+        }
+
+        let searchbtn= document.querySelector('.searchbtn');
+        let closebtn= document.querySelector('.closebtn');
+        let searchbox= document.querySelector('.search_box');
+
+        searchbtn.onclick=function(){
+            searchbox.classList.add('active');
+            closebtn.classList.add('active');
+            searchbtn.classList.add('active');
+        }
+        closebtn.onclick=function(){
+            searchbox.classList.remove('active');
+            closebtn.classList.remove('active');
+            searchbtn.classList.remove('active');
+        }
+
+        let sidesearchbtn=document.querySelector('.sidesearchbtn');
+        let sideclosebtn=document.querySelector('.sideclosebtn');
+
+        sidesearchbtn.onclick=function(){
+            searchbox.classList.add('active');
+            sideclosebtn.classList.add('active');
+            sidesearchbtn.classList.add('active');
+        }
+        sideclosebtn.onclick=function(){
+            searchbox.classList.remove('active');
+            sideclosebtn.classList.remove('active');
+            sidesearchbtn.classList.remove('active');
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>

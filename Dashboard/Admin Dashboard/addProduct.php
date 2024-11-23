@@ -1,3 +1,6 @@
+<?php
+    // require "../../backend/adminSession.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

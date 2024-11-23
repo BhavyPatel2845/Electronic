@@ -1,9 +1,15 @@
 <?php
+require "../../backend/database_connection.php";
+require "../../backend/loginSession.php";
 
-// require "../../../backend/login.php";
-// require "./userAuthentication.php"; 
+if(empty($_SESSION['email'])){
+    echo "
+            <script>
+                alert('Please Login');
+                window.location.href = '../../login.php';
+            </script>";
+}
 ?>
-
 
 
 <!DOCTYPE html>
@@ -80,28 +86,24 @@
             <div class="orderHistoryHeader">
                 <h2>Your Orders</h2>
             </div>
-            <?php
-                $selectQuery = "SELECT checkout.checkout_id, checkout.firstName, checkout.lastName, products.productName,products.detail, products.price,products.productImage 
-                FROM addtocart JOIN products ON addtocart.product_id=products.product_id
-                WHERE addtocart.userEmail = '$email'";
-                $result = mysqli_query($conn, $selectQuery); 
-                    if (!empty($result)) {
-                        $totalPrice = 0;
-                        $productCount = 0;
-                        while($row = $result->fetch_assoc()){
-                            echo "aaa"
-                        }
-                    }
-                    else {
-                        echo "bbb";
-                    }
-            ?>
             <div class="orderHistorySection">
+            <?php
+                $email = $_SESSION['email'];
+                $selectQuery = "SELECT orders.order_id, orders.userEmail,orders.created_at, products.productName, products.detail, products.price, products.productImage 
+                FROM orders JOIN products ON orders.product_id = products.product_id WHERE orders.userEmail = '$email'";
+
+                // Run the query
+                $result = mysqli_query($conn, $selectQuery);
+
+                // Check if the query was successful and if there are any results
+                if ($result && mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                ?>
                 <div class="orderContainer">
                     <div class="orderTopDetails">
                         <div class="orderId">
                             <p>ORDER</p>
-                            <p>3434-343434-3434</p>
+                            <p><?php echo $row['order_id'] ?></p>
                         </div>
                         <div class="viewOrderDetailsAndInvoice">
                             <div class="viewOrderDetails">
@@ -117,30 +119,24 @@
                             <div class="bottomHeading">
                                 <div>   
                                     <p>SHIP TO</p>
-                                    <H6>kaushik patel</H6>
+                                    <H6><?php echo $row['userEmail'] ?></H6>
                                 </div>
                                 <div>
                                     <p>TOTAL</p>
-                                    <h6>$4545</h6>
+                                    <h6><?php echo $row['price'] ?></h6>
                                 </div>
                                 <div>
                                     <P>ORDER PLACED</P>
-                                    <h6>9 August 2024</h6>
-                                </div>
-                                <div>
-                                    <p>Order Receive</p>
-                                    <h6>15 August 2024</h6>
+                                    <h6><?php echo $row['created_at'] ?></h6>
                                 </div>
                             </div>
                             <div class="product">
                                 <div class="productImage">
-                                    <img src="../../Assets/images/cup.png" alt="">
+                                <?php echo '<img src="../../backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
                                 </div>
                                 <div class="productName">
-                                    <h6>Product Name</h6>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aut!
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, aut!
-                                    </p>
+                                    <h6><?php echo $row['productName'] ?></h6>
+                                    <p><?php echo $row['detail'] ?></p>
                                     <div class="buyViewButtons">
                                         <button type="button">Buy it again</button>
                                         <button type="button">View your item</button>
@@ -152,6 +148,12 @@
                     </div>
                     <p class="archiveOrder">Archive Order</p>
                 </div>
+                <?php
+                }
+            } else {
+                echo "No orders found.";
+            }
+            ?>
             </div>
         </div>
     </div>

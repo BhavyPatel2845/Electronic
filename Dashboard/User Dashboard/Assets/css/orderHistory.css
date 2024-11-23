@@ -174,13 +174,15 @@ li{
     justify-content: start;
     align-items: center;
     text-align: center;
+    background-color: #00246b;
+    color: #cadcfc;
 }
 #dashboardContainer .rightSide .orderHistorySection{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-align: start;
     scrollbar-width: none;
@@ -198,7 +200,8 @@ li{
     height: 400px;
     margin: 30px 0px;
     border-radius: 10px;
-    background-color: #efecec;
+    color: #00246b;
+    background-color: #cadcfc;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails{
     height: 15%;
@@ -209,7 +212,9 @@ li{
     border-top-right-radius: 10px;
     line-height: 28px;
     padding: 10px;
-    background-color: #b8afaf;
+    background-color: #5086e4;
+    color: #00246b;
+    font-weight: 600;
 }
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .orderTopDetails .orderId{
     display: flex;
@@ -273,14 +278,18 @@ li{
     width: 200px;
     padding: 8px 25px;
     border-radius: 8px;
-    font-size: var(--mediumFont);
-    font-weight: var(--mediumFontWeight);
     cursor: pointer;
+    border: none;
+    background-color: #00246b;
+    color: #cadcfc;
 }
 
 #dashboardContainer .rightSide .orderHistorySection .orderContainer .archiveOrder{
-    border-top: 1px solid #b8afaf;
+    border-top: 1px solid #00246b;
     padding: 10px;
+}
+h6{
+    font-size: 15px;
 }
 
 /*--------------------------

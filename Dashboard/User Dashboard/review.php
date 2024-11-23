@@ -1,3 +1,16 @@
+<?php
+require "../../backend/database_connection.php";
+require "../../backend/loginSession.php";
+
+if(empty($_SESSION['email'])){
+    echo "
+            <script>
+                alert('Please Login');
+                window.location.href = '../../login.php';
+            </script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,21 +81,34 @@
             <div class="reviewForm">
                 <div class="container">
                     <h3>Review Form</h3>
-                    <form action="">
+                    <form action="../../backend/customerReview.php" method="POST">
                         
-                        <p>Product</p>
-                        <input type="text" placeholder="Product Name">
-                        <p>Product Category</p>
-                        <select>
-                            <option value="">Mobile</option>
-                            <option value="">Smart Watch</option>
-                            <option value="">Air Burds</option>
-                            <option value="">Laptop</option>
+                        <p>User Name</p>
+                        <input name="userName" type="text" placeholder="User Name" required>
+                        <p>Product Name</p>
+                        <select name="productName">
+                            <?php
+                                require "../../backend/database_connection.php";
+
+                                $selectProductName = "SELECT * FROM products";
+                                $result = mysqli_query($conn,$selectProductName);
+
+                                if(!empty($result)){
+                                    while($row = $result->fetch_assoc()){
+                            ?>
+                            <option value="<?php echo $row['productName'] ?>"><?php echo $row['productName'] ?></option>
+
+                            <?php
+                                    }
+                                }
+                            ?>
+
                         </select>
                         <p>Feedback</p>
-                        <textarea rows="10" cols="47" placeholder="Message"></textarea>
+                        <textarea name="feedback" rows="10" cols="47" placeholder="Message" required></textarea>
                         <div class="ratingStar">
                             <p>What's Your Experience ? </p>
+                            <input name="rating" type="hidden" class="test">
                             <div class="stars">  
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
@@ -91,7 +117,7 @@
                                 <span class="fa fa-star"></span>
                             </div>
                         </div>
-                        <button type="submit"> submit </button>
+                        <button type="submit" name="reviewSubmit"> submit </button>
                     </form>
                 </div>
             </div>
