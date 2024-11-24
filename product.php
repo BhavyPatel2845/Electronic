@@ -117,7 +117,7 @@
                             //     }
 
                             ?>
-                            <input type="text">
+                            <!-- <input type="text"> -->
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>

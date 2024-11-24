@@ -101,6 +101,12 @@
                 window.location.href = '../addToCart.php';
             </script>";
         }
+        if($paymentMethod === 'COD'){
+            echo "
+            <script>
+                window.location.href = '../dashboard/User Dashboard/orderHistory.php';
+            </script>";
+        } 
 
         if($paymentMethod === 'UPI'){        
             $apikey = "rzp_test_RSK7K0PuoUp9b7";
