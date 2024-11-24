@@ -10,7 +10,11 @@
   margin-bottom: 15px;
 }
 /* =============NAVBAR=========== */
-
+.fixed-top{
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
 li{
   list-style: none;
 }
@@ -73,6 +77,8 @@ width: 200px;
 }
 .loginAndRegister{
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .toggle_btn{
   color: #000;

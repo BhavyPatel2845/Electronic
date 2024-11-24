@@ -3,7 +3,6 @@
 require "./database_connection.php";
 
 $id = $_GET['id'];
-echo $id;
 $product = "SELECT productImage FROM `products` where product_id='$id'";
 
 $query = mysqli_query($conn, $product);

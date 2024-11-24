@@ -28,10 +28,26 @@
                 <a href="addToCart.php"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </ul>
-            <div class="loginAndRegister">
+
+            <?php
+                require "./backend/loginSession.php";
+
+                if(empty($_SESSION['email'])){
+                    ?>
+                    <div class="loginAndRegister">
                 <a href="./login.php" class="action_btn"> Login </a> |
                 <a href="./registration.php" class="action_btn"> Registration </a> |
-            </div>   
+            </div>
+                    <?php
+                }
+                else {
+                    ?>
+               <div class="loginAndRegister">     
+                    <a href="./dashboard/User Dashboard/editProfile.php"><i class="fa-solid fa-user"></i></a>
+                </div>
+                    <?php
+                }
+            ?> 
             </div>
         </div>
         <div id="sidebar" class="sidebar">

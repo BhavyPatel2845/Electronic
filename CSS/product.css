@@ -28,7 +28,7 @@ Product - start
 #productSection {
   display: flex;
   flex-direction: column;
-  padding: 50px 0px;
+  padding: 100px 0px 50px;
   width: 100%;
   position: relative;
   background-color: #00246b;

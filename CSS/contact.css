@@ -32,10 +32,13 @@ body{
 
 .contactUs{
     width: 100%;
+    height: 100vh;
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* padding: 100px 0px 50px; */
     color: #cadcfc;
     background-color: #00246b;
 }
