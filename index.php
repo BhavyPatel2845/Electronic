@@ -107,12 +107,38 @@
                 <a href="./productDetail.php?id=<?php echo $row['product_id']  ?>" class="individualProductImageContainer">
                     <?php echo '<img src="./backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
                 </a>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                <div class="rating" id="rating">
+                    <?php
+                        $productName = $row['productName'];
+                        $selectFeedback = "SELECT * FROM feedback where productName='$productName'";
+                        $resultFeedback = mysqli_query($conn,$selectFeedback);
+                        $star = 0;
+                        $totalFeedback = 0;
+                        if (mysqli_num_rows($resultFeedback) > 0) {
+                            while($rowFeedback = $resultFeedback->fetch_assoc()){ 
+                                $star = $star + $rowFeedback['rating'];
+                                $totalFeedback++;
+                            }
+                    ?>
+                    <input class="ratingStar" type="hidden" value="<?php echo $star/$totalFeedback; ?>">
+                    
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <?php
+                        }
+                        else{
+                    ?>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>  
+                    <?php
+                        }
+                    ?>
                 </div>
                 <h5><?php echo $row['productName'] ?></h5>
                 <h5>&#8377; <?php echo $row['price'] ?></h5>
@@ -160,12 +186,38 @@
                 <a href="./productDetail.php?id=<?php echo $row['product_id']  ?>" class="individualProductImageContainer">
                     <?php echo '<img src="./backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
                 </a>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                <div class="rating" id="rating">
+                    <?php
+                        $productName = $row['productName'];
+                        $selectFeedback = "SELECT * FROM feedback where productName='$productName'";
+                        $resultFeedback = mysqli_query($conn,$selectFeedback);
+                        $star = 0;
+                        $totalFeedback = 0;
+                        if (mysqli_num_rows($resultFeedback) > 0) {
+                            while($rowFeedback = $resultFeedback->fetch_assoc()){ 
+                                $star = $star + $rowFeedback['rating'];
+                                $totalFeedback++;
+                            }
+                    ?>
+                    <input class="ratingStar" type="hidden" value="<?php echo $star/$totalFeedback; ?>">
+                    
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <?php
+                        }
+                        else{
+                    ?>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>  
+                    <?php
+                        }
+                    ?>
                 </div>
                 <h5><?php echo $row['productName'] ?></h5>
                 <h5>&#8377; <?php echo $row['price'] ?></h5>
@@ -204,12 +256,38 @@
                 <a href="./productDetail.php?id=<?php echo $row['product_id']  ?>" class="individualProductImageContainer">
                     <?php echo '<img src="./backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
                 </a>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                <div class="rating" id="rating">
+                    <?php
+                        $productName = $row['productName'];
+                        $selectFeedback = "SELECT * FROM feedback where productName='$productName'";
+                        $resultFeedback = mysqli_query($conn,$selectFeedback);
+                        $star = 0;
+                        $totalFeedback = 0;
+                        if (mysqli_num_rows($resultFeedback) > 0) {
+                            while($rowFeedback = $resultFeedback->fetch_assoc()){ 
+                                $star = $star + $rowFeedback['rating'];
+                                $totalFeedback++;
+                            }
+                    ?>
+                    <input class="ratingStar" type="hidden" value="<?php echo $star/$totalFeedback; ?>">
+                    
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <?php
+                        }
+                        else{
+                    ?>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>  
+                    <?php
+                        }
+                    ?>
                 </div>
                 <h5><?php echo $row['productName'] ?></h5>
                 <h5>&#8377; <?php echo $row['price'] ?></h5>
@@ -248,12 +326,38 @@
                 <a href="./productDetail.php?id=<?php echo $row['product_id']  ?>" class="individualProductImageContainer">
                     <?php echo '<img src="./backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
                 </a>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                <div class="rating" id="rating">
+                    <?php
+                        $productName = $row['productName'];
+                        $selectFeedback = "SELECT * FROM feedback where productName='$productName'";
+                        $resultFeedback = mysqli_query($conn,$selectFeedback);
+                        $star = 0;
+                        $totalFeedback = 0;
+                        if (mysqli_num_rows($resultFeedback) > 0) {
+                            while($rowFeedback = $resultFeedback->fetch_assoc()){ 
+                                $star = $star + $rowFeedback['rating'];
+                                $totalFeedback++;
+                            }
+                    ?>
+                    <input class="ratingStar" type="hidden" value="<?php echo $star/$totalFeedback; ?>">
+                    
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <?php
+                        }
+                        else{
+                    ?>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>  
+                    <?php
+                        }
+                    ?>
                 </div>
                 <h5><?php echo $row['productName'] ?></h5>
                 <h5>&#8377; <?php echo $row['price'] ?></h5>
@@ -292,12 +396,38 @@
                 <a href="./productDetail.php?id=<?php echo $row['product_id']  ?>" class="individualProductImageContainer">
                     <?php echo '<img src="./backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
                 </a>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                <div class="rating" id="rating">
+                    <?php
+                        $productName = $row['productName'];
+                        $selectFeedback = "SELECT * FROM feedback where productName='$productName'";
+                        $resultFeedback = mysqli_query($conn,$selectFeedback);
+                        $star = 0;
+                        $totalFeedback = 0;
+                        if (mysqli_num_rows($resultFeedback) > 0) {
+                            while($rowFeedback = $resultFeedback->fetch_assoc()){ 
+                                $star = $star + $rowFeedback['rating'];
+                                $totalFeedback++;
+                            }
+                    ?>
+                    <input class="ratingStar" type="hidden" value="<?php echo $star/$totalFeedback; ?>">
+                    
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <span class="rate">&#9733;</span>
+                    <?php
+                        }
+                        else{
+                    ?>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>  
+                    <?php
+                        }
+                    ?>
                 </div>
                 <h5><?php echo $row['productName'] ?></h5>
                 <h5>&#8377; <?php echo $row['price'] ?></h5>

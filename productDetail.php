@@ -70,12 +70,29 @@
                 <div class="productName">
                     <h3><?php echo $row['productName'] ?></h3>
                 </div>
-                <div class="rating">
+                <div class="rating" id="rating">
+                    <?php
+                        $productName = $row['productName'];
+                        $selectFeedback = "SELECT * FROM feedback where productName='$productName'";
+                        $resultFeedback = mysqli_query($conn,$selectFeedback);
+                        $star = 0;
+                        $totalFeedback = 0;
+                        if (mysqli_num_rows($resultFeedback) > 0) {
+                            while($rowFeedback = $resultFeedback->fetch_assoc()){ 
+                                $star = $star + $rowFeedback['rating'];
+                                $totalFeedback++;
+                            }
+                    ?>
+                    <input class="ratingStar" type="hidden" value="<?php echo $star/$totalFeedback; ?>">
+                    
                     <span class="rate">&#9733;</span>
                     <span class="rate">&#9733;</span>
                     <span class="rate">&#9733;</span>
                     <span class="rate">&#9733;</span>
                     <span class="rate">&#9733;</span>
+                    <?php
+                        }
+                    ?>
                 </div>
                 <div class="price">
                     <h4>price  :</h4>
@@ -137,47 +154,47 @@
         ?>
 
 
-    <div class="productSlider" id="productSlider">
-        <div class="headingAndButton">
-            <div class="heading">
-                <h5>Hot <span>New Arrival</span> You May Like</h5>
+        <div class="productSlider" id="productSlider">
+            <div class="headingAndButton">
+                <div class="heading">
+                    <h5>Hot <span>New Arrival</span> You May Like</h5>
+                </div>
+                <div class="buttons">
+                    <div class="productSwiperButtonPrev" onclick="previousButton('manual')">&#10094;</div>
+                    <div class="productSwiperButtonNext" id="nextSliderButton" onclick="nextButtonClick('manual')">&#10095;</div>
+                </div>
             </div>
-            <div class="buttons">
-                <div class="productSwiperButtonPrev" onclick="previousButton('manual')">&#10094;</div>
-                <div class="productSwiperButtonNext" id="nextSliderButton" onclick="nextButtonClick('manual')">&#10095;</div>
-            </div>
-        </div>
 
-        <div class="productsContainer">
-            <div class="swiperContainer">
-                <div class="swiperWrapper">
-                    <?php
-                    for ($i=0; $i <20 ; $i++) { 
-                    ?>
-                    <div class="individualProductBox productSwiperSlide">
-                        <div class="individualProductImageContainer">
-                            <img src="./IMAGES/product1.png" alt="">
+            <div class="productsContainer">
+                <div class="swiperContainer">
+                    <div class="swiperWrapper">
+                        <?php
+                        for ($i=0; $i <20 ; $i++) { 
+                        ?>
+                        <div class="individualProductBox productSwiperSlide">
+                            <div class="individualProductImageContainer">
+                                <img src="./IMAGES/product1.png" alt="">
+                            </div>
+                            <p class="productName">Boat 172</p>
+                            <p class="productPrice">&#8377; 1500.00</p>
+                            <div class="productRating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="cartButton">
+                                <button>Add To Cart</button>
+                            </div>
                         </div>
-                        <p class="productName">Boat 172</p>
-                        <p class="productPrice">&#8377; 1500.00</p>
-                        <div class="productRating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
-                            <i class="fa-regular fa-star"></i>
-                         </div>
-                         <div class="cartButton">
-                            <button>Add To Cart</button>
-                         </div>
+                        <?php
+                        }
+                        ?>
                     </div>
-                    <?php
-                    }
-                    ?>
                 </div>
             </div>
         </div>
-    </div>
 
     </div>
     <!----------------

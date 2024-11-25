@@ -1,15 +1,15 @@
 /*--------------------
    Navigation - Start 
 --------------------*/
-var hamburgerMenuIcon = document.querySelector(".hamburgerMenuIcon");
-var nav = document.querySelector("nav");
-var navigationLinks = document.querySelector("#navigationLinks");
+// var hamburgerMenuIcon = document.querySelector(".hamburgerMenuIcon");
+// var nav = document.querySelector("nav");
+// var navigationLinks = document.querySelector("#navigationLinks");
 
-hamburgerMenuIcon.addEventListener("click", function () {
-  hamburgerMenuIcon.classList.toggle("burger_cross");
-  navigationLinks.classList.add("navigationLinksOpen");
-  navigationLinks.classList.toggle("navigationLinksClose");
-});
+// hamburgerMenuIcon.addEventListener("click", function () {
+//   hamburgerMenuIcon.classList.toggle("burger_cross");
+//   navigationLinks.classList.add("navigationLinksOpen");
+//   navigationLinks.classList.toggle("navigationLinksClose");
+// });
 /*--------------------
    Navigation - End 
 --------------------*/
@@ -123,3 +123,25 @@ const swiperContainer = document.querySelector(
     Product Slider - End 
  --------------------*/
  
+
+ 
+/*--------------------
+   product star - start 
+--------------------*/
+
+let ratingStar = document.querySelector('.ratingStar');
+let rating = Math.round(ratingStar.value);
+let star = document.querySelectorAll('.rate')
+
+// 
+star.forEach((str, index) => {
+  if (index < rating) {
+      str.classList.add("active"); 
+  } else {
+      str.classList.remove("active"); 
+  }
+});
+/*--------------------
+   product star - end 
+--------------------*/
+

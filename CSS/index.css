@@ -197,9 +197,14 @@
     .product button:hover{
         scale: 1.03;
     }
-    .product .star i{
-        color: goldenrod;
+    .product span{
+        
+        margin-top: 5px;
+        font-size: 25px;
     }
+      .product span.active{
+        color: #f16108;
+      }
 
 /* ===============Banner============ */
 #banner{

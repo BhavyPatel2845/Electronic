@@ -40,8 +40,10 @@ li{
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
-  padding: 50px 0px;
+  /* padding: 50px 0px; */
   color: #cadcfc;
+
+  padding: 120px 0px 50px;
   background-color: #00246b;
   /* background-color: #87cefa; */
 }
@@ -100,8 +102,8 @@ li{
   grid-gap: 10px;
 
 }
-#product .right .rating span{
-  color: yellow;
+#product .right .rating span.active{
+  color: #f16108;
 }
 #product .right .price{
   width: 150px;

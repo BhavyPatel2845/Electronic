@@ -1,5 +1,5 @@
 <?php
-    // require "../../backend/adminSession.php";
+    require "../../backend/adminSession.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -156,9 +156,10 @@
                         while ($row = $result->fetch_assoc()) {            
                 ?>
                 <div class="productsBox">
-                    <div class="imageBox">
+                    <!-- <a class="imageBox"> -->
+                    <a href="./productFeedbacks.php?id=<?php echo $row['product_id']  ?>" class="imageBox">
                         <?php echo '<img src="../../backend/productImageUpload/' . $row['productImage'] . '" alt="' . $row['productName'] . '">' ?>
-                    </div>
+                    </a>
                     <div class="productDetailBox">
                         <div class="productNameCatagory">
                             <div class="productName">Name: <span><?php echo $row['productName']; ?></span></div>

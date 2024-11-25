@@ -357,15 +357,13 @@ form div select:focus {
   margin: 1vw;
   background-color: #fcfbfb;
   border-radius: 10px;
-  overflow-y: scroll;
-  scrollbar-width: none;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   background-color: #cadcfc;
   color: #00246b;
 }
 
 .productsBox .imageBox {
-  height: 45%;
+  /* height: 45%; */
   width: 100%;
   position: relative;
   border-bottom: 1px solid #007bff;
@@ -373,8 +371,8 @@ form div select:focus {
 }
 .productsBox .imageBox img {
   object-fit: contain;
-  height: 100%;
-  width: 100%;
+  /* height: 100%; */
+  height: 45%;
 }
 
 .productsBox .productDetailBox {

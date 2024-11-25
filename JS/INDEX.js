@@ -1,3 +1,25 @@
+
+/*--------------------
+   product star - start 
+--------------------*/
+
+let ratingStar = document.querySelector('.ratingStar');
+let rating = Math.round(ratingStar.value);
+let star = document.querySelectorAll('.rate')
+
+// 
+star.forEach((str, index) => {
+  if (index < rating) {
+      str.classList.add("active"); 
+  } else {
+      str.classList.remove("active"); 
+  }
+});
+/*--------------------
+   product star - end 
+--------------------*/
+
+
 // /********************  NAVIGATION  ******************/
 // var hamburgerMenuIcon = document.querySelector(".hamburgerMenuIcon");
 // var nav = document.querySelector("navigation");
