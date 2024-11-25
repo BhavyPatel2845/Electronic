@@ -120,14 +120,21 @@
                                 $totalFeedback++;
                             }
                     ?>
-                    <input class="ratingStar" type="hidden" value="<?php echo $star/$totalFeedback; ?>">
-                    
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
+                    <?php 
+                    $st = $star/$totalFeedback;
+                        for($i = 1; $i<=5; $i++){ ?>
+                        <?php if($st >= $i){ ?>
+                            <span class="rate active">&#9733;</span>
+                        <?php
+                            }
+                            else{
+                        ?>
+                            <span class="rate">&#9733;</span> <?php
+                            } 
+                        }
+                    ?>
                     <?php
+                        
                         }
                         else{
                     ?>
@@ -199,14 +206,21 @@
                                 $totalFeedback++;
                             }
                     ?>
-                    <input class="ratingStar" type="hidden" value="<?php echo $star/$totalFeedback; ?>">
-                    
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
+                    <?php 
+                    $st = $star/$totalFeedback;
+                        for($i = 1; $i<=5; $i++){ ?>
+                        <?php if($st >= $i){ ?>
+                            <span class="rate active">&#9733;</span>
+                        <?php
+                            }
+                            else{
+                        ?>
+                            <span class="rate">&#9733;</span> <?php
+                            } 
+                        }
+                    ?>
                     <?php
+                        
                         }
                         else{
                     ?>
@@ -269,14 +283,21 @@
                                 $totalFeedback++;
                             }
                     ?>
-                    <input class="ratingStar" type="hidden" value="<?php echo $star/$totalFeedback; ?>">
-                    
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
+                    <?php 
+                    $st = $star/$totalFeedback;
+                        for($i = 1; $i<=5; $i++){ ?>
+                        <?php if($st >= $i){ ?>
+                            <span class="rate active">&#9733;</span>
+                        <?php
+                            }
+                            else{
+                        ?>
+                            <span class="rate">&#9733;</span> <?php
+                            } 
+                        }
+                    ?>
                     <?php
+                        
                         }
                         else{
                     ?>
@@ -339,14 +360,21 @@
                                 $totalFeedback++;
                             }
                     ?>
-                    <input class="ratingStar" type="hidden" value="<?php echo $star/$totalFeedback; ?>">
-                    
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
+                    <?php 
+                    $st = $star/$totalFeedback;
+                        for($i = 1; $i<=5; $i++){ ?>
+                        <?php if($st >= $i){ ?>
+                            <span class="rate active">&#9733;</span>
+                        <?php
+                            }
+                            else{
+                        ?>
+                            <span class="rate">&#9733;</span> <?php
+                            } 
+                        }
+                    ?>
                     <?php
+                        
                         }
                         else{
                     ?>
@@ -409,14 +437,21 @@
                                 $totalFeedback++;
                             }
                     ?>
-                    <input class="ratingStar" type="hidden" value="<?php echo $star/$totalFeedback; ?>">
-                    
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
-                    <span class="rate">&#9733;</span>
+                    <?php 
+                    $st = $star/$totalFeedback;
+                        for($i = 1; $i<=5; $i++){ ?>
+                        <?php if($st >= $i){ ?>
+                            <span class="rate active">&#9733;</span>
+                        <?php
+                            }
+                            else{
+                        ?>
+                            <span class="rate">&#9733;</span> <?php
+                            } 
+                        }
+                    ?>
                     <?php
+                        
                         }
                         else{
                     ?>

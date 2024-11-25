@@ -92,6 +92,15 @@
                     <span class="rate">&#9733;</span>
                     <?php
                         }
+                        else{
+                            ?>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                    <?php 
+                            }
                     ?>
                 </div>
                 <div class="price">

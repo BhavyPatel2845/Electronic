@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-SHOP</title>
     <link rel="stylesheet" href="CSS/Header.css">
-    <link rel="stylesheet" href="CSS/INDEX.css">
+    <link rel="stylesheet" href="CSS/indexes.css">
     <link rel="stylesheet" href="CSS/Footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

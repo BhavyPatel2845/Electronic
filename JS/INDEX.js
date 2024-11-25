@@ -1,23 +1,23 @@
 
-/*--------------------
-   product star - start 
---------------------*/
+// /*--------------------
+//    product star - start 
+// --------------------*/
 
-let ratingStar = document.querySelector('.ratingStar');
-let rating = Math.round(ratingStar.value);
-let star = document.querySelectorAll('.rate')
+// let ratingStar = document.querySelector('.ratingStar');
+// let rating = Math.round(ratingStar.value);
+// let star = document.querySelectorAll('.rate')
 
-// 
-star.forEach((str, index) => {
-  if (index < rating) {
-      str.classList.add("active"); 
-  } else {
-      str.classList.remove("active"); 
-  }
-});
-/*--------------------
-   product star - end 
---------------------*/
+// // 
+// star.forEach((str, index) => {
+//   if (index < rating) {
+//       str.classList.add("active"); 
+//   } else {
+//       str.classList.remove("active"); 
+//   }
+// });
+// /*--------------------
+//    product star - end 
+// --------------------*/
 
 
 // /********************  NAVIGATION  ******************/

@@ -169,13 +169,21 @@
                                     <span class="delete"><a href="#" class="reply"><i class="fa-solid fa-trash"></i></a></span>
                                 </h4>
                                 <div class="rating" id="rating">                                   
-                                    <input class="ratingStar" type="number" value="<?php echo $rowFeedback['rating'] ?>">
+                                    <!-- <input class="ratingStar" type="number" value="<?php echo $rowFeedback['rating'] ?>"> -->
+                                    <?php 
+                                        for($i = 1; $i<=5; $i++){ ?>
+                                            <?php if($rowFeedback['rating']>= $i){ ?>
+                                            <span class="rate active">&#9733;</span>
+                                        <?php
+                                        }
+                                            else{
+                                                ?>
+                                                <span class="rate">&#9733;</span> <?php
+                                            } 
+                                        }
+                                    ?>
                                     
-                                    <span class="rate">&#9733;</span>
-                                    <span class="rate">&#9733;</span>
-                                    <span class="rate">&#9733;</span>
-                                    <span class="rate">&#9733;</span>
-                                    <span class="rate">&#9733;</span>
+                                    
                             </div>
                                 <p><?php echo $rowFeedback['feedback'] ?></p>
                             </div>

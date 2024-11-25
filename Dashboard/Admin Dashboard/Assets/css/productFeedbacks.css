@@ -255,8 +255,8 @@ li{
     grid-gap: 10px;
   
   }
-  #product .right .rating span.active{
-    color: #f16108;
+  #product .rating span.active{
+    color: #c95c18;
   }
   #product .right .price{
     width: 150px;

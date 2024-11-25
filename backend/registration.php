@@ -30,6 +30,20 @@
         }
     }
 
+    $pattern = "/^[a-zA-Z]+([ '-][a-zA-Z]+)*$/";
+
+    if (preg_match($pattern, $userName)) {
+        
+    } else {
+        $errors[] = "$userName Accepts Only Characters, Spaces, Hyphens or Apostrophes";  // Add error for invalid username
+    }
+
+    if (preg_match($pattern, $city)) {
+    } else {
+        $errors[] = "$city Accepts Only Characters";  // Add error for invalid city
+    }
+
+
     $pincodeLength = strlen((string)$pincode);
     if($pincodeLength != 6){
         $errors[] = "Pincode Is Not Vailed";
