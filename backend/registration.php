@@ -35,7 +35,7 @@
     if (preg_match($pattern, $userName)) {
         
     } else {
-        $errors[] = "$userName Accepts Only Characters, Spaces, Hyphens or Apostrophes";  // Add error for invalid username
+        $errors[] = "$userName Accepts Only Characters";  // Add error for invalid username
     }
 
     if (preg_match($pattern, $city)) {

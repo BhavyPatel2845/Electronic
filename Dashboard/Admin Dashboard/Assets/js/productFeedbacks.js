@@ -17,20 +17,20 @@
    product star - start 
 --------------------*/
 
-// let ratingStar = document.querySelector('.ratingStar');
-// let rating = Math.round(ratingStar.value);
+let ratingStar = document.querySelector('.ratingStar');
+let rating = Math.round(ratingStar.value);
 
-// let star = document.querySelectorAll('.rate')
-// console.log(star);
+let star = document.querySelectorAll('.rate')
+console.log(star);
 
 
-// star.forEach((str, index) => {
-//   if (index < rating) {
-//       str.classList.add("active"); 
-//   } else {
-//       str.classList.remove("active"); 
-//   }
-// });
+star.forEach((str, index) => {
+  if (index < rating) {
+      str.classList.add("active"); 
+  } else {
+      str.classList.remove("active"); 
+  }
+});
 /*--------------------
    product star - end 
 --------------------*/

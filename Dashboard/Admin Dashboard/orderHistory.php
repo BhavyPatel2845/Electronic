@@ -1,5 +1,25 @@
 <?php
-    // require "../../backend/adminSession.php";
+    require "../../backend/database_connection.php"; // Include your database connection
+
+    // Handle the update request
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $orderId = $_POST['orderId'];
+        $orderStatus = $_POST['orderStatus'];
+
+        // Update the order status in the database
+        $updateQuery = "UPDATE orders SET orderStatus = ? WHERE order_id = ?";
+        if ($stmt = $conn->prepare($updateQuery)) {
+            $stmt->bind_param("si", $orderStatus, $orderId);
+            if ($stmt->execute()) {
+                echo "<script>alert('Order status updated successfully.');</script>";
+            } else {
+                echo "<script>alert('Error updating order status.');</script>";
+            }
+            $stmt->close();
+        } else {
+            echo "<script>alert('Error preparing the update query.');</script>";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,38 +103,45 @@
                         <div class="action">Action</div>
                     </li>
                     <?php
-                        require "../../backend/database_connection.php";
-
+                        // Fetch orders from the database
                         $selectOrder = "SELECT * FROM orders";
-                        $result = mysqli_query($conn,$selectOrder);
+                        $result = mysqli_query($conn, $selectOrder);
                         if ($result && $result->num_rows > 0) {
-                            while($row = $result->fetch_assoc()){
-
-                       ?>
+                            while($row = $result->fetch_assoc()) {
+                    ?>
                             <li class="listOfHistory">
-                        <div class="id"><?php echo $row['order_id'] ?></div>
-                        <div class="name"><?php echo $row['userEmail'] ?></div>
-                        <div class="payment"><?php echo $row['paymentMethod'] ?></div>
-                        <div class="type"><?php echo $row['orderStatus'] ?></div>
-                        <div class="total"><?php echo $row['price'] ?></div>
-                        <div class="action">
-                            <div class="actionbox" id="actionBox1">
-                                <div class="refund danger"><a href="#" class="danger">Refund</a></div>
-                                <div class="refund danger"><a href="#">Message</a></div>
-                            </div>
-                        </div>
-                    </li> 
-                       <?php
+                                <div class="id"><?php echo $row['order_id'] ?></div>
+                                <div class="name"><?php echo $row['userEmail'] ?></div>
+                                <div class="payment"><?php echo $row['paymentMethod'] ?></div>
+                                <div class="type"><?php echo $row['orderStatus'] ?></div>
+                                <div class="total"><?php echo $row['price'] ?></div>
+                                <div class="action">
+                                    <div class="actionbox" id="actionBox1">
+                                        <!-- Order Status Dropdown -->
+                                        <form action="" method="POST">
+                                            <div class="dropdown">
+                                                <select name="orderStatus" class="statusDropdown">
+                                                    <option value="Pending" <?php if($row['orderStatus'] == 'Pending') echo 'selected'; ?>>Pending</option>
+                                                    <option value="Confirmed" <?php if($row['orderStatus'] == 'Confirmed') echo 'selected'; ?>>Confirmed</option>
+                                                    <option value="Rejected" <?php if($row['orderStatus'] == 'Rejected') echo 'selected'; ?>>Rejected</option>
+                                                    <option value="Shipped" <?php if($row['orderStatus'] == 'Shipped') echo 'selected'; ?>>Shipped</option>
+                                                    <option value="Out for Delivery" <?php if($row['orderStatus'] == 'Out for Delivery') echo 'selected'; ?>>Out for Delivery</option>
+                                                    <option value="Delivered" <?php if($row['orderStatus'] == 'Delivered') echo 'selected'; ?>>Delivered</option>
+                                                </select>
+                                            </div>
+                                            <input type="hidden" name="orderId" value="<?php echo $row['order_id']; ?>">
+                                            <button type="submit" class="updateButton">Update</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                    <?php
                             }
+                        } else {
+                            echo "<li>No orders found.</li>";
                         }
-                        else{
-                            echo "bbb";
-                        }
-                       ?>
-                                      
-                    
+                    ?>
                 </ul>
-
             </div>
         </div>
     </div>

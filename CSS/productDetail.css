@@ -196,6 +196,78 @@ table,td,tr{
  product detail table - start
 -----------------------------*/
 
+
+.feedback{
+  padding: 50px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00246b;
+  color: #cadcfc;
+}
+.feedback .feedbackContainer{
+  height: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  border: 1px solid #cadcfc;
+}
+
+.feedback .feedbackContainer h3{
+  padding: 20px 30px;
+}
+
+.feedback .review{
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  padding: 30px;
+  grid-gap: 30px;
+}
+.feedback .review .user-img{
+  height: 110px;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #cadcfc;
+}
+.feedback .review .user-img i{
+  display: flex;
+  font-size: 80px;
+}  
+.feedback .review .desc{
+  width: 80%;
+}
+.feedback .review .desc h4{
+  width: 100%;
+  display: flex;
+  padding: 10px 10px 0px;
+  justify-content: space-between;
+
+}
+.feedback .review .desc p{
+  padding: 5px 10px;
+}
+
+.feedback .review .desc .rating{
+  display: flex;
+  padding: 10px;
+  grid-gap: 10px;
+}
+
+.feedback .review .desc .star span .rate{
+  font-size: 20px;
+  color: rgb(255, 111, 0);
+}
+.feedback .review .desc .delete i{
+  color: #cadcfc;
+}
+
 /*----------------------------
  Related Product - start
 -----------------------------*/

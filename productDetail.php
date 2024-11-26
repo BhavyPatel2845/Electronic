@@ -157,7 +157,52 @@
             </table>
         </div>
         <?php
-                    }
+            }
+        ?>
+            <div class="feedback">
+                    <div class="feedbackContainer">
+                        <h3 class="head">Reviews</h3>
+                        <?php 
+                            $productName = $row['productName'];
+                           $selectFeedback = "SELECT `feddback_id`, `productName`, `userName`, `userEmail`, `feedback`, `rating` FROM `feedback` where productName = '$productName'";
+                           $resultFeedback = mysqli_query($conn,$selectFeedback);
+                           if (mysqli_num_rows($resultFeedback) > 0) {
+                            while($rowFeedback = $resultFeedback->fetch_assoc()){                        
+                        ?>
+                        <div class="review">
+                            <div class="user-img"><i class="fa-solid fa-user"></i></div>
+                            <div class="desc">
+                                <h4>
+                                    <span class="text-left"><?php echo $rowFeedback['userName'] ?></span>
+                                    <span class="delete"><a href="#" class="reply"><i class="fa-solid fa-trash"></i></a></span>
+                                </h4>
+                                <div class="rating" id="rating">                                   
+                                    <!-- <input class="ratingStar" type="number" value="<?php echo $rowFeedback['rating'] ?>"> -->
+                                    <?php 
+                                        for($i = 1; $i<=5; $i++){ ?>
+                                            <?php if($rowFeedback['rating']>= $i){ ?>
+                                            <span class="rate active">&#9733;</span>
+                                        <?php
+                                        }
+                                            else{
+                                                ?>
+                                                <span class="rate">&#9733;</span> <?php
+                                            } 
+                                        }
+                                    ?>
+                                    
+                                    
+                            </div>
+                                <p><?php echo $rowFeedback['feedback'] ?></p>
+                            </div>
+                        </div>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
+                </div>
+        <?php
                 }
             }
         ?>

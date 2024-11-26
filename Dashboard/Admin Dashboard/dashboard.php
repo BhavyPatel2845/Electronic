@@ -88,20 +88,16 @@
                             </div>
                         </div>
                         <div class="detail">
-                            <!-- <h6>Total Sale</h6>
-                            <p>&#8377;50,00,000.00</p> -->
-                            <?php
+                        <?php
                                 require "../../backend/database_connection.php";
-                                $sql = "SELECT price from orders";
+                                $sql = "SELECT COUNT(DISTINCT product_id) AS unique_product FROM products";
                                 $result = $conn->query($sql);
-                                $price = 0;
+                                
                                 if ($result->num_rows > 0) {
-                                    while($row = $result->fetch_assoc()){
-                                        $price = $price + $row['price'];
-                                    }                               
+                                    $row = $result->fetch_assoc();                               
                             ?>
-                            <h6>Total Sale</h6>
-                            <p>&#8377;<?php echo $price  ?></p>
+                            <h6>Products</h6>
+                            <p><?php echo $row['unique_product']  ?></p>
                             <?php
                                 } else {
                                     echo "0";
@@ -112,9 +108,7 @@
                             <p>More Info</p>
                         </div>
                     </div>
-
                     
-
                     <div class="detailContainer">
                         <div class="imageContainer">
                             <div class="image">
@@ -142,7 +136,6 @@
                             <p>More Info</p>
                         </div>
                     </div>
-
                     <div class="detailContainer">
                         <div class="imageContainer">
                             <div class="image">
@@ -152,14 +145,14 @@
                         <div class="detail">
                         <?php
                                 require "../../backend/database_connection.php";
-                                $sql = "SELECT COUNT(DISTINCT product_id) AS unique_product FROM products";
+                                $sql = "SELECT COUNT(DISTINCT order_id) AS unique_customer FROM orders";
                                 $result = $conn->query($sql);
                                 
                                 if ($result->num_rows > 0) {
                                     $row = $result->fetch_assoc();                               
                             ?>
-                            <h6>Products</h6>
-                            <p><?php echo $row['unique_product']  ?></p>
+                            <h6>Total Order</h6>
+                            <p><?php echo $row['unique_customer']  ?></p>
                             <?php
                                 } else {
                                     echo "0";
@@ -170,7 +163,118 @@
                             <p>More Info</p>
                         </div>
                     </div>
-
+                    
+                    <div class="detailContainer">
+                        <div class="imageContainer">
+                            <div class="image">
+                                <i class="fa-solid fa-recycle"></i>
+                            </div>
+                        </div>
+                        <div class="detail">
+                        <?php
+                                require "../../backend/database_connection.php";
+                                $sql = "SELECT COUNT(DISTINCT order_id) AS unique_customer FROM orders where orderStatus = 'pending'";
+                                $result = $conn->query($sql);
+                                
+                                if ($result->num_rows > 0) {
+                                    $row = $result->fetch_assoc();                               
+                            ?>
+                            <h6>Pending Order</h6>
+                            <p><?php echo $row['unique_customer']  ?></p>
+                            <?php
+                                } else {
+                                    echo "0";
+                                }
+                            ?>
+                        </div>
+                        <div class="moreInfo">
+                            <p>More Info</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detailContainer">
+                        <div class="imageContainer">
+                            <div class="image">
+                                <i class="fa-solid fa-recycle"></i>
+                            </div>
+                        </div>
+                        <div class="detail">
+                        <?php
+                                require "../../backend/database_connection.php";
+                                $sql = "SELECT COUNT(DISTINCT order_id) AS unique_customer FROM orders where orderStatus = 'Delivered'";
+                                $result = $conn->query($sql);
+                                
+                                if ($result->num_rows > 0) {
+                                    $row = $result->fetch_assoc();                               
+                            ?>
+                            <h6>Deleveried Order</h6>
+                            <p><?php echo $row['unique_customer']  ?></p>
+                            <?php
+                                } else {
+                                    echo "0";
+                                }
+                            ?>
+                        </div>
+                        <div class="moreInfo">
+                            <p>More Info</p>
+                        </div>
+                    </div>
+                    <div class="detailContainer">
+                        <div class="imageContainer">
+                            <div class="image">
+                                <i class="fa-solid fa-recycle"></i>
+                            </div>
+                        </div>
+                        <div class="detail">
+                        <?php
+                                require "../../backend/database_connection.php";
+                                $sql = "SELECT COUNT(DISTINCT order_id) AS unique_customer FROM orders where orderStatus = 'CANCEL'";
+                                $result = $conn->query($sql);
+                                
+                                if ($result->num_rows > 0) {
+                                    $row = $result->fetch_assoc();                               
+                            ?>
+                            <h6>Cancel Order</h6>
+                            <p><?php echo $row['unique_customer']  ?></p>
+                            <?php
+                                } else {
+                                    echo "0";
+                                }
+                            ?>
+                        </div>
+                        <div class="moreInfo">
+                            <p>More Info</p>
+                        </div>
+                    </div>
+                    <div class="detailContainer">
+                        <div class="imageContainer">
+                            <div class="image">
+                                <i class="fa-solid fa-recycle"></i>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <?php
+                                require "../../backend/database_connection.php";
+                                $sql = "SELECT price from orders where orderStatus = 'Confirmed'";
+                                $result = $conn->query($sql);
+                                $price = 0;
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()){
+                                        $price = $price + $row['price'];
+                                    }                               
+                            ?>
+                            <h6>Total Sale</h6>
+                            <p>&#8377;<?php echo $price  ?></p>
+                            <?php
+                                } else {
+                                    echo "0";
+                                }
+                            ?>
+                        </div>
+                        <div class="moreInfo">
+                            <p>More Info</p>
+                        </div>
+                    </div>                
                     <div class="detailContainer">
                         <div class="imageContainer">
                             <div class="image">
