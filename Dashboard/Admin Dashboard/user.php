@@ -145,13 +145,16 @@
         dashboard left side - start
         --------------------------->
         <div class="leftSide">
-            <ul>
+        <ul>
                 <a href="dashboard.php"><li><img src="Assets/images/sidebarImg/dashboard.png" alt="">Dashboard</li></a>
-                <a href="products.php"><li><img src="Assets/images/sidebarImg/products.png" alt="">Products</li></a>
                 <a href="addCategory.php"><li><img src="Assets/images/sidebarImg/addproducts.png" alt="">Add Category</li></a>
+                <a href="category.php"><li><img src="Assets/images/sidebarImg/products.png" alt="">Category</li></a>
                 <a href="addProduct.php"><li><img src="Assets/images/sidebarImg/addproducts.png" alt="">Add Products</li></a>
+                <a href="products.php"><li><img src="Assets/images/sidebarImg/products.png" alt="">Products</li></a>
                 <a href="user.php"><li><img src="Assets/images/sidebarImg/users.png" alt="">Users</li></a>
+                <a href="user.php"><li><img src="Assets/images/sidebarImg/users.png" alt="">User Contact</li></a>
                 <a href="orderHistory.php"><li><img src="Assets/images/sidebarImg/orderhistory.png" alt="">Order History</li></a>
+                <a href="feedback.php"><li><img src="Assets/images/sidebarImg/orderhistory.png" alt="">Feedback</li></a>
             </ul>
         </div>
         <!-------------------------- 

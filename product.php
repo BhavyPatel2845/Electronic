@@ -118,11 +118,51 @@
 
                             ?>
                             <!-- <input type="text"> -->
+                            <!-- <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i> -->
+                            <div class="rating" id="rating">
+                    <?php
+                        $productName = $row['productName'];
+                        $selectFeedback = "SELECT * FROM feedback where productName='$productName'";
+                        $resultFeedback = mysqli_query($conn,$selectFeedback);
+                        $star = 0;
+                        $totalFeedback = 0;
+                        if (mysqli_num_rows($resultFeedback) > 0) {
+                            while($rowFeedback = $resultFeedback->fetch_assoc()){ 
+                                $star = $star + $rowFeedback['rating'];
+                                $totalFeedback++;
+                            }
+                    ?>
+                    <?php 
+                    $st = $star/$totalFeedback;
+                        for($i = 1; $i<=5; $i++){ ?>
+                        <?php if($st >= $i){ ?>
+                            <span class="rate active">&#9733;</span>
+                        <?php
+                            }
+                            else{
+                        ?>
+                            <span class="rate">&#9733;</span> <?php
+                            } 
+                        }
+                    ?>
+                    <?php
+                        
+                        }
+                        else{
+                    ?>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>
+                            <span class="rate">&#9733;</span>  
+                    <?php
+                        }
+                    ?>
+                </div>
                         </div>
                         <form class="addToCart" action="./backend/productAddToCart.php" method="post"> 
                             <input type="hidden" name="productId" id="productId" value="<?php echo $row['product_id'] ?>">  <!-- Make this hidden -->

@@ -213,20 +213,11 @@
 }
 
 .addUserbtn button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    background-color: #cadcfc;
-    color: #00246b;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
 }
-
-.addUserbtn button:hover {
-    background-color: #5086e4;
-}
-
 #dashboardContainer .rightSide .usersTable{
     width: 90%;
     height: 500px;

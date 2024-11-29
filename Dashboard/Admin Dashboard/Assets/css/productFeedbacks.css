@@ -370,6 +370,9 @@ li{
     padding: 20px 30px;
   }
 
+.feedback .feedbackContainer h4 span:nth-child(2){
+  margin-left: 30px;
+}
   .feedback .review{
     display: flex;
     justify-content: start;
@@ -400,9 +403,10 @@ li{
     padding: 5px 10px;
   }
 
-  .feedback .review .desc .star{
-    display: flex;
-    justify-content: space-between;
+  .feedback .review .desc .rating{
+    padding: 5px 10px;
+    /* display: flex; */
+    /* justify-content: space-between; */
   }
   
   .feedback .review .desc .star span .rate{

@@ -199,6 +199,14 @@ transform: translateY(-5px);
 #footer .copyRightContainer {
   text-align: center;color: #00246b;
 }
+.product span{
+        
+  margin-top: 5px;
+  font-size: 25px;
+}
+.product span.active{
+  color: #f16108;
+}
 
 
 

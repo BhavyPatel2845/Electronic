@@ -99,42 +99,30 @@
                 <ul>
                     <li id="headerOflist">
                         <div class="id">Id</div>
-                        <div class="name">Email</div>
-                        <div class="payment">Payment</div>
-                        <div class="status">Status</div>
-                        <div class="total">Total</div>
-                        <div class="action">Action</div>
+                        <div class="name">Product Name</div>
+                        <div class="payment">User Name</div>
+                        <div class="status">Email</div>
+                        <div class="total">Feedback</div>
+                        <div class="action">Rating</div>
+                        <div class="action">Delete</div>
                     </li>
                     <?php
                         // Fetch orders from the database
-                        $selectOrder = "SELECT * FROM orders";
+                        $selectOrder = "SELECT * FROM feedback";
                         $result = mysqli_query($conn, $selectOrder);
                         if ($result && $result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
                     ?>
                             <li class="listOfHistory">
-                                <div class="id"><?php echo $row['order_id'] ?></div>
-                                <div class="name"><?php echo $row['userEmail'] ?></div>
-                                <div class="payment"><?php echo $row['paymentMethod'] ?></div>
-                                <div class="type"><?php echo $row['orderStatus'] ?></div>
-                                <div class="total"><?php echo $row['price'] ?></div>
+                                <div class="id"><?php echo $row['feddback_id'] ?></div>
+                                <div class="name"><?php echo $row['productName'] ?></div>
+                                <div class="payment"><?php echo $row['userName'] ?></div>
+                                <div class="payment"><?php echo $row['userEmail'] ?></div>
+                                <div class="type"><?php echo $row['feedback'] ?></div>
+                                <div class="total"><?php echo $row['rating'] ?></div>
                                 <div class="action">
                                     <div class="actionbox" id="actionBox1">
-                                        <!-- Order Status Dropdown -->
-                                        <form action="" method="POST">
-                                            <div class="dropdown">
-                                                <select name="orderStatus" class="statusDropdown">
-                                                    <option value="Pending" <?php if($row['orderStatus'] == 'Pending') echo 'selected'; ?>>Pending</option>
-                                                    <option value="Confirmed" <?php if($row['orderStatus'] == 'Confirmed') echo 'selected'; ?>>Confirmed</option>
-                                                    <option value="Rejected" <?php if($row['orderStatus'] == 'Rejected') echo 'selected'; ?>>Rejected</option>
-                                                    <option value="Shipped" <?php if($row['orderStatus'] == 'Shipped') echo 'selected'; ?>>Shipped</option>
-                                                    <option value="Out for Delivery" <?php if($row['orderStatus'] == 'Out for Delivery') echo 'selected'; ?>>Out for Delivery</option>
-                                                    <option value="Delivered" <?php if($row['orderStatus'] == 'Delivered') echo 'selected'; ?>>Delivered</option>
-                                                </select>
-                                            </div>
-                                            <input type="hidden" name="orderId" value="<?php echo $row['order_id']; ?>">
-                                            <button type="submit" class="updateButton">Update</button>
-                                        </form>
+                                        <a href="../../backend/deleteFeedback.php?id=<?php echo $row['feddback_id'] ?>"><i class="fa-solid fa-trash"></i></a>
                                     </div>
                                 </div>
                             </li>

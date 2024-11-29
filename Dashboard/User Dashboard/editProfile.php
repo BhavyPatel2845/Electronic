@@ -56,6 +56,7 @@
                 <li><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-user"></i><a href="editProfile.php">Edit Profile</a></li>
                 <li><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-user"></i><a href="orderHistory.php">Order History</a></li>
                 <li><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-user"></i><a href="review.php">Review</a></li>
+                <li><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-user"></i><a href="../../backend/logout.php">Log Out</a></li>
             </ul>
         </div>
         <!-------------------------- 

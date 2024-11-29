@@ -24,24 +24,22 @@
             <div class="findItFast">
                 <h3>Featured</h3>
                 <div class="footerLinks">
-                    <a href="">Smart Phones</a>
-                    <a href="">Watches </a>
-                    <a href="">Laptops</a>
-                    <a href="">Waterproof Headphones</a>
+                    <a href="./product.php">Smart Phones</a>
+                    <a href="./product.php">Watches </a>
+                    <a href="./product.php">Laptops</a>
+                    <a href="./product.php">Waterproof Headphones</a>
                 </div>
             </div>
             <div class="quickLinks">
                 <h3>Quick Links</h3>
                 <div class="footerLinks">
-                    <a href="">Your Account</a>
-                    <a href="">Returns & Exchanges</a>
-                    <a href="">Return Center</a>
-                    <a href="">Purchase Hisotry</a>
-                    <a href="">Latest News Blog</a>
-                    <a href="">Shipping & Delivery</a>
+                    <a href="./dashboard/User Dashboard/editProfile.php">Your Account</a>
+                    <a href="./dashboard/User Dashboard/editProfile.php">Purchase Hisotry</a>
+                    
+                    <a href="./contact.php">Support Center</a>
                 </div>
             </div>
-            <div class="serviceUs">
+            <!-- <div class="serviceUs">
                 <h3>Service us</h3>
                 <div class="footerLinks">
                     <a href="">Support Center</a>
@@ -51,7 +49,7 @@
                     <a href="">Help</a>
                     <a href="">Products Return</a>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="socialMediaLinksContainer">
             <ul>

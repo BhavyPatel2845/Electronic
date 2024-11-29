@@ -196,7 +196,8 @@
 
 .userContactBox ul {
     height: 95%;
-    min-width: 1200px;
+    width: 100%;
+    /* min-width: 1200px; */
     display: flex;
     flex-direction: column;
     align-items: center;
