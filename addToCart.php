@@ -122,9 +122,7 @@ else{
              <!-- <a href="./order.php">check out</a> -->
             <a href="./order.php"><button type="">Check Out</button></a>
             <div class="otherProduct">
-            <a href="#">
-                See pair with your cart product.
-            </a>
+            
             </div>
         </section>
     </div>

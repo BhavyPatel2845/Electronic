@@ -60,7 +60,7 @@
                 <a href="addProduct.php"><li><img src="Assets/images/sidebarImg/addproducts.png" alt="">Add Products</li></a>
                 <a href="products.php"><li><img src="Assets/images/sidebarImg/products.png" alt="">Products</li></a>
                 <a href="user.php"><li><img src="Assets/images/sidebarImg/users.png" alt="">Users</li></a>
-                <a href="user.php"><li><img src="Assets/images/sidebarImg/users.png" alt="">User Contact</li></a>
+                <a href="userContact.php"><li><img src="Assets/images/sidebarImg/users.png" alt="">User Contact</li></a>
                 <a href="orderHistory.php"><li><img src="Assets/images/sidebarImg/orderhistory.png" alt="">Order History</li></a>
                 <a href="feedback.php"><li><img src="Assets/images/sidebarImg/orderhistory.png" alt="">Feedback</li></a>
             </ul>
@@ -258,7 +258,7 @@
                         <div class="detail">
                             <?php
                                 require "../../backend/database_connection.php";
-                                $sql = "SELECT price from orders where orderStatus = 'Confirmed'";
+                                $sql = "SELECT price from orders where orderStatus = 'Delivered'";
                                 $result = $conn->query($sql);
                                 $price = 0;
                                 if ($result->num_rows > 0) {

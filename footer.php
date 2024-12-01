@@ -34,7 +34,7 @@
                 <h3>Quick Links</h3>
                 <div class="footerLinks">
                     <a href="./dashboard/User Dashboard/editProfile.php">Your Account</a>
-                    <a href="./dashboard/User Dashboard/editProfile.php">Purchase Hisotry</a>
+                    <a href="./dashboard/User Dashboard/orderHistory.php">Purchase Hisotry</a>
                     
                     <a href="./contact.php">Support Center</a>
                 </div>

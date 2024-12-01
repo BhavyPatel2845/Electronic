@@ -43,7 +43,7 @@
                                 <input type="number"  placeholder="Pincode" name="pincode">
                                 <input type="text"  placeholder="State" name="state">
                                 <input type="number"  placeholder="Phone Number" name="phoneNumber">
-                                <input type="email" placeholder="Email" name="email">
+                                <input type="email" placeholder="Email" name="email" value="<?php echo $_SESSION['email'] ?>" readonly>
                             </div>
 						</div>
 					</div>

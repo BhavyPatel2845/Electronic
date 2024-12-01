@@ -105,7 +105,7 @@ if (isset($_GET['cancel_order_id'])) {
             <div class="orderHistorySection">
                 <?php
                 $email = $_SESSION['email'];
-                $selectQuery = "SELECT orders.order_id, orders.userEmail, orders.created_at, orders.orderStatus, products.productName, products.detail, products.price, products.productImage 
+                $selectQuery = "SELECT orders.order_id, orders.userEmail, orders.created_at, orders.orderStatus,products.product_id, products.productName, products.detail, products.price, products.productImage 
                 FROM orders 
                 JOIN products ON orders.product_id = products.product_id 
                 WHERE orders.userEmail = '$email'";
@@ -167,12 +167,12 @@ if (isset($_GET['cancel_order_id'])) {
                         </div>
                     </div>
                     <?php 
-                        if($row['orderStatus'] == 'CANCEL'){
-                        }
-                        else{
+                        if($row['orderStatus'] == 'Pending'){
                     ?>
                     <a href="#" class="archiveOrder" onclick="confirmCancelOrder(<?php echo $row['order_id']; ?>)">Cancel Order</a>
                     <?php
+                        }
+                        else{
                         }
                     ?>
                 </div>

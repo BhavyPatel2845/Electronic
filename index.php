@@ -31,7 +31,7 @@
             <h5>NEW ARRAIVALS</h5>
             <H1><span>Best Price</span> This Year</H1>
             <p>Shoomatic offers your very comfortable time<br>Walking and exercieses.</p>
-            <button>Explore Now</button>
+            <button><a href="./product.php">Explore Now</a></button>
         </div>
     </section>
 
@@ -166,9 +166,9 @@
     <!-- ===========BANNER SECTION================ -->
     <section id="banner" >
         <div class="container">
-            <h4>MID Season's Sale</h4>
-            <H1>Autumn Collection <br>UP TO 20% OFF</H1>
-            <button class="text-uppercase">shop now</button>
+            <h4>Upgrade your home with</h4>
+            <H1> the latest in smart electronics! <br>UP TO 20% OFF</H1>
+            <button class="text-uppercase"><a style="color:white;" href="./product.php">Shop Now</a></button>
         </div>
     </section>
 

@@ -82,7 +82,7 @@
                 <a href="addProduct.php"><li><img src="Assets/images/sidebarImg/addproducts.png" alt="">Add Products</li></a>
                 <a href="products.php"><li><img src="Assets/images/sidebarImg/products.png" alt="">Products</li></a>
                 <a href="user.php"><li><img src="Assets/images/sidebarImg/users.png" alt="">Users</li></a>
-                <a href="user.php"><li><img src="Assets/images/sidebarImg/users.png" alt="">User Contact</li></a>
+                <a href="userContact.php"><li><img src="Assets/images/sidebarImg/users.png" alt="">User Contact</li></a>
                 <a href="orderHistory.php"><li><img src="Assets/images/sidebarImg/orderhistory.png" alt="">Order History</li></a>
                 <a href="feedback.php"><li><img src="Assets/images/sidebarImg/orderhistory.png" alt="">Feedback</li></a>
             </ul>
@@ -107,7 +107,7 @@
                     </li>
                     <?php
                         // Fetch orders from the database
-                        $selectOrder = "SELECT * FROM orders";
+                        $selectOrder = "SELECT * FROM orders  order by order_id DESC";
                         $result = mysqli_query($conn, $selectOrder);
                         if ($result && $result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
