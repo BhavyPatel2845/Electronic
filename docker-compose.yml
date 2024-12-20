@@ -23,7 +23,7 @@ services:
     container_name: mysql-db
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: your_database_name
+      MYSQL_DATABASE: st_store
       MYSQL_USER: root
       MYSQL_PASSWORD: password
     ports:
