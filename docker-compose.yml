@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  php:
+    build: .
+    container_name: php-web
+    ports:
+      - "80:80" # Port 80 is exposed for the PHP web service
+    volumes:
+      - .:/var/www/html
+    networks:
+      - mynetwork
+    depends_on:
+      - mysql
+    environment:
+      - DB_HOST=mysql
+      - DB_NAME=your_database_name
+      - DB_USER=root
+      - DB_PASS=password
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: your_database_name
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    networks:
+      - mynetwork
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  mysql-data:
