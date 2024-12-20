@@ -14,7 +14,7 @@ services:
       - mysql
     environment:
       - DB_HOST=mysql
-      - DB_NAME=your_database_name
+      - DB_NAME=st_store
       - DB_USER=root
       - DB_PASS=password
 
