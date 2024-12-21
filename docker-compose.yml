@@ -1,41 +1,41 @@
-version: "3.8"
+# version: "3.8"
 
-services:
-  php:
-    build: .
-    container_name: php-web
-    ports:
-      - "80:80" # Port 80 is exposed for the PHP web service
-    volumes:
-      - .:/var/www/html
-    networks:
-      - mynetwork
-    depends_on:
-      - mysql
-    environment:
-      - DB_HOST=dpg-ctja5o5svqrc73879ah0-a
-      - DB_NAME=st_store_7x0w
-      - DB_USER=st_store_7x0w_user
-      - DB_PASS=3XHE6ivcg1XoeNswK1wZ8DtDeuucfBjf
+# services:
+#   php:
+#     build: .
+#     container_name: php-web
+#     ports:
+#       - "80:80" # Port 80 is exposed for the PHP web service
+#     volumes:
+#       - .:/var/www/html
+#     networks:
+#       - mynetwork
+#     depends_on:
+#       - mysql
+#     environment:
+#       - DB_HOST=dpg-ctja5o5svqrc73879ah0-a
+#       - DB_NAME=st_store_7x0w
+#       - DB_USER=st_store_7x0w_user
+#       - DB_PASS=3XHE6ivcg1XoeNswK1wZ8DtDeuucfBjf
 
-  mysql:
-    image: mysql:8.0
-    container_name: mysql-db
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: st_store_7x0w
-      MYSQL_USER: st_store_7x0w_user
-      MYSQL_PASSWORD: 3XHE6ivcg1XoeNswK1wZ8DtDeuucfBjf
-    ports:
-      - "3306:3306"
-    networks:
-      - mynetwork
-    volumes:
-      - mysql-data:/var/lib/mysql
+#   mysql:
+#     image: mysql:8.0
+#     container_name: mysql-db
+#     environment:
+#       MYSQL_ROOT_PASSWORD: password
+#       MYSQL_DATABASE: st_store_7x0w
+#       MYSQL_USER: st_store_7x0w_user
+#       MYSQL_PASSWORD: 3XHE6ivcg1XoeNswK1wZ8DtDeuucfBjf
+#     ports:
+#       - "3306:3306"
+#     networks:
+#       - mynetwork
+#     volumes:
+#       - mysql-data:/var/lib/mysql
 
-networks:
-  mynetwork:
-    driver: bridge
+# networks:
+#   mynetwork:
+#     driver: bridge
 
-volumes:
-  mysql-data:
+# volumes:
+#   mysql-data:
