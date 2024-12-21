@@ -13,7 +13,7 @@
 
 <?php
 
-require "../docker-compose.yml";
+// require "../docker-compose.yml";
 // include "./";
 $host = getenv('DB_HOST');  // 'mysql', as defined in docker-compose
 $dbname = getenv('DB_NAME');  // your_database_name
