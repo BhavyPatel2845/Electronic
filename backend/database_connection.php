@@ -12,7 +12,7 @@
 ?>
 
 <?php
-include "../docker-compose.yml"
+include "../docker-compose.yml";
 $host = getenv('DB_HOST');  // 'mysql', as defined in docker-compose
 $dbname = getenv('DB_NAME');  // your_database_name
 $username = getenv('DB_USER');  // 'root'
