@@ -1,31 +1,32 @@
 <?php
-    // $serverName="localhost";
-    // $userName="root";
-    // $password="";
-    // $database="st_store";
-
-    // $conn = new mysqli($serverName,$userName,$password,$database);
-
-    // if ($conn->connect_error) {
-    //     die("connectin failed : " . $conn->connect_error);
-    // }
-?>
-
-<?php
-
-// require "../docker-compose.yml";
-// include "./";
+    
 $host = getenv('DB_HOST');  // 'mysql', as defined in docker-compose
 $dbname = getenv('DB_NAME');  // your_database_name
 $username = getenv('DB_USER');  // 'root'
 $password = getenv('DB_PASS');  // 'password'
 
-try {
-    $dsn = "mysql:host=$host;dbname=$dbname";
-    $pdo = new PDO($dsn, $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully to MySQL database";
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
+    $conn = new mysqli($host,$username,$password,$dbname);
+
+    if ($conn->connect_error) {
+        die("connectin failed : " . $conn->connect_error);
+    }
 ?>
+
+<?php
+
+// // require "../docker-compose.yml";
+// // include "./";
+// $host = getenv('DB_HOST');  // 'mysql', as defined in docker-compose
+// $dbname = getenv('DB_NAME');  // your_database_name
+// $username = getenv('DB_USER');  // 'root'
+// $password = getenv('DB_PASS');  // 'password'
+
+// try {
+//     $dsn = "mysql:host=$host;dbname=$dbname";
+//     $pdo = new PDO($dsn, $username, $password);
+//     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//     echo "Connected successfully to MySQL database";
+// } catch (PDOException $e) {
+//     echo "Connection failed: " . $e->getMessage();
+// }
+// ?>
