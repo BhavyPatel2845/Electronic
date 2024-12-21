@@ -1,17 +1,17 @@
-# # Use the official PHP image with Apache
-# FROM php:8.2-apache
+# Use the official PHP image with Apache
+FROM php:8.2-apache
 
-# # Enable Apache modules (optional but recommended for .htaccess support)
-# RUN a2enmod rewrite
+# Enable Apache modules (optional but recommended for .htaccess support)
+RUN a2enmod rewrite
 
-# # Set the working directory inside the container
-# WORKDIR /var/www/html/
+# Set the working directory inside the container
+WORKDIR /var/www/html/
 
-# # Copy the PHP application into the container
-# COPY . /var/www/html/
+# Copy the PHP application into the container
+COPY . /var/www/html/
 
-# # Expose the port Apache will run on
-# EXPOSE 80
+# Expose the port Apache will run on
+EXPOSE 80
 
-# # Apache is the default web server, so we don't need a special CMD here
-# # The container will start Apache automatically
+# Apache is the default web server, so we don't need a special CMD here
+# The container will start Apache automatically
