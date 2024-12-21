@@ -13,19 +13,19 @@ services:
     depends_on:
       - mysql
     environment:
-      - DB_HOST=mysql
-      - DB_NAME=st_store
-      - DB_USER=root
-      - DB_PASS=password
+      - DB_HOST=dpg-ctja5o5svqrc73879ah0-a
+      - DB_NAME=st_store_7x0w
+      - DB_USER=st_store_7x0w_user
+      - DB_PASS=3XHE6ivcg1XoeNswK1wZ8DtDeuucfBjf
 
   mysql:
     image: mysql:8.0
     container_name: mysql-db
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: st_store
-      MYSQL_USER: root
-      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: st_store_7x0w
+      MYSQL_USER: st_store_7x0w_user
+      MYSQL_PASSWORD: 3XHE6ivcg1XoeNswK1wZ8DtDeuucfBjf
     ports:
       - "3306:3306"
     networks:
